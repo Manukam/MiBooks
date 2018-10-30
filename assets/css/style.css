@@ -1,0 +1,121 @@
+Custom Stylesheet
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: black;
+}
+
+.brand-logo {
+  position:absolute;
+  width:150px;
+  height:100px;
+  overflow:hidden;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+span {
+
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    /* white-space: initial; */
+}
+
+.bname{
+  font-size: 16px !important; 
+}
+
+.category-name{
+  font-size: 18px !important;
+}
+
+.custom-height{
+  height: 400px !important;
+  width: 250px !important;
+  display: inline-block !important;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.card-image {
+  height: 250px !important;
+}
+
+.resize {
+  width: 150px !important; /* you can use % */
+  height: 230px !important;
+  align-content: center  !important;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.horizontal-scroll{
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+  width: inherit !important;
+  height: auto !important;
+  align-self: left !important;
+}
+
+::-webkit-scrollbar{
+  height: 4px;
+  width: 4px;
+  background: gray;
+}
+::-webkit-scrollbar-thumb:horizontal{
+  background: #000;
+  border-radius: 10px;
+}
+
