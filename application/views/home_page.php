@@ -14,28 +14,7 @@
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <div class="brand-logo">
-          <a id="logo-container" href="#" class="brand-logo">MiBooKs</a>
-        </div>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#"><i class="material-icons right">shopping_cart</i></a></li>
-        </ul>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Shop</a></li>
-        </ul>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Blog</a></li>
-        </ul>
-        <!-- <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
-      </div>
-    </nav>
-  </div>
+  <?php include('navbar.html'); ?>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -83,6 +62,7 @@
         </div>
 
         <div class="col s12 m4">
+        <a href="<?php echo base_url(). 'index.php/Category_books/view_category/2';?>">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" src="<?php echo asset_url(). 'images/bio.jpg'?>">
@@ -93,6 +73,7 @@
             </div>
           </div>
         </div>
+        </a>
 
         <div class="col s12 m4">
           <div class="card small">
