@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <?php include('navbar.html'); ?>
+  <?php include('navbar.php'); ?>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
