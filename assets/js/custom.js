@@ -22,3 +22,7 @@ $(document).on('mouseenter.hover-reveal','.hover-reveal', function (e){
     $(this).find('.card-content>span').attr('style', '');
   });
 
+  $(document).ready( function () {
+    $('#book_list').DataTable();
+} );
+

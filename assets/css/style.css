@@ -210,3 +210,11 @@ div.foo{
   width: 150px;
   height: 10px;
 }
+
+.section{
+  width: 100% !important;
+}
+
+.container{
+  width: 90% !important;
+}

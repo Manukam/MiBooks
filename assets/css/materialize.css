@@ -2967,7 +2967,7 @@ ul.staggered-list li {
   background-color: rgba(51, 51, 51, 0.08);
 }
 
-table, th, td {
+/* table, th, td {
   border: none;
 }
 
@@ -3022,7 +3022,7 @@ td, th {
     border-spacing: 0;
     display: block;
     position: relative;
-    /* sort out borders */
+  
   }
   table.responsive-table td:empty:before {
     content: '\00a0';
@@ -3074,7 +3074,7 @@ td, th {
     border: 0;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
   }
-}
+} */
 
 .collection {
   margin: 0.5rem 0 1rem 0;
@@ -6081,7 +6081,7 @@ body.keyboard-focused .dropdown-content li:focus {
   -webkit-font-smoothing: antialiased;
 }
 
-select:focus {
+/* select:focus {
   outline: 1px solid #c9f3ef;
 }
 
@@ -6093,7 +6093,7 @@ button:focus {
 label {
   font-size: 0.8rem;
   color: #9e9e9e;
-}
+} */
 
 /* Text Inputs + Textarea
    ========================================================================== */
@@ -6286,7 +6286,7 @@ textarea.materialize-textarea.validate + label {
 }
 
 /* Validation Sass Placeholders */
-input.valid:not([type]), input.valid:not([type]):focus,
+/* input.valid:not([type]), input.valid:not([type]):focus,
 input[type=text].valid:not(.browser-default),
 input[type=text].valid:not(.browser-default):focus,
 input[type=password].valid:not(.browser-default),
@@ -6314,8 +6314,8 @@ textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-
   border-bottom: 1px solid #4CAF50;
   -webkit-box-shadow: 0 1px 0 0 #4CAF50;
           box-shadow: 0 1px 0 0 #4CAF50;
-}
-
+} */
+/* 
 input.invalid:not([type]), input.invalid:not([type]):focus,
 input[type=text].invalid:not(.browser-default),
 input[type=text].invalid:not(.browser-default):focus,
@@ -6345,9 +6345,9 @@ textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.sel
   border-bottom: 1px solid #F44336;
   -webkit-box-shadow: 0 1px 0 0 #F44336;
           box-shadow: 0 1px 0 0 #F44336;
-}
+} */
 
-input:not([type]).valid ~ .helper-text[data-success],
+/* input:not([type]).valid ~ .helper-text[data-success],
 input:not([type]):focus.valid ~ .helper-text[data-success],
 input:not([type]).invalid ~ .helper-text[data-error],
 input:not([type]):focus.invalid ~ .helper-text[data-error],
@@ -6608,7 +6608,6 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   }
 }
 
-/* Search Field */
 .input-field input[type=search] {
   display: block;
   line-height: inherit;
@@ -6657,7 +6656,6 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   transition: .3s color;
 }
 
-/* Textarea */
 textarea {
   width: 100%;
   height: 3rem;
@@ -6667,9 +6665,7 @@ textarea {
 textarea.materialize-textarea {
   line-height: normal;
   overflow-y: hidden;
-  /* prevents scroll bar flash */
   padding: .8rem 0 .8rem 0;
-  /* prevents text jump on Enter keypress */
   resize: none;
   min-height: 3rem;
   -webkit-box-sizing: border-box;
@@ -6681,13 +6677,11 @@ textarea.materialize-textarea {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  /* future version of deprecated 'word-wrap' */
   padding-top: 1.2rem;
-  /* prevents text jump on Enter keypress */
   position: absolute;
   top: 0;
   z-index: -1;
-}
+} */
 
 /* Autocomplete */
 .autocomplete-content li .highlight {
@@ -7128,22 +7122,22 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
 
 /* Select Field
    ========================================================================== */
-select {
-  display: none;
-}
+  /* select {
+    display: none;
+  }
 
-select.browser-default {
-  display: block;
-}
+  select.browser-default {
+    display: block;
+  } */
 
-select {
+/* select {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
   padding: 5px;
   border: 1px solid #f2f2f2;
   border-radius: 2px;
   height: 3rem;
-}
+} */
 
 .select-label {
   position: absolute;
@@ -7489,7 +7483,7 @@ input[type=range]::-ms-thumb {
 /***************
     Nav List
 ***************/
-.table-of-contents.fixed {
+/* .table-of-contents.fixed {
   position: fixed;
 }
 
@@ -7518,7 +7512,7 @@ input[type=range]::-ms-thumb {
   font-weight: 500;
   padding-left: 14px;
   border-left: 2px solid #ee6e73;
-}
+} */
 
 .sidenav {
   position: fixed;
