@@ -9,12 +9,12 @@
   <!-- CSS  -->
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="<?php echo asset_url(). 'css/materialize.css'?>" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="<?php echo asset_url(). 'css/style.css'?>" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
-  <?php include('navbar.php'); ?>
+  <?php include 'navbar.php';?>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -30,7 +30,7 @@
 
       </div>
     </div>
-    <div class="parallax"><img src=<?php echo asset_url(). 'images/image15.png' ?> alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src=<?php echo asset_url() . 'images/image15.png' ?> alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -52,7 +52,7 @@
         <div class="col s12 m4">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="<?php echo asset_url(). 'images/arts.jpg'?>">
+              <img class="activator" src="<?php echo asset_url() . 'images/arts.jpg' ?>">
             </div>
             <div class="card-content">
               <span class="card-title category-name activator grey-text text-darken-4">Arts and Photography</span>
@@ -62,10 +62,10 @@
         </div>
 
         <div class="col s12 m4">
-        <a href="<?php echo base_url(). 'index.php/Category_books/view_category/2';?>">
+        <a href="<?php echo base_url() . 'index.php/Category_books/view_category/2'; ?>">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="<?php echo asset_url(). 'images/bio.jpg'?>">
+              <img class="activator" src="<?php echo asset_url() . 'images/bio.jpg' ?>">
             </div>
             <div class="card-content">
               <span class="card-title category-name activator grey-text text-darken-4">Biographies & Memoirs</span>
@@ -78,7 +78,7 @@
         <div class="col s12 m4">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="<?php echo asset_url(). 'images/cook.jpg'?>">
+              <img class="activator" src="<?php echo asset_url() . 'images/cook.jpg' ?>">
             </div>
             <div class="card-content">
               <span class="card-title category-name activator grey-text text-darken-4">Cookbooks, Food and Wine</span>
@@ -90,7 +90,7 @@
         <div class="col s12 m4">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="<?php echo asset_url(). 'images/children.jpg'?>">
+              <img class="activator" src="<?php echo asset_url() . 'images/children.jpg' ?>">
             </div>
             <div class="card-content">
               <span class="card-title category-name activator grey-text text-darken-4">Children's Books</span>
@@ -102,7 +102,7 @@
         <div class="col s12 m4">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="<?php echo asset_url(). 'images/romance.jpg'?>">
+              <img class="activator" src="<?php echo asset_url() . 'images/romance.jpg' ?>">
             </div>
             <div class="card-content">
               <span class="card-title category-name activator grey-text text-darken-4">Romace</span>
@@ -114,7 +114,7 @@
         <div class="col s12 m4">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="<?php echo asset_url(). 'images/fantasy.jpg'?>">
+              <img class="activator" src="<?php echo asset_url() . 'images/fantasy.jpg' ?>">
             </div>
             <div class="card-content">
               <span class="card-title category-name activator grey-text text-darken-4">Sci-Fi and Fantasy</span>
@@ -140,7 +140,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src=<?php echo asset_url(). 'images/image7.jpg' ?> alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src=<?php echo asset_url() . 'images/image7.jpg' ?> alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -158,13 +158,13 @@
             eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
             posuere cubilia Curae;</p> -->
           <div class="horizontal-scroll">
-            <?php foreach ($most_viewed as $m_viewed_book){
-                
-            ?>
+            <?php foreach ($most_viewed as $m_viewed_book) {
+
+    ?>
             <!-- <div class="horizonatal-scroll"> -->
             <div class="card medium custom-height hover-reveal">
               <div class="card-image">
-                <img class="activator resize" src="<?php echo asset_url(). 'images/books/history.jpg'?>">
+                <img class="activator resize" src="<?php echo asset_url() . 'images/books/history.jpg' ?>">
               </div>
               <div class="card-content">
                 <span class="card-title bname">
@@ -187,7 +187,7 @@
               </div>
             </div>
             <!-- </div> -->
-            <?php } ?>
+            <?php }?>
           </div>
         </div>
       </div>
@@ -204,7 +204,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="<?php echo asset_url(). 'images/image4.jpg'?>" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="<?php echo asset_url() . 'images/image4.jpg' ?>" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer teal">
@@ -249,9 +249,9 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
-  <script src="<?php echo asset_url(). 'js/materialize.js'?>"></script>
-  <script src="<?php echo asset_url(). 'js/init.js'?>"></script>
-  <script src="<?php echo asset_url(). 'js/custom.js'?>"></script>
+  <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
+  <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
+  <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
 
 </body>
 
