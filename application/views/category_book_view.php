@@ -82,25 +82,31 @@
 
 		<div class="container">
 			<div class="section">
-                <h4> List of Books </h4>
+				<h4> List of Books </h4>
 				<table id="book_list" class="display" cellspacing="0" width="100%">
 					<thead>
 						<tr>
-                            <th></th>
+							<th></th>
 							<th>Book Name</th>
 							<th>Author</th>
 							<th>Price</th>
 						</tr>
 					</thead>
 					<tbody>
-                        <?php foreach($category_books as $m_viewed_book){ ?>
+						<?php foreach($category_books as $m_viewed_book){ ?>
 						<tr>
 							<td><img src="<?php echo asset_url() .'images/books/history.jpg'?>" style='height:200px;width:150px;'></td>
-                            <td><?php echo $m_viewed_book->book_name; ?></td>
-                            <td><?php echo $m_viewed_book->author_name; ?></td>
-                            <td><p> Rs. 1200.00</td>
-                        </tr>
-                        <?php } ?>
+							<td>
+								<?php echo $m_viewed_book->book_name; ?>
+							</td>
+							<td>
+								<?php echo $m_viewed_book->author_name; ?>
+							</td>
+							<td>
+								<p> Rs. 1200.00
+							</td>
+						</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			</div>

@@ -24,5 +24,10 @@ $(document).on('mouseenter.hover-reveal','.hover-reveal', function (e){
 
   $(document).ready( function () {
     $('#book_list').DataTable();
+
+    $('#book_list').on('click', 'tbody tr', function() {
+      console.log('API row values : ');
+      window.location.href = "http://localhost/MIBooks/index.php/Book_controller/view_book"; 
+    })
 } );
 
