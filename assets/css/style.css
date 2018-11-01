@@ -80,7 +80,9 @@ span {
 }
 
 .category-name{
+  width: 120px;
   font-size: 18px !important;
+  word-wrap: break-word !important;
 }
 
 .custom-height{
@@ -204,3 +206,7 @@ div.foo{
 .category-description{
   color: #222; font-family: 'Open Sans', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; margin: 0 0 14px; }
 
+.category-card{
+  width: 150px;
+  height: 10px;
+}
