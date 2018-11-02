@@ -50,6 +50,7 @@
 			<h5> Shop By Category </h5>
 			<div class="row">
 				<div class="col s12 m4">
+				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/1'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/arts.jpg' ?>">
@@ -59,7 +60,9 @@
 							<p><a href="#">Browse</a></p>
 						</div>
 					</div>
+					</a>
 				</div>
+
 
 				<div class="col s12 m4">
 					<a href="<?php echo base_url() . 'index.php/Category_books/view_category/2'; ?>">
@@ -72,10 +75,12 @@
 								<p><a href="#">Browse</a></p>
 							</div>
 						</div>
+						</a>
 				</div>
-				</a>
+				
 
 				<div class="col s12 m4">
+				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/3'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/cook.jpg' ?>">
@@ -85,9 +90,12 @@
 							<p><a href="#">Browse</a></p>
 						</div>
 					</div>
+					</a>
 				</div>
+				
 
 				<div class="col s12 m4">
+				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/4'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/children.jpg' ?>">
@@ -97,9 +105,11 @@
 							<p><a href="#">Browse</a></p>
 						</div>
 					</div>
+					</a>
 				</div>
 
 				<div class="col s12 m4">
+				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/5'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/romance.jpg' ?>">
@@ -109,9 +119,11 @@
 							<p><a href="#">Browse</a></p>
 						</div>
 					</div>
+					</a>
 				</div>
 
 				<div class="col s12 m4">
+				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/6'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/fantasy.jpg' ?>">
@@ -121,6 +133,7 @@
 							<p><a href="#">Browse</a></p>
 						</div>
 					</div>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -48,6 +48,7 @@
 			<h5> Shop By Category </h5>
 
 			<div class="row">
+			<?php foreach($sub_categories as $sub){ ?>
 				<div class="col s12 m3">
 				<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/2/1'?>">
 					<div class="card small category-card">
@@ -55,48 +56,13 @@
 							<img class="activator" src="<?php echo asset_url() . 'images/books/mamba.jpg' ?>">
 						</div>
 						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Memoirs</span>
+							<span class="card-title category-name activator grey-text text-darken-4"><?php echo $sub->sub_cat_name;?></span>
 							<!-- <p><a href="#">Browse</a></p> -->
 						</div>
 					</div>
 					</a>
 				</div>
-
-				<div class="col s12 m3">
-					<div class="card small category-card">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/books/fear.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Historical</span>
-							<!-- <p><a href="#">Browse</a></p> -->
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m3">
-					<div class="card small category-card">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/books/coldblood.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<p class="card-title category-name activator grey-text text-darken-4">True Crime</p>
-							<!-- <p><a href="#">Browse</a></p> -->
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m3">
-					<div class="card small category-card">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/books/moneyball.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<p class="card-title category-name activator grey-text text-darken-4">Sports & Outdoors</p>
-							<!-- <p><a href="#">Browse</a></p> -->
-						</div>
-					</div>
-				</div>
+			<?php } ?>
 			</div>
 		</div>
 	</div>

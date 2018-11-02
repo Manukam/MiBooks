@@ -8,6 +8,16 @@ class View_category_model extends CI_Model {
         $query = $this->db->query($query_string,array($category_id));
         return $query->result();  
     }
+
+    public function get_sub_categories($category_id){
+        $this->db->select('*');
+        $this->db->from('sub_category');
+        $this->db->join('category_mapping', 'sub_category.id = category_mapping.sub_category');
+        $this->db->where("category_mapping.main_category", $category_id);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
 }
 
 ?>

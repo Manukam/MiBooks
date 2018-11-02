@@ -6,6 +6,7 @@ class Category_books extends CI_Controller {
 
         $this->load->model('View_category_model');
         $data['category_books'] = $this->View_category_model->get_category_data($category_id);
+        $data['sub_categories'] = $this->View_category_model->get_sub_categories($category_id);
         $this->load->view('category_view',$data);
         }
 
