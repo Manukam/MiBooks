@@ -29,5 +29,11 @@ $(document).on('mouseenter.hover-reveal','.hover-reveal', function (e){
       // console.log('API row values : ');
       window.location.href = "http://localhost/MIBooks/index.php/Book_controller/view_book"; 
     })
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems, options);
+    });
+    $('.materialboxed').materialbox();
 } );
 

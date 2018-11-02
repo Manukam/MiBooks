@@ -134,7 +134,7 @@ body{
     ;
 }
 div.foo{
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: left;
   position: relative;
@@ -219,4 +219,37 @@ div.foo{
 
 .container{
   width: 90% !important;
+}
+
+.book-card{
+  width: 300px;
+  height: 400px !important;
+}
+
+.book-image{
+  width: 300px !important;
+  height: 300px !important;
+}
+
+.book-description{
+  font-size: 14px;
+  text-align: justify;
+  text-justify: inter-word !important;
+}
+
+.price-card{
+  /* width: 200px; */
+  display: flex;
+  /* position: inherit !important; */
+  top: 10 !important;
+  left: 0;
+  height: 100%;
+  width: 90%;
+}
+
+.hr_line { 
+  margin: 25px 0;
+  height: 1px;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
 }

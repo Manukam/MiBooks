@@ -13,10 +13,10 @@
         <span class="letter" data-letter="O">O</span>
         <span class="letter" data-letter="K">K</span>
         <span class="letter" data-letter="S">S</span> </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down">
           <li><a href="sass.html">Shop</a></li>
           <li><a href="badges.html">Blog</a></li>
-          <li><i class="material-icons">shopping_cart</i></li>
+          <li><a href="<?php echo base_url(). 'index.php/Shopping_cart_controller/view_cart';?>"><i class="material-icons">shopping_cart</i></li>
         </ul>
       </div>
   </nav>
