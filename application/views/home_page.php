@@ -173,7 +173,7 @@
 						<!-- <div class="horizonatal-scroll"> -->
 						<div class="card medium custom-height hover-reveal">
 							<div class="card-image">
-								<img class="activator resize" src="<?php echo asset_url() . 'images/books/history.jpg' ?>">
+								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $m_viewed_book->id .'.jpg' ?>">
 							</div>
 							<div class="card-content">
 								<span class="card-title bname">
@@ -182,7 +182,7 @@
 									<?php echo $m_viewed_book->author_name; ?></span>
 
 								<hr>
-								<i class="material-icons">attach_money</i>35.00
+								<i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?>
 								<p><a href="#">Add to Cart</a></p>
 							</div>
 							<div class="card-reveal">

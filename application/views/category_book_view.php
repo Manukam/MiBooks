@@ -53,7 +53,7 @@
     ?>
 				<div class="card medium custom-height hover-reveal">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/history.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname">
@@ -62,7 +62,7 @@
 							<?php echo $m_viewed_book->author_name; ?></span>
 
 						<hr>
-						<i class="material-icons">attach_money</i>35.00
+						<i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?>
 						<p><a href="#">Add to Cart</a></p>
 					</div>
 					<div class="card-reveal">
@@ -94,8 +94,8 @@
 					</thead>
 					<tbody>
 						<?php foreach($category_books as $m_viewed_book){ ?>
-						<tr>
-							<td><img src="<?php echo asset_url() .'images/books/history.jpg'?>" style='height:200px;width:150px;'></td>
+						<tr id = "<?php echo $m_viewed_book->id;?>">
+							<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id.'.jpg'?>" style='height:200px;width:150px;'></td>
 							<td>
 								<?php echo $m_viewed_book->book_name; ?>
 							</td>
@@ -103,7 +103,7 @@
 								<?php echo $m_viewed_book->author_name; ?>
 							</td>
 							<td>
-								<p> Rs. 1200.00
+								<p><i class="material-icons">attach_money</i> <?php echo $m_viewed_book->price; ?>
 							</td>
 						</tr>
 						<?php } ?>

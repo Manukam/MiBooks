@@ -16,7 +16,7 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="sass.html">Shop</a></li>
           <li><a href="badges.html">Blog</a></li>
-          <li><a href="<?php echo base_url(). 'index.php/Shopping_cart_controller/view_cart';?>"><i class="material-icons">shopping_cart</i></li>
+          <li><a href="<?php echo base_url(). 'index.php/Shopping_cart_controller/view_cart';?>"><i class="material-icons">shopping_cart</i></a></li>
         </ul>
       </div>
   </nav>

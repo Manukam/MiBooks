@@ -17,11 +17,15 @@
 	<?php include('navbar.php');?>
 	<div class="row">
 		<div class="col s12 m3">
-			<img class="materialboxed" width="300" src="<?php echo asset_url() . 'images/books/mamba.jpg' ?>">
+			<img class="materialboxed" width="300" src="<?php echo asset_url() . 'images/books/'.$book_details[0]->id.'.jpg' ?>">
 		</div>
 		<div class="col s12 m6">
-			<h5>The Mamba Mentality: How I Play </h5>
-			<h6> by Manuka Maduranga </h6>
+			<h5>
+				<?php echo $book_details[0]->book_name; ?>
+			</h5>
+			<h6>
+				<?php echo $book_details[0]->author_name;?>
+			</h6>
 			<hr>
 
 			<p class="book-description"> The first book from the basketball superstar Kobe Bryant―a lavish, deep dive inside the
@@ -72,7 +76,7 @@
     ?>
 				<div class="card medium custom-height hover-reveal">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/history.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname">

@@ -50,7 +50,7 @@
 			<div class="row">
 			<?php foreach($sub_categories as $sub){ ?>
 				<div class="col s12 m3">
-				<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/2/1'?>">
+				<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
 					<div class="card small category-card">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/books/mamba.jpg' ?>">
@@ -91,7 +91,7 @@
     ?>
 				<div class="card medium custom-height hover-reveal">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/history.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname">
