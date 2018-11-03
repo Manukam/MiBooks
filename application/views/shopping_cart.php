@@ -25,13 +25,15 @@
 			<ol class="ui-list shopping-cart--list" id="shopping-cart--list">
 
 				<!-- <script id="shopping-cart--list-item-template" type="text/template"> -->
+				<?php foreach($shopping_items as $items){ 
+					foreach($items as $item) {?>
 					<li class="_grid shopping-cart--list-item">
           <div class="_column product-image">
             <img class="product-image" src="<?php echo asset_url(). 'images/books/fear.jpg' ?>" alt="Item image" />
           </div>
           <div class="_column product-info">
-            <h4 class="product-name">Book name</h4>
-            <p class="product-desc">lala</p>
+            <h4 class="product-name"><?php echo $item->book_name?></h4>
+            <p class="product-desc"><?php echo $item->author_name;?></p>
             <div class="price product-single-price">1234</div>
           </div>
           <div class="_column product-modifiers">
@@ -44,6 +46,7 @@
             <div class="price product-total-price">$0.00</div>
           </div>
         </li>
+				<?php }} ?>
       <!-- </script> -->
 
 			</ol>

@@ -57,8 +57,8 @@
 					</div>
 
 				</div>
-				<div class="card-action">
-					<a class="waves-effect waves-light btn center"><i class="material-icons left">cloud</i>button</a>
+				<div class="card-action " id="<?php  echo $book_details[0]->id;?>">
+					<a class="waves-effect waves-light btn center" href="<?php echo base_url() .'index.php/Shopping_cart_controller/add_to_cart/'. $book_details[0]->id; ?>">Add to Cart</a>
 				</div>
 			</div>
 		</div>
