@@ -48,7 +48,7 @@
 					<!-- <p><a href="#">Browse</a></p> -->
 					<label>Qty</label>
 					<div class="input-field col s12 left">
-						<select>
+						<select id="book_quantity">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -57,8 +57,8 @@
 					</div>
 
 				</div>
-				<div class="card-action " id="<?php  echo $book_details[0]->id;?>">
-					<a class="waves-effect waves-light btn center" href="<?php echo base_url() .'index.php/Shopping_cart_controller/add_to_cart/'. $book_details[0]->id; ?>">Add to Cart</a>
+				<div class="card-action cart-btn" id="<?php  echo $book_details[0]->id;?>">
+					<a class="waves-effect waves-light btn center">Add to Cart</a>
 				</div>
 			</div>
 		</div>

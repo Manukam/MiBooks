@@ -38,18 +38,21 @@ $(document).ready(function () {
 		var id = table.row(this).id();
 		console.log(id);
 		window.location.href = "http://localhost/MIBooks/index.php/Book_controller/view_book/" + id;
-	})
+	});
 
 	document.addEventListener('DOMContentLoaded', function () {
 		var elems = document.querySelectorAll('.materialboxed');
 		var instances = M.Materialbox.init(elems, options);
 	});
-  $('.materialboxed').materialbox();
-  
+	$('.materialboxed').materialbox();
 
- $('.cart-btn').on('çlick',function(){
-  console.log('its working');
-  var book_id = document.getElementsByClassName("cart-btn")[0].id;
-  window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id;
- });
+
+	$('.cart-btn').on('click', function () {
+		// console.log('its working');
+		var book_id = document.getElementsByClassName("cart-btn")[0].id;
+		var e = document.getElementById("book_quantity");
+		var quantity = e.options[e.selectedIndex].value;
+		// console.log(book_id);
+		window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity;
+	});
 });
