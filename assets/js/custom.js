@@ -55,4 +55,11 @@ $(document).ready(function () {
 		// console.log(book_id);
 		window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity;
 	});
+
+	
 });
+
+function removeItem(book_id){
+	console.log(book_id);
+	window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_cart_item/"+book_id;
+}

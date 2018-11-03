@@ -51,7 +51,7 @@
 							</div>
 							<button class="_btn _column product-plus">&plus;</button>
 						</div>
-						<button class="_btn entypo-trash product-remove">Remove</button>
+						<button class="_btn entypo-trash product-remove" id='<?php echo $item->id;?>' onClick="removeItem(this.id)">Remove</button>
 						<div class="price product-total-price">$0.00</div>
 					</div>
 				</li>
@@ -85,5 +85,9 @@
 		</section>
 	</div>
 </body>
-
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
+	<script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
+	<script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
+	<script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
 </html>

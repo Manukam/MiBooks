@@ -49,5 +49,13 @@ class Shopping_cart_controller extends CI_Controller {
         }
         return $shopping_list;
     }
+
+
+    public function remove_cart_item($book_id){
+        $added_books = $this->session->userdata('cart');
+        unset($added_books[$book_id]);
+        $this->session->set_userdata('cart',$added_books);
+        $this->view_cart();
+    }
 }
 ?>
