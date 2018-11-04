@@ -128,7 +128,7 @@
 											<!-- <div class="horizonatal-scroll"> -->
 											<div class="card medium custom-height hover-reveal card-1">
 												<div class="card-image">
-													<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $m_viewed_book->id .'.jpg' ?>">
+													<img class="activator resize" src="<?php echo asset_url() . 'images/books/' . $m_viewed_book->id . '.jpg' ?>">
 												</div>
 												<div class="card-content">
 													<span class="card-title bname">
@@ -145,9 +145,9 @@
 											</div>
 											<!-- </div> -->
 											<?php }?>
-											
+
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -170,21 +170,21 @@
 
 
 						<div class="page" id="p2">
-										<p> Halo halo </p>
-
+							
 						</div>
+					<!-- </div> -->
 
 
 
 
-						<!-- <div class="page" id="p3">
+					<!-- <div class="page" id="p3">
 							<section class="icon fa fa-rocket"><span class="title">Rocket</span></section>
 						</div> -->
 
 
 
 
-						<!-- <div class="page" id="p4">
+					<!-- <div class="page" id="p4">
 							<section class="icon fa fa-dribbble">
 								<span class="title">Dribbble</span>
 								<p class="hint">
@@ -197,7 +197,7 @@
 
 
 
-						<!-- <div class="page" id="p5">
+					<!-- <div class="page" id="p5">
 							<section class="icon fa fa-plus-circle">
 								<span class="title">More</span>
 								<p class="hint">
@@ -207,10 +207,10 @@
 								</p>
 							</section>
 						</div> -->
-					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
@@ -255,6 +255,19 @@
 		}
 	});
 
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
 </script>
 
 </html>
