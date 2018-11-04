@@ -12,6 +12,8 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 
 <body>
@@ -50,18 +52,18 @@
 							<a href="#t1">
 								<li class="icon fa fa-chart-bar" id="uno"></li>
 							</a>
-							<a href="#t2">
+							<!-- <a href="#t2">
 								<li class="icon fa fa-keyboard" id="dos"></li>
-							</a>
-							<a href="#t3">
-								<li class="icon fa fa-rocket" id="tres"></li>
-							</a>
-							<!-- <a href="#t4">
-								<li class="icon fa fa-dribbble" id="cuatro"></li>
 							</a> -->
-							<a href="#t5">
-								<li class="icon fa fa-plus-circle" id="cinco"></li>
+							<!-- <a href="#t3">
+								<li class="icon fa fa-rocket" id="tres"></li>
+							</a> -->
+							<a href="#t2">
+								<li class="icon fa fa-plus-circle" id="dos"></li>
 							</a>
+							<!-- <a href="#t5">
+								<li class="" id="cinco"></li>
+							</a> -->
 						</ul>
 
 						<div class="page" id="p1">
@@ -119,6 +121,7 @@
 
 										<div class="horizontal-scroll-admin">
 											<p class="admin-heading">Most Viewed Books</p>
+											<!-- <div id="rightArrow"></div> -->
 											<?php foreach ($most_viewed as $m_viewed_book) {
 
     ?>
@@ -142,21 +145,23 @@
 											</div>
 											<!-- </div> -->
 											<?php }?>
+											
 										</div>
+										
 									</div>
 								</div>
 							</div>
 
 							<div class="section">
 								<div class="row">
-									
+
 									<div class="chart-view">
-									<p class="admin-heading"> Most Viewed Catagories </p>
-									<div class="card-chart card-1">
-									<canvas id="myChart"></canvas>	</div>
+										<p class="admin-heading"> Most Viewed Catagories </p>
+										<div class="card-chart card-1">
+											<canvas id="myChart"></canvas> </div>
+									</div>
 								</div>
 							</div>
-						</div>
 						</div>
 
 
@@ -165,21 +170,21 @@
 
 
 						<div class="page" id="p2">
-
+										<p> Halo halo </p>
 
 						</div>
 
 
 
 
-						<div class="page" id="p3">
+						<!-- <div class="page" id="p3">
 							<section class="icon fa fa-rocket"><span class="title">Rocket</span></section>
-						</div>
+						</div> -->
 
 
 
 
-						<div class="page" id="p4">
+						<!-- <div class="page" id="p4">
 							<section class="icon fa fa-dribbble">
 								<span class="title">Dribbble</span>
 								<p class="hint">
@@ -188,11 +193,11 @@
 								</p>
 								<p class="hint">Already invited by <a href="http://www.dribbble.com/mrpeters" target="_blank">Stan Peters</a></p>
 							</section>
-						</div>
+						</div> -->
 
 
 
-						<div class="page" id="p5">
+						<!-- <div class="page" id="p5">
 							<section class="icon fa fa-plus-circle">
 								<span class="title">More</span>
 								<p class="hint">
@@ -201,7 +206,7 @@
 										navigation"</a>
 								</p>
 							</section>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -210,42 +215,46 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 <script>
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        labels: ["Biographies & Memoirs", "Romance", "Children's Books", "Sci-Fi & Fantasy", "Arts & Photography", "Cookbooks"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
+	var ctx = document.getElementById("myChart");
+	var myChart = new Chart(ctx, {
+		type: 'doughnut',
+		data: {
+			labels: ["Biographies & Memoirs", "Romance", "Children's Books", "Sci-Fi & Fantasy", "Arts & Photography",
+				"Cookbooks"
+			],
+			datasets: [{
+				label: '# of Votes',
+				data: [12, 19, 3, 5, 2, 3],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}
+		}
+	});
+
 </script>
+
 </html>
