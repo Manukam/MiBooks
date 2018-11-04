@@ -56,7 +56,8 @@ $(document).ready(function () {
 		window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity;
 	});
 
-	
+
+
 });
 
 function removeItem(book_id){
