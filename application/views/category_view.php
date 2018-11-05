@@ -95,14 +95,14 @@
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
-						<span class="card-title bname">
+						<span class="card-title bname card-text">
 							<?php echo $m_viewed_book->book_name; ?></span>
-						<span class="card-content ">
+						<span class="card-content card-text">
 							<?php echo $m_viewed_book->author_name; ?></span>
 
 						<hr>
 						<i class="material-icons">attach_money</i>35.00
-						<p><a href="#">Add to Cart</a></p>
+						<p class="card-text"><a href="#">Add to Cart</a></p>
 					</div>
 					
 				</div>

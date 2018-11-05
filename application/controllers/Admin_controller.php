@@ -2,8 +2,18 @@
 
 class Admin_controller extends CI_Controller {
 
-    public function login(){
+    public function login_view(){
         $this->load->view("admin_login");
+    }
+
+    public function login(){
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        if($username === 'admin' && $password === '1234'){
+            $this->show_dashboard();
+        }else{
+            alert("wrong info");
+        }
     }
 
     public function show_dashboard(){

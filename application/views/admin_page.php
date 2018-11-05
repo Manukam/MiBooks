@@ -14,6 +14,7 @@
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -176,10 +177,10 @@
 								<main>
 
 									<input id="tab1" type="radio" name="tabs" checked>
-									<label for="tab1">Add a Book</label>
+									<label id="book_form" for="tab1">Add a Book</label>
 
 									<input id="tab2" type="radio" name="tabs">
-									<label for="tab2">Add a Category</label>
+									<label id="category_form" for="tab2">Add a Category</label>
 
 									<!-- <input id="tab3" type="radio" name="tabs">
 									<label for="tab3">Stack Overflow</label>
@@ -188,15 +189,56 @@
 									<label for="tab4">Bitbucket</label> -->
 
 									<section id="content1">
-										<p>
-											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
-											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
-											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
-											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-										</p>
-										<p>
-											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-										</p>
+										<div class="row">
+											<div class="input-field col s12 m3">
+												<div class="wrapper">
+													<div class="box">
+														<div class="js--image-preview"></div>
+														<div class="upload-options">
+															<label>
+																<input type="file" class="image-upload" accept="image/*" />
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<form class="col s12 m7">
+												<div class="row">
+													<div class="input-field col s12">
+														<input placeholder="Book Name" id="first_name" type="text" class="validate custom_form">
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12 m7">
+														<select class="js-example-basic-single" >
+															<option value="" disabled selected>Choose Author</option>
+															<option value="1">J.K Rowling</option>
+															<option value="2">Stephen King</option>
+															<option value="3">Stephen Hawking</option>
+														</select>
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12 m7">
+														<select class="js-example-basic-single" >
+															<option value="" disabled selected>Book Category</option>
+															<option value="1">Romance</option>
+															<option value="2">Biography</option>
+															<option value="3">Sci-Fi & Fantasy</option>
+														</select>
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+											</form>
+										</div>
+
+
+
+
+
 									</section>
 
 									<section id="content2">
@@ -211,55 +253,9 @@
 										</p>
 									</section>
 
-									<!-- <section id="content3">
-										<p>
-											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
-											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
-											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
-											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-										</p>
-										<p>
-											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-										</p>
-									</section> -->
-
-									<!-- <section id="content4">
-										<p>
-											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-										</p>
-										<p>
-											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
-											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
-											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
-											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-										</p>
-									</section> -->
-
 								</main>
 							</div>
 						</div>
-						<!-- </div> -->
-
-
-
-
-						<!-- <div class="page" id="p3">
-							<section class="icon fa fa-rocket"><span class="title">Rocket</span></section>
-						</div> -->
-
-
-
-
-						<!-- <div class="page" id="p4">
-							<section class="icon fa fa-dribbble">
-								<span class="title">Dribbble</span>
-								<p class="hint">
-									<a href="https://dribbble.com/albertohartzet" target="_blank">Im ready to play, <span class="hint line-trough">invite
-											me </span> find me</a>
-								</p>
-								<p class="hint">Already invited by <a href="http://www.dribbble.com/mrpeters" target="_blank">Stan Peters</a></p>
-							</section>
-						</div> -->
 
 
 
@@ -281,7 +277,11 @@
 		</div>
 
 </body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="<?php echo asset_url() . 'js/admin_page.js' ?>"></script>
+
 <script>
 	var ctx = document.getElementById("myChart");
 	var data = new Array();

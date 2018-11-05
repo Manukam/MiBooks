@@ -55,10 +55,10 @@
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
-					<div class="card-content">
+					<div class="card-content card-text">
 						<span class="card-title bname">
 							<?php echo $m_viewed_book->book_name; ?></span>
-						<span class="card-content ">
+						<span class="card-content card-text">
 							<?php echo $m_viewed_book->author_name; ?></span>
 
 						<hr>

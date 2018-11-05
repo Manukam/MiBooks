@@ -16,7 +16,7 @@
 						<li><a class="white-text" href="#!">About Us</a></li>
 						<li><a class="white-text" href="#!">Sitemap</a></li>
 						<li><a class="white-text" href="#!">Bookmarks</a></li>
-						<li><a class="white-text" href="#!">Admin Login</a></li>
+						<li><a class="white-text" href="<?php echo base_url(). 'index.php/Admin_controller/login' ?>">Admin Login</a></li>
 					</ul>
 				</div>
 				<div class="col l3 s12">

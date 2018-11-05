@@ -1,14 +1,14 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
 <link href="<?php echo asset_url() . 'css/admin_login.css'?>" rel='stylesheet' type='text/css'>
 
-<form method="post" action="index.html">
+<form method="post" action="<?php echo base_url() . 'index.php/Admin_controller/login/' ?>">
 	<div class="box">
 		<h1>Admin Login</h1>
 
-		<input type="email" name="email" placeholder="email" 
+		<input type="text" name="username" placeholder="email" 
 		 class="email" />
 
-		<input type="password" name="email" placeholder="email" 
+		<input type="password" name="password" placeholder="email" 
 		 class="email" />
 
 		<!-- <a href="#">
@@ -16,7 +16,7 @@
 		</a> End Btn -->
 
 		<a href="#">
-			<div id="btn2">Login</div>
+			<div id="btn2"><input type ="submit"></div>
 		</a> <!-- End Btn2 -->
 
 	</div> <!-- End Box -->

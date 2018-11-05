@@ -67,7 +67,7 @@ footer.page-footer {
   margin: 0;
 }
 
-span {
+.card-text {
 
     white-space: nowrap;
     overflow: hidden !important;

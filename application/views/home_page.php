@@ -168,15 +168,15 @@
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $m_viewed_book->id .'.jpg' ?>">
 							</div>
-							<div class="card-content">
-								<span class="card-title bname">
+							<div class="card-content ">
+								<span class="card-title bname card-text">
 									<?php echo $m_viewed_book->book_name; ?></span>
-								<span class="card-content ">
+								<span class="card-content card-text">
 									<?php echo $m_viewed_book->author_name; ?></span>
 
 								<hr>
-								<span><i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?> </span>
-								<p><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p>
+								<span class="card-text"><i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?> </span>
+								<p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p>
 							</div>
 							<!-- <div class="card-reveal">
 								<span class="card-title grey-text text-darken-4">
