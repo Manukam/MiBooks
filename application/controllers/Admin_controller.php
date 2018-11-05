@@ -12,7 +12,7 @@ class Admin_controller extends CI_Controller {
         if($username === 'admin' && $password === '1234'){
             $this->show_dashboard();
         }else{
-            alert("wrong info");
+            // alert("wrong info");
         }
     }
 
