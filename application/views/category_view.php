@@ -89,8 +89,8 @@
 			<div class="horizontal-scroll">
 				<?php foreach ($category_books as $m_viewed_book) {
 
-    ?>
-				<div class="card medium custom-height hover-reveal">
+    ?>          <a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">
+				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
@@ -104,17 +104,9 @@
 						<i class="material-icons">attach_money</i>35.00
 						<p><a href="#">Add to Cart</a></p>
 					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">
-							<?php echo $m_viewed_book->book_name; ?><i class="material-icons right">close</i></span>
-						<p>Here is some more information about this product that is only revealed once hover it.</p>
-						<p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit
-							petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
-							summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas
-							omittam ad nam. Eu per erant putent, eu has suas sale.</p>
-					</div>
+					
 				</div>
-				
+				</a>
 				<?php }?>
 				</div>
 			</div>

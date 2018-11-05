@@ -41,7 +41,7 @@
 						<p class="product-desc">
 							<?php echo $item->author_name;?>
 						</p>
-						<div class="price product-single-price">1234</div>
+						<!-- <div class="price product-single-price">1234</div> -->
 					</div>
 					<div class="_column product-modifiers">
 						<div class="_grid">
@@ -89,8 +89,8 @@
 </body>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
 <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
-
 </html>

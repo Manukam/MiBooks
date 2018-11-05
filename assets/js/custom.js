@@ -2,16 +2,16 @@ $(document).on('mouseenter.hover-reveal', '.hover-reveal', function (e) {
 	$(e.target).closest('.card').css('overflow', 'hidden');
 	$(this).find('.card-content>span').attr('style', 'color: rgba(0,0,0,0) !important');
 	$(this).find('.card-reveal').css({
-			display: 'block'
-		})
+		display: 'block'
+	})
 		.velocity("stop", false)
 		.velocity({
 			translateY: '-100%'
 		}, {
-			duration: 300,
-			queue: false,
-			easing: 'easeInOutQuad'
-		});
+				duration: 300,
+				queue: false,
+				easing: 'easeInOutQuad'
+			});
 });
 
 // Make Reveal animate down and display none when mouseleave
@@ -19,15 +19,15 @@ $(document).on('mouseleave.hover-reveal', '.hover-reveal', function (e) {
 	$(this).find('.card-reveal').velocity({
 		translateY: 0
 	}, {
-		duration: 225,
-		queue: false,
-		easing: 'easeInOutQuad',
-		complete: function () {
-			$(this).css({
-				display: 'none'
-			});
-		}
-	});
+			duration: 225,
+			queue: false,
+			easing: 'easeInOutQuad',
+			complete: function () {
+				$(this).css({
+					display: 'none'
+				});
+			}
+		});
 	$(this).find('.card-content>span').attr('style', '');
 });
 
@@ -53,14 +53,38 @@ $(document).ready(function () {
 		var e = document.getElementById("book_quantity");
 		var quantity = e.options[e.selectedIndex].value;
 		// console.log(book_id);
-		window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity;
+		// window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity;
+		// swal("Succsess!", "Book has been added to Cart!", "success");
+		$.ajax({
+			type: "POST",
+			url: "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity,
+			// data: data,
+			success: function (data) {
+				swal("Succsess!", "Book has been added to Cart!", "success");
+			},
+			error: function (XHR, status, response) {
+				console.log(status + ' --- ' + ' --- ' + response);
+			}
+		});
 	});
 
 
 
 });
 
-function removeItem(book_id){
-	console.log(book_id);
-	window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_cart_item/"+book_id;
+function removeItem(book_id) {
+	// console.log(book_id);
+	// window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_cart_item/" + book_id;
+	$.ajax({
+		type: "POST",
+		url: "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_cart_item/" + book_id,
+		// data: data,
+		success: function (data) {
+			location.reload();	
+		},
+		error: function (XHR, status, response) {
+			console.log(status + ' --- ' + ' --- ' + response);
+		}
+	});
+	swal("Succsess!", "Book has been removed from the Cart!", "success");
 }

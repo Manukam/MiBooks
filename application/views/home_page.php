@@ -158,19 +158,13 @@
 				<div class="col s12 center">
 					<h3><i class="mdi-content-send brown-text"></i></h3>
 					<h4>Most Viewed Books</h4>
-					<!-- <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
-            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
-            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
-            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
-            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p> -->
 					<div class="horizontal-scroll">
 						<?php foreach ($most_viewed as $m_viewed_book) {
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<div class="card medium custom-height hover-reveal">
+						<a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">
+						<div class="card medium custom-height card-1">
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $m_viewed_book->id .'.jpg' ?>">
 							</div>
@@ -181,10 +175,10 @@
 									<?php echo $m_viewed_book->author_name; ?></span>
 
 								<hr>
-								<i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?>
-								<p><a href="#">Add to Cart</a></p>
+								<span><i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?> </span>
+								<p><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p>
 							</div>
-							<div class="card-reveal">
+							<!-- <div class="card-reveal">
 								<span class="card-title grey-text text-darken-4">
 									<?php echo $m_viewed_book->book_name; ?><i class="material-icons right">close</i></span>
 								<p>Here is some more information about this product that is only revealed once hover it.</p>
@@ -192,8 +186,8 @@
 									petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
 									summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas
 									omittam ad nam. Eu per erant putent, eu has suas sale.</p>
-							</div>
-						</div>
+							</div> -->
+						</div> </a>
 						<!-- </div> -->
 						<?php }?>
 					</div>

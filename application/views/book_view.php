@@ -74,7 +74,7 @@
 				<?php foreach ($category_books as $m_viewed_book) {
 
     ?>
-				<div class="card medium custom-height hover-reveal">
+				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
 					</div>
@@ -88,7 +88,7 @@
 						<i class="material-icons">attach_money</i>35.00
 						<p><a href="#">Add to Cart</a></p>
 					</div>
-					<div class="card-reveal">
+					<!-- <div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">
 							<?php echo $m_viewed_book->book_name; ?><i class="material-icons right">close</i></span>
 						<p>Here is some more information about this product that is only revealed once hover it.</p>
@@ -96,7 +96,7 @@
 							petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
 							summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas
 							omittam ad nam. Eu per erant putent, eu has suas sale.</p>
-					</div>
+					</div> -->
 				</div>
 				<?php }?>
 			</div>
@@ -108,6 +108,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
 <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>

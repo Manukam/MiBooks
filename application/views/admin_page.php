@@ -34,7 +34,9 @@
 						<li><i class="icon far fa-user"></i></li>
 					</ul>
 				</div>
+			</div>
 		</nav>
+
 	</div>
 
 
@@ -61,9 +63,9 @@
 							<a href="#t2">
 								<li class="icon fa fa-plus-circle" id="dos"></li>
 							</a>
-							<!-- <a href="#t5">
-								<li class="" id="cinco"></li>
-							</a> -->
+							<a href="#t5">
+								<i class="icon fas fa-search"></i>
+							</a>
 						</ul>
 
 						<div class="page" id="p1">
@@ -126,7 +128,7 @@
 
     ?>
 											<!-- <div class="horizonatal-scroll"> -->
-											<div class="card medium custom-height hover-reveal card-1">
+											<div class="card medium custom-height card-1">
 												<div class="card-image">
 													<img class="activator resize" src="<?php echo asset_url() . 'images/books/' . $m_viewed_book->id . '.jpg' ?>">
 												</div>
@@ -170,21 +172,85 @@
 
 
 						<div class="page" id="p2">
-							
+							<div class="card large form-card-custom card-1">
+								<main>
+
+									<input id="tab1" type="radio" name="tabs" checked>
+									<label for="tab1">Add a Book</label>
+
+									<input id="tab2" type="radio" name="tabs">
+									<label for="tab2">Add a Category</label>
+
+									<!-- <input id="tab3" type="radio" name="tabs">
+									<label for="tab3">Stack Overflow</label>
+
+									<input id="tab4" type="radio" name="tabs">
+									<label for="tab4">Bitbucket</label> -->
+
+									<section id="content1">
+										<p>
+											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
+											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
+											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
+											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+										</p>
+										<p>
+											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
+										</p>
+									</section>
+
+									<section id="content2">
+										<p>
+											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
+										</p>
+										<p>
+											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
+											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
+											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
+											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+										</p>
+									</section>
+
+									<!-- <section id="content3">
+										<p>
+											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
+											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
+											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
+											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+										</p>
+										<p>
+											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
+										</p>
+									</section> -->
+
+									<!-- <section id="content4">
+										<p>
+											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
+										</p>
+										<p>
+											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
+											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
+											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
+											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+										</p>
+									</section> -->
+
+								</main>
+							</div>
 						</div>
-					<!-- </div> -->
+						<!-- </div> -->
 
 
 
 
-					<!-- <div class="page" id="p3">
+						<!-- <div class="page" id="p3">
 							<section class="icon fa fa-rocket"><span class="title">Rocket</span></section>
 						</div> -->
 
 
 
 
-					<!-- <div class="page" id="p4">
+						<!-- <div class="page" id="p4">
 							<section class="icon fa fa-dribbble">
 								<span class="title">Dribbble</span>
 								<p class="hint">
@@ -197,7 +263,7 @@
 
 
 
-					<!-- <div class="page" id="p5">
+						<div class="page" id="p5">
 							<section class="icon fa fa-plus-circle">
 								<span class="title">More</span>
 								<p class="hint">
@@ -206,25 +272,31 @@
 										navigation"</a>
 								</p>
 							</section>
-						</div> -->
+						</div>
+					</div>
 				</div>
 			</div>
+
+
 		</div>
-	</div>
-	</div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 <script>
 	var ctx = document.getElementById("myChart");
+	var data = new Array();
+	<?php foreach($most_viewed_categories as $key => $val){ ?>
+	data.push('<?php echo $val; ?>');
+	<?php } ?>
 	var myChart = new Chart(ctx, {
 		type: 'doughnut',
 		data: {
-			labels: ["Biographies & Memoirs", "Romance", "Children's Books", "Sci-Fi & Fantasy", "Arts & Photography",
-				"Cookbooks"
+			labels: ["Arts & Photography", "Biographies & Memoirs", "Cookbooks $ Wine", "Children's Books", "Romance",
+				"Sci-Fi & Fantasy"
 			],
 			datasets: [{
 				label: '# of Votes',
-				data: [12, 19, 3, 5, 2, 3],
+				data: data,
 				backgroundColor: [
 					'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)',
@@ -248,7 +320,18 @@
 			scales: {
 				yAxes: [{
 					ticks: {
-						beginAtZero: true
+						display: false
+					},
+					gridLines: {
+						display: false
+					}
+				}],
+				xAxes: [{
+					gridLines: {
+						display: false
+					},
+					ticks: {
+						display: false
 					}
 				}]
 			}

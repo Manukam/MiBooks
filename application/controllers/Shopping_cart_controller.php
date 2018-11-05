@@ -33,6 +33,7 @@ class Shopping_cart_controller extends CI_Controller {
         
         $this->session->set_userdata('cart',$shopping_items);
         // var_dump ( $this->session->userdata('cart'));
+        // $this->load->view("book_view",$book_id);
     }
 
     public function no_dupes(array $input_array) {
