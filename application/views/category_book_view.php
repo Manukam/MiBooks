@@ -75,8 +75,9 @@
 							omittam ad nam. Eu per erant putent, eu has suas sale.</p>
 					</div>
 				</div>
-				<!-- </div> -->
+				
 				<?php }?>
+				</div>
 			</div>
 		</div>
 
@@ -111,6 +112,8 @@
 				</table>
 			</div>
 		</div>
+
+		<?php include("footer.php"); ?>
 </body>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>

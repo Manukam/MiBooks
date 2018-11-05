@@ -48,21 +48,22 @@
 			<h5> Shop By Category </h5>
 
 			<div class="row">
-			<?php foreach($sub_categories as $sub){ ?>
+				<?php foreach($sub_categories as $sub){ ?>
 				<div class="col s12 m3">
-				<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
-					<div class="card small category-card">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/books/mamba.jpg' ?>">
+					<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
+						<div class="card small category-card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="<?php echo asset_url() . 'images/books/mamba.jpg' ?>">
+							</div>
+							<div class="card-content">
+								<span class="card-title category-name activator grey-text text-darken-4">
+									<?php echo $sub->sub_cat_name;?></span>
+								<!-- <p><a href="#">Browse</a></p> -->
+							</div>
 						</div>
-						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4"><?php echo $sub->sub_cat_name;?></span>
-							<!-- <p><a href="#">Browse</a></p> -->
-						</div>
-					</div>
 					</a>
 				</div>
-			<?php } ?>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -113,10 +114,23 @@
 							omittam ad nam. Eu per erant putent, eu has suas sale.</p>
 					</div>
 				</div>
-				<!-- </div> -->
+				
 				<?php }?>
+				</div>
 			</div>
 		</div>
+		<div class="parallax-container valign-wrapper">
+		<div class="section no-pad-bot">
+			<div class="container">
+				<div class="row center">
+					<!-- <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5> -->
+				</div>
+			</div>
+		</div>
+		<div class="parallax"><img src="<?php echo asset_url() . 'images/image4.jpg' ?>" alt="Unsplashed background img 3"></div>
+	</div>
+
+		<?php include('footer.php');  ?>
 </body>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
