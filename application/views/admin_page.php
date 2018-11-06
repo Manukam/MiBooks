@@ -206,29 +206,61 @@
 											<form class="col s12 m7">
 												<div class="row">
 													<div class="input-field col s12">
-														<input placeholder="Book Name" id="first_name" type="text" class="validate custom_form">
+														<input placeholder="Book Name" id="book_name" type="text" class="validate custom_form">
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<select class="js-example-basic-single" >
+														<select class="author-select" id="author_select">
 															<option value="" disabled selected>Choose Author</option>
-															<option value="1">J.K Rowling</option>
-															<option value="2">Stephen King</option>
-															<option value="3">Stephen Hawking</option>
+															<?php foreach($authors as $author){ ?>
+															<option value="<?php echo $author->id; ?>">
+																<?php echo $author->author_name;?>
+															</option>
+															<?php } ?>
 														</select>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<select class="js-example-basic-single" >
+														<select class="js-example-basic-single book-cat-select" id="book-cat-select">
 															<option value="" disabled selected>Book Category</option>
-															<option value="1">Romance</option>
-															<option value="2">Biography</option>
-															<option value="3">Sci-Fi & Fantasy</option>
+															<?php foreach($book_categories as $category){ ?>
+															<option value="<?php echo $category->id; ?>">
+																<?php echo $category->cat_name;?>
+															</option>
+															<?php } ?>
 														</select>
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12 m7">
+														<select disabled class="js-example-basic-single sub-book" id="sub-book">
+															<option value="" disabled selected>Book Sub Category</option>
+															
+														</select>
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12 m7">
+														<textarea placeholder="Book Description" class="custom_form" id="book_description">
+														</textarea>
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12 m7">
+														<input type="text" placeholder="Book Price">
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12 m7">
+														<input type="button" value="Add Book!" class="add-book-btn">
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
@@ -351,6 +383,7 @@
 		document.getElementById(cityName).style.display = "block";
 		evt.currentTarget.className += " active";
 	}
+
 </script>
 
 </html>
