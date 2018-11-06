@@ -317,6 +317,7 @@
 <script src="<?php echo asset_url() . 'js/selectjs.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/admin_page.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/jQuery.tagify.min.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/sweetalert.min.js' ?>"></script>	
 
 <script>
 	var ctx = document.getElementById("myChart");

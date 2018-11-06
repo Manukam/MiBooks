@@ -109,9 +109,8 @@ $(document).ready(function () {
 					data: cat_data,
 
 					success: function (data) {
-						console.log(data);
-
-						// result = (data);
+						// console.log(data);
+						swal("Succsess!", "Category has been added!", "success");
 					},
 					error: function (XHR, status, response) {
 						console.log(status + ' --- ' + ' --- ' + response);

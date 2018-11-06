@@ -48,22 +48,25 @@
         </div> -->
 			<h5> Shop By Category </h5>
 			<div class="row">
+			<?php foreach($categories as $category){ ?>
 				<div class="col s12 m4">
-				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/1'; ?>">
+				
+				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/' . $category->id;?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/arts.jpg' ?>">
 						</div>
 						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Arts and Photography</span>
+							<span class="card-title category-name activator grey-text text-darken-4"><?php echo $category->cat_name;?></span>
 							<p><a href="#">Browse</a></p>
 						</div>
 					</div>
-					</a>
+				</a> 
 				</div>
+				<?php } ?>
 
 
-				<div class="col s12 m4">
+				<!-- <div class="col s12 m4">
 					<a href="<?php echo base_url() . 'index.php/Category_books/view_category/2'; ?>">
 						<div class="card small">
 							<div class="card-image waves-effect waves-block waves-light">
@@ -75,10 +78,10 @@
 							</div>
 						</div>
 						</a>
-				</div>
+				</div> -->
 				
 
-				<div class="col s12 m4">
+				<!-- <div class="col s12 m4">
 				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/3'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
@@ -90,10 +93,10 @@
 						</div>
 					</div>
 					</a>
-				</div>
+				</div> -->
 				
 
-				<div class="col s12 m4">
+				<!-- <div class="col s12 m4">
 				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/4'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
@@ -105,9 +108,9 @@
 						</div>
 					</div>
 					</a>
-				</div>
+				</div> -->
 
-				<div class="col s12 m4">
+				<!-- <div class="col s12 m4">
 				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/5'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
@@ -119,9 +122,9 @@
 						</div>
 					</div>
 					</a>
-				</div>
+				</div> -->
 
-				<div class="col s12 m4">
+				<!-- <div class="col s12 m4">
 				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/6'; ?>">
 					<div class="card small">
 						<div class="card-image waves-effect waves-block waves-light">
@@ -133,7 +136,7 @@
 						</div>
 					</div>
 					</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
