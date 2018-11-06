@@ -35,26 +35,15 @@
 
 	<div class="container">
 		<div class="section">
-
-			<!--   Icon Section   -->
-			<!-- <div class="row">
-        <div class="col s12 m1">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h6 class="center">Arts and Photography</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div> -->
 			<h5> Shop By Category </h5>
 			<div class="row">
 			<?php foreach($categories as $category){ ?>
 				<div class="col s12 m4">
 				
 				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/' . $category->id;?>">
-					<div class="card small">
+					<div class="card small card-1">
 						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/arts.jpg' ?>">
+							<img class="activator" src="<?php echo asset_url() . 'images/'. $category->id . '.jpg' ?>">
 						</div>
 						<div class="card-content">
 							<span class="card-title category-name activator grey-text text-darken-4"><?php echo $category->cat_name;?></span>
@@ -64,79 +53,6 @@
 				</a> 
 				</div>
 				<?php } ?>
-
-
-				<!-- <div class="col s12 m4">
-					<a href="<?php echo base_url() . 'index.php/Category_books/view_category/2'; ?>">
-						<div class="card small">
-							<div class="card-image waves-effect waves-block waves-light">
-								<img class="activator" src="<?php echo asset_url() . 'images/bio.jpg' ?>">
-							</div>
-							<div class="card-content">
-								<span class="card-title category-name activator grey-text text-darken-4">Biographies & Memoirs</span>
-								<p><a href="#">Browse</a></p>
-							</div>
-						</div>
-						</a>
-				</div> -->
-				
-
-				<!-- <div class="col s12 m4">
-				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/3'; ?>">
-					<div class="card small">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/cook.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Cookbooks, Food and Wine</span>
-							<p><a href="#">Browse</a></p>
-						</div>
-					</div>
-					</a>
-				</div> -->
-				
-
-				<!-- <div class="col s12 m4">
-				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/4'; ?>">
-					<div class="card small">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/children.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Children's Books</span>
-							<p><a href="#">Browse</a></p>
-						</div>
-					</div>
-					</a>
-				</div> -->
-
-				<!-- <div class="col s12 m4">
-				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/5'; ?>">
-					<div class="card small">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/romance.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Romace</span>
-							<p><a href="#">Browse</a></p>
-						</div>
-					</div>
-					</a>
-				</div> -->
-
-				<!-- <div class="col s12 m4">
-				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/6'; ?>">
-					<div class="card small">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/fantasy.jpg' ?>">
-						</div>
-						<div class="card-content">
-							<span class="card-title category-name activator grey-text text-darken-4">Sci-Fi and Fantasy</span>
-							<p><a href="#">Browse</a></p>
-						</div>
-					</div>
-					</a>
-				</div> -->
 			</div>
 		</div>
 	</div>
