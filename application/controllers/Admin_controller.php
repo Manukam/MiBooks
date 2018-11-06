@@ -65,8 +65,6 @@ class Admin_controller extends CI_Controller {
     }
 
     public function add_image($file_name){
-        // print_r($file_name);
-        // print_r(asset_url(). 'images/books/');
         $config['upload_path']= "./assets/images/books/";
         $config['allowed_types']='jpg|png';
         $config['encrypt_name'] = FALSE;
@@ -77,17 +75,18 @@ class Admin_controller extends CI_Controller {
         if($this->upload->do_upload("book_image")){
             $data = array('upload_data' => $this->upload->data());
             $this->show_dashboard();
- 
-            // $title= $this->input->post('title');
-            // $image= $data['upload_data']['file_name']; 
-             
-            // $result= $this->upload_model->save_upload($title,$image);
-            // echo json_decode($data);
         }else{
-            // $this->success  = FALSE;
             $response = $this->upload->display_errors();
-            // print_r($response);
         }
+    }
+
+    public function add_category(){
+        $this->load->model("Admin_model");
+        $main_cat = $this->input->post("main_cat");
+        $sub_cats = $this->input->post('sub_cats');
+
+        // var_dump($sub_cats);die;
+        $this->Admin_model->add_category($main_cat,$sub_cats);
     }
 }
 

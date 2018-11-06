@@ -22,7 +22,20 @@ class Admin_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function add_category($main_cat, $sub_cats){
+        $data = array('cat_name'=> $main_cat);
+        $sub_categories = array();
+        // var_dump($sub_cats);
+        foreach($sub_cats as $index=>$sub){
+            $sub_categories[$index] = array('sub_cat_name' => $sub['value']);
+            // var_dump($sub['value']);die;
+        }
+
+        $this->db->insert('category', $data);
+        $this->db->insert_batch('sub_category', $sub_categories);
 }
+    }
 
 
 ?>

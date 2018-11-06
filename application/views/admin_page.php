@@ -3,9 +3,10 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 	<title>Admin Dashboard</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link href="<?php echo asset_url() . 'css/select2.css' ?>" rel="stylesheet" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo asset_url() . 'css/admin_page.css' ?>" />
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
@@ -13,7 +14,8 @@
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-	<link href="<?php echo asset_url() . 'css/selectjs.min.css' ?>" rel="stylesheet" />
+	<link href="<?php echo asset_url() . 'css/tagify.css' ?>" rel="stylesheet">
+
 </head>
 
 <body>
@@ -59,7 +61,7 @@
 						</ul>
 
 						<div class="page" id="p1">
-					
+
 							<div class="section" id="stats">
 								<div class="row">
 									<div class="col s12 m3">
@@ -151,10 +153,10 @@
 								<main>
 
 									<input id="tab1" type="radio" name="tabs" checked>
-									<label  for="tab1">Add a Book</label>
+									<label for="tab1">Add a Book</label>
 
 									<input id="tab2" type="radio" name="tabs">
-									<label  for="tab2">Add a Category</label>
+									<label for="tab2">Add a Category</label>
 
 
 									<section id="content1">
@@ -164,12 +166,12 @@
 													<div class="box">
 														<div class="js--image-preview"></div>
 														<div class="upload-options">
-															<form  action = "" id="form-image" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-															<!-- -->
+															<form action="" id="form-image" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+																<!-- -->
 																<label>
-																	<input type="file" name="book_image" class="image-upload"  />
+																	<input type="file" name="book_image" class="image-upload" />
 																</label>
-																<input type='submit' id="hide_this"/>
+																<input type='submit' id="hide_this" />
 															</form>
 														</div>
 													</div>
@@ -247,15 +249,43 @@
 									</section>
 
 									<section id="content2">
-										<p>
-											Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin.
-										</p>
-										<p>
-											Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket
-											beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef
-											kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket
-											shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-										</p>
+										<div class="row">
+											<div class="input-field col s12 m3">
+												<div class="wrapper">
+													<div class="box">
+														<div class="js--image-preview"></div>
+														<div class="upload-options">
+															<form action="" id="form-image" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+																<!-- -->
+																<label>
+																	<input type="file" name="book_image" class="image-upload" />
+																</label>
+																<input type='submit' id="hide_this" />
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<form class="col s12 m7" id="category-form-sub">
+												<div class="row">
+													<div class="input-field col s12">
+														<input placeholder="Category Name" id="category_name" type="text" class="validate custom_form">
+														<!-- <label for="first_name">First Name</label> -->
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<input name="tags" placeholder="Write Sub Categories">
+													</div>
+												</div>
+												<div class="row">
+													<div class="input-field col s12">
+														<button type = "submit" id="category-btn" > Add Category! </button>
+													</div>
+												</div>
+											</form>
+										</div>
 									</section>
 
 								</main>
@@ -286,6 +316,7 @@
 <script src="<?php echo asset_url() . 'js/chart.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/selectjs.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/admin_page.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/jQuery.tagify.min.js' ?>"></script>
 
 <script>
 	var ctx = document.getElementById("myChart");
