@@ -87,9 +87,9 @@
 
 	<?php include("footer.php");?>
 </body>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
+<script src="<?php echo asset_url() . 'js/jquery-2.2.1.min.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/velocity.min.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/sweetalert.min.js' ?>"></script>	
 <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>

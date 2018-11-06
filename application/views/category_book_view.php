@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<?php echo asset_url() . 'css/datatable.css'?>">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 
@@ -107,11 +107,11 @@
 
 		<?php include("footer.php"); ?>
 </body>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
+<script src="<?php echo asset_url() . 'js/jquery-2.2.1.min.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/velocity.min.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="<?php echo asset_url() . 'js/datatable.js' ?>"></script>
 
 </html>

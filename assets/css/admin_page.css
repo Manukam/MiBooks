@@ -657,7 +657,7 @@ i.material-icons {
 }
 
 textarea{
-	height: 150px !important;
+	height: 100px !important;
 	width: 100% !important;
 }
 
@@ -724,6 +724,3 @@ input[type=text].valid + label::after, input[type=password].valid + label::after
   }
    */
 
-#hide_this{
-	/* visibility: hidden; */
-}

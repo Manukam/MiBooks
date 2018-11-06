@@ -4,17 +4,16 @@
 <head>
 	<!-- <meta charset="utf-8" /> -->
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-	<title>Page Title</title>
+	<title>Admin Dashboard</title>
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo asset_url() . 'css/admin_page.css' ?>" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+	<link href="<?php echo asset_url() . 'css/selectjs.min.css' ?>" rel="stylesheet" />
 </head>
 
 <body>
@@ -41,10 +40,6 @@
 	</div>
 
 
-
-
-
-
 	<div class="ct" id="t1">
 		<div class="ct" id="t2">
 			<div class="ct" id="t3">
@@ -55,12 +50,6 @@
 							<a href="#t1">
 								<li class="icon fa fa-chart-bar" id="uno"></li>
 							</a>
-							<!-- <a href="#t2">
-								<li class="icon fa fa-keyboard" id="dos"></li>
-							</a> -->
-							<!-- <a href="#t3">
-								<li class="icon fa fa-rocket" id="tres"></li>
-							</a> -->
 							<a href="#t2">
 								<li class="icon fa fa-plus-circle" id="dos"></li>
 							</a>
@@ -70,18 +59,7 @@
 						</ul>
 
 						<div class="page" id="p1">
-							<!-- <div class="section">
-								<div class="row">
-
-								</div>
-							</div> -->
-
-							<!-- <div class="section">
-								<div class="row">
-
-
-								</div>
-							</div> -->
+					
 							<div class="section" id="stats">
 								<div class="row">
 									<div class="col s12 m3">
@@ -168,10 +146,6 @@
 						</div>
 
 
-
-
-
-
 						<div class="page" id="p2">
 							<div class="card large form-card-custom card-1">
 								<main>
@@ -182,11 +156,6 @@
 									<input id="tab2" type="radio" name="tabs">
 									<label id="category_form" for="tab2">Add a Category</label>
 
-									<!-- <input id="tab3" type="radio" name="tabs">
-									<label for="tab3">Stack Overflow</label>
-
-									<input id="tab4" type="radio" name="tabs">
-									<label for="tab4">Bitbucket</label> -->
 
 									<section id="content1">
 										<div class="row">
@@ -313,9 +282,9 @@
 		</div>
 
 </body>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="<?php echo asset_url() . 'js/jquery-2.2.1.min.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/chart.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/selectjs.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/admin_page.js' ?>"></script>
 
 <script>

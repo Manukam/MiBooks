@@ -1,8 +1,8 @@
 // $('select').select2({width: "100%"});
 $(document).ready(function () {
-	$('.book-cat-select').select2();
-	$('.author-select').select2();
-	$('.sub-book').select2();
+	$('.book-cat-select').select2({theme: "classic"});
+	$('.author-select').select2({theme: "classic"});
+	$('.sub-book').select2({theme: "classic"});
 
 	$('.book-cat-select').on('select2:select', function (e) {
 		var data = e.params.data;
