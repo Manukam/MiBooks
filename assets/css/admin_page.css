@@ -461,6 +461,8 @@ label {
 	color: #abc;
 	border: 1px solid transparent;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+/* @import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css'); */
 
 label:before {
 	font-family: fontawesome;
@@ -469,11 +471,11 @@ label:before {
 }
 
 label[for*='1']:before {
-	content: '\f1cb';
+	content: '\f02d';
 }
 
 label[for*='2']:before {
-	content: '\f17d';
+	content: '\f65e';
 }
 
 label[for*='3']:before {
@@ -615,6 +617,7 @@ input:checked+label {
 	top: calc(50% - 3rem);
 	left: calc(50% - 2.25rem);
 	z-index: 0;
+	float: left;
 }
 
 .js--image-preview.js--no-default::after {
@@ -661,66 +664,5 @@ textarea{
 	width: 100% !important;
 }
 
-/* .select2 .selection .select2-selection--single, .select2-container--default .select2-search--dropdown .select2-search__field {
-    border-width: 0 0 1px 0 !important;
-    border-radius: 0 !important;
-    height: 2.05rem;
-}
 
-.select2-container--default .select2-selection--multiple, .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border-width: 0 0 1px 0 !important;
-    border-radius: 0 !important;
-}
-
-.select2-results__option {
-    color: #26a69a;
-    padding: 8px 16px;
-    font-size: 16px;
-}
-
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #eee !important;
-    color: #26a69a !important;
-}
-
-.select2-container--default .select2-results__option[aria-selected=true] {
-    background-color: #e1e1e1 !important;
-}
-
-.select2-dropdown {
-    border: none !important;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-}
-
-.select2-container--default .select2-results__option[role=group] .select2-results__group {
-    background-color: #333333;
-    color: #fff;
-}
-
-.select2-container .select2-search--inline .select2-search__field {
-    margin-top: 0 !important;
-}
-
-.select2-container .select2-search--inline .select2-search__field:focus {
-    border-bottom: none !important;
-    box-shadow: none !important;
-}
-
-.select2-container .select2-selection--multiple {
-    min-height: 2.05rem !important;
-}
-
-.select2-container--default.select2-container--disabled .select2-selection--single {
-    background-color: #ddd !important;
-    color: rgba(0,0,0,0.26);
-    border-bottom: 1px dotted rgba(0,0,0,0.26);
-}
-
-input[type=text].valid + label::after, input[type=password].valid + label::after, input[type=email].valid + label::after, input[type=url].valid + label::after, input[type=time].valid + label::after, input[type=date].valid + label::after, input[type=datetime-local].valid + label::after, input[type=tel].valid + label::after, input[type=number].valid + label::after, input[type=search].valid + label::after, textarea.materialize-textarea.valid + label::after, input[type=text].invalid + label::after, input[type=password].invalid + label::after, input[type=email].invalid + label::after, input[type=url].invalid + label::after, input[type=time].invalid + label::after, input[type=date].invalid + label::after, input[type=datetime-local].invalid + label::after, input[type=tel].invalid + label::after, input[type=number].invalid + label::after, input[type=search].invalid + label::after, textarea.materialize-textarea.invalid + label::after, input[type=text]:focus.valid + label::after, input[type=password]:focus.valid + label::after, input[type=email]:focus.valid + label::after, input[type=url]:focus.valid + label::after, input[type=time]:focus.valid + label::after, input[type=date]:focus.valid + label::after, input[type=datetime-local]:focus.valid + label::after, input[type=tel]:focus.valid + label::after, input[type=number]:focus.valid + label::after, input[type=search]:focus.valid + label::after, textarea.materialize-textarea:focus.valid + label::after, input[type=text]:focus.invalid + label::after, input[type=password]:focus.invalid + label::after, input[type=email]:focus.invalid + label::after, input[type=url]:focus.invalid + label::after, input[type=time]:focus.invalid + label::after, input[type=date]:focus.invalid + label::after, input[type=datetime-local]:focus.invalid + label::after, input[type=tel]:focus.invalid + label::after, input[type=number]:focus.invalid + label::after, input[type=search]:focus.invalid + label::after, textarea.materialize-textarea:focus.invalid + label::after {
-	white-space: pre;
-  }
-  input[type=text].empty:not(:focus).valid + label::after, input[type=password].empty:not(:focus).valid + label::after, input[type=email].empty:not(:focus).valid + label::after, input[type=url].empty:not(:focus).valid + label::after, input[type=time].empty:not(:focus).valid + label::after, input[type=date].empty:not(:focus).valid + label::after, input[type=datetime-local].empty:not(:focus).valid + label::after, input[type=tel].empty:not(:focus).valid + label::after, input[type=number].empty:not(:focus).valid + label::after, input[type=search].empty:not(:focus).valid + label::after, textarea.materialize-textarea.empty:not(:focus).valid + label::after, input[type=text].empty:not(:focus).invalid + label::after, input[type=password].empty:not(:focus).invalid + label::after, input[type=email].empty:not(:focus).invalid + label::after, input[type=url].empty:not(:focus).invalid + label::after, input[type=time].empty:not(:focus).invalid + label::after, input[type=date].empty:not(:focus).invalid + label::after, input[type=datetime-local].empty:not(:focus).invalid + label::after, input[type=tel].empty:not(:focus).invalid + label::after, input[type=number].empty:not(:focus).invalid + label::after, input[type=search].empty:not(:focus).invalid + label::after, textarea.materialize-textarea.empty:not(:focus).invalid + label::after {
-	top: 2.8rem;
-  }
-   */
 

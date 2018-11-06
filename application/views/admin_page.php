@@ -2,10 +2,10 @@
 <html>
 
 <head>
-	<!-- <meta charset="utf-8" /> -->
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Admin Dashboard</title>
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo asset_url() . 'css/admin_page.css' ?>" />
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
@@ -151,10 +151,10 @@
 								<main>
 
 									<input id="tab1" type="radio" name="tabs" checked>
-									<label id="book_form" for="tab1">Add a Book</label>
+									<label  for="tab1">Add a Book</label>
 
 									<input id="tab2" type="radio" name="tabs">
-									<label id="category_form" for="tab2">Add a Category</label>
+									<label  for="tab2">Add a Category</label>
 
 
 									<section id="content1">
@@ -296,7 +296,7 @@
 	var myChart = new Chart(ctx, {
 		type: 'doughnut',
 		data: {
-			labels: ["Arts & Photography", "Biographies & Memoirs", "Cookbooks $ Wine", "Children's Books", "Romance",
+			labels: ["Arts & Photography", "Biographies & Memoirs", "Cookbooks & Wine", "Children's Books", "Romance",
 				"Sci-Fi & Fantasy"
 			],
 			datasets: [{
