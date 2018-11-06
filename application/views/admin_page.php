@@ -195,9 +195,13 @@
 													<div class="box">
 														<div class="js--image-preview"></div>
 														<div class="upload-options">
-															<label>
-																<input type="file" class="image-upload" accept="image/*" />
-															</label>
+															<form  action = "" id="form-image" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+															<!-- -->
+																<label>
+																	<input type="file" name="book_image" class="image-upload"  />
+																</label>
+																<input type='submit' id="hide_this"/>
+															</form>
 														</div>
 													</div>
 												</div>
@@ -240,14 +244,14 @@
 													<div class="input-field col s12 m7">
 														<select disabled class="js-example-basic-single sub-book" id="sub-book">
 															<option value="" disabled selected>Book Sub Category</option>
-															
+
 														</select>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<textarea placeholder="Book Description" class="custom_form" id="book_description">
+														<textarea class="custom_form" id="book_description">
 														</textarea>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
@@ -383,7 +387,6 @@
 		document.getElementById(cityName).style.display = "block";
 		evt.currentTarget.className += " active";
 	}
-
 </script>
 
 </html>

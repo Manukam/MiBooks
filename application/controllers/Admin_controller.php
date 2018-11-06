@@ -45,8 +45,49 @@ class Admin_controller extends CI_Controller {
     }
 
     public function add_book(){
+        $this->load->model("Book_model");
         $book_name = $this->input->post('bookName');
-        var_dump($book_name);
+        $author = $this->input->post('author');
+        $main_cat = $this->input->post('mainCat');
+        $sub_cat = $this->input->post('subCat');
+        $description = $this->input->post('description');
+        // var_dump($book_name);
+
+        $data = array('book_name'=> $book_name,
+                        "book_author" => $author,
+                    'book_cat'=>$main_cat,
+                'sub_cat'=>$sub_cat,
+                'description'=>$description
+            );
+        $insert_id = $this->Book_model->insert_book($data);
+
+        echo $insert_id;
+    }
+
+    public function add_image($file_name){
+        // print_r($file_name);
+        // print_r(asset_url(). 'images/books/');
+        $config['upload_path']= "./assets/images/books/";
+        $config['allowed_types']='jpg|png';
+        $config['encrypt_name'] = FALSE;
+        $config['file_name'] = $file_name;
+        $config['max_size']  = 1000;
+         
+        $this->upload->initialize($config);
+        if($this->upload->do_upload("book_image")){
+            $data = array('upload_data' => $this->upload->data());
+            $this->show_dashboard();
+ 
+            // $title= $this->input->post('title');
+            // $image= $data['upload_data']['file_name']; 
+             
+            // $result= $this->upload_model->save_upload($title,$image);
+            // echo json_decode($data);
+        }else{
+            // $this->success  = FALSE;
+            $response = $this->upload->display_errors();
+            // print_r($response);
+        }
     }
 }
 

@@ -23,28 +23,25 @@ $(document).ready(function () {
 				console.log(status + ' --- ' + ' --- ' + response);
 			}
 		}).done(function () {
-			// console.log(result);
-			result = $.map(result, function (obj) {
-				obj.id = obj.id;
-				obj.text = obj.sub_cat_name;
-
-				return obj;
-			});
-
 			$('.sub-book').empty();
 			$('.sub-book').val(null).trigger('change');
-			$('.sub-book').select2({
-				data: result
-			});
+
+			$('.sub-book').append($.map(result, function (v, i) {
+				return $('<option>', {
+					val: i,
+					text: v
+				});
+			}));
+
+
 			$('.sub-book').select2('enable');
 
 		});
-
-
-	});
-
+  });
+  
+  var fileName;
 	$('.add-book-btn').on('click', function () {
-		// e.preventDefault();
+		
 		var bookName = document.getElementById("book_name").value;
 		var author = $("#author_select").val();
 		var mainCat = $("#book-cat-select").val();
@@ -58,40 +55,46 @@ $(document).ready(function () {
 			'subCat': subCat,
 			'description': description
 		};
-console.log(data);
+		// console.log(data);
 		$.ajax({
 			type: "POST",
 			dataType: 'json',
 			url: "http://localhost/MIBooks/index.php/Admin_controller/add_book/",
 			data: data,
 			success: function (data) {
-				result = (data);
+				fileName = data;
 			},
 			error: function (XHR, status, response) {
 				console.log(status + ' --- ' + ' --- ' + response);
 			}
-		}).done(function () {});
+		}).done(function () {
+      var form = document.getElementById("form-image");
+      if(form){
+        form.action = "http://localhost/MIBooks/index.php/Admin_controller/add_image/" + fileName;
+      }
+      $('#hide_this').trigger('click');
+			console.log(form.action);
+    });
+    // $('#hide_this').click();
 
-
-		$.ajaxFileUpload({
-			url: './upload/upload_file/',
-			secureuri: false,
-			fileElementId: 'userfile',
-			dataType: 'json',
-			data: {
-				'title': $('#title').val()
-			},
-			success: function (data, status) {
-				// if (data.status != 'error') {
-				// 	$('#files').html('<p>Reloading files...</p>');
-				// 	refresh_files();
-				// 	$('#title').val('');
-				// }
-				alert(data.msg);
-			}
-		});
-		return false;
 	});
+
+	// $('#hide_this').on('click', function (e) {
+  //   e.preventDefault();
+  //   console.log("click triggered");
+  //   // 	$.ajax({
+	// 	// 	url: 'http://localhost/MIBooks/index.php/Admin_controller/add_image/' + fileName,
+	// 	// 	type: "POST",
+	// 	// 	data: new FormData(this),
+	// 	// 	processData: false,
+	// 	// 	contentType: false,
+	// 	// 	cache: false,
+	// 	// 	async: false,
+	// 	// 	success: function (data) {
+	// 	// 		console.log(data);
+	// 	// 	}
+	// 	// });
+	// });
 });
 
 function initImageUpload(box) {
