@@ -19,7 +19,7 @@ class Admin_controller extends CI_Controller {
     public function show_dashboard(){
         $this->load->model("book_model");
         $this->load->model("Admin_model");
-        $data['most_viewed'] = $this->book_model->get_book_list();
+        $data['most_viewed'] = $this->book_model->get_most_viewed_book_list();
 
         $category_views = $this->Admin_model->get_viewed_categories();
         $most_viewed_categories = array();
@@ -28,6 +28,8 @@ class Admin_controller extends CI_Controller {
         }
         $data['most_viewed_categories'] = $most_viewed_categories;
         $data['book_categories'] = $this->book_model->get_book_categories();
+        $data['total_page_views'] = $this->Admin_model->get_total_page_views();
+        $data['total_visitors'] = $this->Admin_model->get_visitors();
 
 
         $data['authors'] = $this->Admin_model->get_authors();

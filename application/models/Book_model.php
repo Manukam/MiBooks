@@ -2,9 +2,9 @@
 
 class Book_model extends CI_Model {
 
-    public function get_book_list(){
+    public function get_most_viewed_book_list(){
         $this->load->model("Book");
-        $query = $this->db->query('SELECT book.id, book.price, book.book_name, authors.author_name, category.cat_name FROM book INNER JOIN category ON book.book_cat = category.id INNER JOIN authors ON authors.id = book.book_author');  
+        $query = $this->db->query('SELECT book.book_name, book.book_author, authors.author_name, book.price, book.id, user_view.book_id, count(*) as NUM FROM user_view INNER JOIN book ON book.id = user_view.book_id INNER JOIN authors ON book.book_author = authors.id GROUP BY book_id ORDER BY NUM DESC LIMIT 10');  
         
         // foreach ($query->result('Book') as $user)
         // {

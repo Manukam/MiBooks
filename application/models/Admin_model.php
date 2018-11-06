@@ -38,6 +38,14 @@ class Admin_model extends CI_Model {
             $this->db->insert('category_mapping', $mapping);
         }     
     }
+
+    public function get_total_page_views(){
+        return  $this->db->count_all_results('user_view');
+    }
+
+    public function get_visitors(){
+        return $this->db->count_all_results('users');
+    }
 }
 
 

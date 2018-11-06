@@ -66,16 +66,16 @@
 								<div class="row">
 									<div class="col s12 m3">
 										<div class="card-custom card-1">
-											<p>Total Visits</p>
+											<p>Total Visitors</p>
 											<i class="fas fa fa-chart-line left admin-icons-1"></i>
-											<span id="stat-number" class="step color-1">1</span>
+											<span id="stat-number" class="step color-1"><?php echo $total_visitors; ?></span>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
 											<p>Total Page Views </p>
 											<i class="fas fa fa-chart-line left admin-icons-2"></i>
-											<span id="stat-number" class="step color-2">1</span>
+											<span id="stat-number" class="step color-2"><?php echo $total_page_views;?></span>
 										</div>
 									</div>
 									<div class="col s12 m3">
