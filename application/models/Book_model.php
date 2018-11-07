@@ -36,6 +36,17 @@ class Book_model extends CI_Model {
         $insert_id = $this->db->insert_id();
         return  $insert_id;
     }
+
+    public function check_book($book_name){
+        $query = $this->db->get_where('book',array('book_name' => $book_name));
+        $count = $query->num_rows();
+        // print_r($count);
+        if($count == 0){
+            return ('false');
+        }else{
+            return('true');
+        }
+    }
 }
 
 

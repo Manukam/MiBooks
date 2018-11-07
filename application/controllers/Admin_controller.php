@@ -2,6 +2,12 @@
 
 class Admin_controller extends CI_Controller {
 
+    function __construct() {
+        parent::__construct();
+        $this->load->model("book_model");
+        $this->load->model("Admin_model");
+    }
+
     public function login_view(){
         $this->load->view("admin_login");
     }
@@ -17,8 +23,7 @@ class Admin_controller extends CI_Controller {
     }
 
     public function show_dashboard(){
-        $this->load->model("book_model");
-        $this->load->model("Admin_model");
+        
         $data['most_viewed'] = $this->book_model->get_most_viewed_book_list();
 
         $category_views = $this->Admin_model->get_viewed_categories();
@@ -37,7 +42,6 @@ class Admin_controller extends CI_Controller {
     }
 
     public function get_sub_categories($main_category_id){
-        $this->load->model("Admin_model");
         $sub_categories = $this->Admin_model->get_sub_categories($main_category_id);
         $result= array();
         foreach($sub_categories as $index=>$sub){
@@ -47,7 +51,6 @@ class Admin_controller extends CI_Controller {
     }
 
     public function add_book(){
-        $this->load->model("Book_model");
         $book_name = $this->input->post('bookName');
         $author = $this->input->post('author');
         $main_cat = $this->input->post('mainCat');
@@ -83,12 +86,18 @@ class Admin_controller extends CI_Controller {
     }
 
     public function add_category(){
-        $this->load->model("Admin_model");
         $main_cat = $this->input->post("main_cat");
         $sub_cats = $this->input->post('sub_cats');
 
         // var_dump($sub_cats);die;
         $this->Admin_model->add_category($main_cat,$sub_cats);
+    }
+
+    public function book_validate(){
+        $book_name = $this->input->post("book_name");
+        $result = $this->book_model->check_book($book_name);
+        // print_r($result);
+        echo $result;
     }
 }
 

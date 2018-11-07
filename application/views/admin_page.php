@@ -68,14 +68,16 @@
 										<div class="card-custom card-1">
 											<p>Total Visitors</p>
 											<i class="fas fa fa-chart-line left admin-icons-1"></i>
-											<span id="stat-number" class="step color-1"><?php echo $total_visitors; ?></span>
+											<span id="stat-number" class="step color-1">
+												<?php echo $total_visitors; ?></span>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
 											<p>Total Page Views </p>
 											<i class="fas fa fa-chart-line left admin-icons-2"></i>
-											<span id="stat-number" class="step color-2"><?php echo $total_page_views;?></span>
+											<span id="stat-number" class="step color-2">
+												<?php echo $total_page_views;?></span>
 										</div>
 									</div>
 									<div class="col s12 m3">
@@ -181,13 +183,16 @@
 											<form class="col s12 m7">
 												<div class="row">
 													<div class="input-field col s12">
-														<input placeholder="Book Name" id="book_name" type="text" class="validate custom_form">
+														<input placeholder="Book Name" id="book_name" type="text" class="custom_form" required>
 														<!-- <label for="first_name">First Name</label> -->
+													</div>
+													<div id ="validity" class="valid">
+														This book already exists
 													</div>
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<select class="author-select" id="author_select">
+														<select class="author-select" id="author_select" required>
 															<option value="" disabled selected>Choose Author</option>
 															<?php foreach($authors as $author){ ?>
 															<option value="<?php echo $author->id; ?>">
@@ -200,7 +205,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<select class="js-example-basic-single book-cat-select" id="book-cat-select">
+														<select class="js-example-basic-single book-cat-select" id="book-cat-select" required>
 															<option value="" disabled selected>Book Category</option>
 															<?php foreach($book_categories as $category){ ?>
 															<option value="<?php echo $category->id; ?>">
@@ -213,7 +218,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<select disabled class="js-example-basic-single sub-book" id="sub-book">
+														<select disabled class="js-example-basic-single sub-book" id="sub-book" required>
 															<option value="" disabled selected>Book Sub Category</option>
 
 														</select>
@@ -222,20 +227,19 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<textarea class="custom_form" id="book_description">
-														</textarea>
+														<textarea placeholder="Book Description" class="custom_form" id="book_description" required></textarea>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<input type="text" placeholder="Book Price">
+														<input type="text" placeholder="Book Price" required>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<input type="button" value="Add Book!" class="add-book-btn">
+														<input type="submit" value="Add Book!" class="add-book-btn">
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
@@ -281,7 +285,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12">
-														<button type = "submit" id="category-btn" > Add Category! </button>
+														<button type="submit" id="category-btn"> Add Category! </button>
 													</div>
 												</div>
 											</form>
@@ -317,7 +321,7 @@
 <script src="<?php echo asset_url() . 'js/selectjs.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/admin_page.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/jQuery.tagify.min.js' ?>"></script>
-<script src="<?php echo asset_url() . 'js/sweetalert.min.js' ?>"></script>	
+<script src="<?php echo asset_url() . 'js/sweetalert.min.js' ?>"></script>
 
 <script>
 	var ctx = document.getElementById("myChart");
