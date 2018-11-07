@@ -25,6 +25,7 @@ class Admin_controller extends CI_Controller {
     public function show_dashboard(){
         
         $data['most_viewed'] = $this->book_model->get_most_viewed_book_list();
+        $data['all_books'] = $this->book_model->get_all_books();
 
         $category_views = $this->Admin_model->get_viewed_categories();
         $most_viewed_categories = array();
@@ -64,12 +65,12 @@ class Admin_controller extends CI_Controller {
                 'sub_cat'=>$sub_cat,
                 'description'=>$description
             );
-        $insert_id = $this->Book_model->insert_book($data);
+        $insert_id = $this->book_model->insert_book($data);
 
         echo $insert_id;
     }
 
-    public function add_image($file_name){
+    public function add_book_image($file_name){
         $config['upload_path']= "./assets/images/books/";
         $config['allowed_types']='jpg|png';
         $config['encrypt_name'] = FALSE;
@@ -85,12 +86,30 @@ class Admin_controller extends CI_Controller {
         }
     }
 
+    public function add_category_image($file_name){
+        $config['upload_path']= "./assets/images/Category/";
+        $config['allowed_types']='jpg|png';
+        $config['encrypt_name'] = FALSE;
+        $config['file_name'] = $file_name;
+        $config['max_size']  = 1000;
+         
+        $this->upload->initialize($config);
+        if($this->upload->do_upload("category_image")){
+            $data = array('upload_data' => $this->upload->data());
+            $this->show_dashboard();
+        }else{
+            $response = $this->upload->display_errors();
+            print_r ($response);
+        }
+    }
+
     public function add_category(){
         $main_cat = $this->input->post("main_cat");
         $sub_cats = $this->input->post('sub_cats');
 
         // var_dump($sub_cats);die;
-        $this->Admin_model->add_category($main_cat,$sub_cats);
+        $insert_cat_id = $this->Admin_model->add_category($main_cat,$sub_cats);
+        echo $insert_cat_id;
     }
 
     public function book_validate(){

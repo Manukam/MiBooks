@@ -46,6 +46,15 @@ class Book_model extends CI_Model {
         }else{
             return('true');
         }
+        
+    }
+
+    public function get_all_books(){
+        $this->db->select('book.id as id_book, book.book_name, book.book_author, book.book_cat, authors.author_name, book.price');
+        $this->db->from('book');
+        $this->db->join('authors', 'authors.id = book.book_author');
+        $query = $this->db->get();
+        return $query->result();
     }
 }
 

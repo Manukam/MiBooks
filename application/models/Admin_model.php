@@ -34,9 +34,11 @@ class Admin_model extends CI_Model {
             $this->db->insert('sub_category', $sub_categories);
             $sub_cat_id = $this->db->insert_id();
             $mapping = array('main_category'=>$main_category_id, 'sub_category'=>$sub_cat_id);
-            print_r($mapping);
+            // print_r($mapping);
             $this->db->insert('category_mapping', $mapping);
-        }     
+        }    
+        
+        return $main_category_id;
     }
 
     public function get_total_page_views(){

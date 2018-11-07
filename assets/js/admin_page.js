@@ -1,5 +1,6 @@
 // $('select').select2({width: "100%"});
 $(document).ready(function () {
+	var table = $('#book_list').DataTable();
 	$('.book-cat-select').select2({
 		theme: "classic"
 	});
@@ -68,6 +69,7 @@ $(document).ready(function () {
 			url: "http://localhost/MIBooks/index.php/Admin_controller/add_book/",
 			data: data,
 			success: function (data) {
+				console.log(data);
 				fileName = data;
 			},
 			error: function (XHR, status, response) {
@@ -76,9 +78,9 @@ $(document).ready(function () {
 		}).done(function () {
 			var form = document.getElementById("form-image");
 			if (form) {
-				form.action = "http://localhost/MIBooks/index.php/Admin_controller/add_image/" + fileName;
+				form.action = "http://localhost/MIBooks/index.php/Admin_controller/add_book_image/" + fileName;
 			}
-			$('#hide_this').trigger('click');
+			$('#book_image_upload').trigger('click');
 			// console.log(form.action);
 		});
 		// $('#hide_this').click();
@@ -88,6 +90,7 @@ $(document).ready(function () {
 	$('[name=tags]').tagify();
 
 	$('#category-btn').on('click', function (e) {
+		var categoryId;
 		e.preventDefault();
 		var tags = $('[name=tags]').tagify();
 		// console.log(tags[0].value);
@@ -100,7 +103,7 @@ $(document).ready(function () {
 			'sub_cats': tags
 		};
 
-		console.log(cat_data);
+		// console.log(cat_data);
 
 		$.ajax({
 			type: "POST",
@@ -109,12 +112,20 @@ $(document).ready(function () {
 			data: cat_data,
 
 			success: function (data) {
-				// console.log(data);
+				console.log(data);
+				categoryId = data;
+
 				swal("Succsess!", "Category has been added!", "success");
 			},
 			error: function (XHR, status, response) {
 				console.log(status + ' --- ' + ' --- ' + response);
 			}
+		}).done(function(){
+			var form = document.getElementById("category-image");
+			if (form) {
+				form.action = "http://localhost/MIBooks/index.php/Admin_controller/add_category_image/" + categoryId;
+			}
+			$('#category_image_upload').trigger('click');
 		});
 
 	});

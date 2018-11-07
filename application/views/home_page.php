@@ -43,7 +43,7 @@
 				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/' . $category->id;?>">
 					<div class="card small card-1">
 						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="<?php echo asset_url() . 'images/'. $category->id . '.jpg' ?>">
+							<img class="activator" src="<?php echo asset_url() . 'images/Category/'. $category->id . '.jpg' ?>">
 						</div>
 						<div class="card-content">
 							<span class="card-title category-name activator grey-text text-darken-4"><?php echo $category->cat_name;?></span>

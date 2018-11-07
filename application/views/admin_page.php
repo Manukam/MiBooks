@@ -15,6 +15,7 @@
 	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/tagify.css' ?>" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<?php echo asset_url() . 'css/datatable.css'?>">
 
 </head>
 
@@ -173,7 +174,7 @@
 																<label>
 																	<input type="file" name="book_image" class="image-upload" />
 																</label>
-																<input type='submit' id="hide_this" />
+																<input type='submit' id="book_image_upload" />
 															</form>
 														</div>
 													</div>
@@ -186,7 +187,7 @@
 														<input placeholder="Book Name" id="book_name" type="text" class="custom_form" required>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
-													<div id ="validity" class="valid">
+													<div id="validity" class="valid">
 														This book already exists
 													</div>
 												</div>
@@ -227,7 +228,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<textarea placeholder="Book Description" class="custom_form" id="book_description" required></textarea>
+														<textarea placeholder="Book Description" class="custom_form" id="book_description"></textarea>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
@@ -239,7 +240,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<input type="submit" value="Add Book!" class="add-book-btn">
+														<input type="submit" value="Add Book!" class="add-book-btn fancy-btn">
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>
@@ -259,12 +260,12 @@
 													<div class="box">
 														<div class="js--image-preview"></div>
 														<div class="upload-options">
-															<form action="" id="form-image" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+															<form action="" id="category-image" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 																<!-- -->
 																<label>
-																	<input type="file" name="book_image" class="image-upload" />
+																	<input type="file" name="category_image" class="image-upload" />
 																</label>
-																<input type='submit' id="hide_this" />
+																<input type='submit' id="category_image_upload" />
 															</form>
 														</div>
 													</div>
@@ -285,7 +286,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12">
-														<button type="submit" id="category-btn"> Add Category! </button>
+														<button type="submit" id="category-btn" class="fancy-btn"> Add Category! </button>
 													</div>
 												</div>
 											</form>
@@ -299,13 +300,34 @@
 
 
 						<div class="page" id="p5">
-							<section class="icon fa fa-plus-circle">
-								<span class="title">More</span>
-								<p class="hint">
-									<span>You love one page & CSS only stuff? </span><br />
-									<a href="https://codepen.io/hrtzt/details/pgXMYb/" target="_blank">check this pen "Pure CSS One page vertical
-										navigation"</a>
-								</p>
+							<!-- <section class="icon fa fa-plus-circle"> -->
+							<h4> List of Books </h4>
+				<table id="book_list"  cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Book Name</th>
+							<th>Author</th>
+							<th>Views</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($all_books as $m_viewed_book){ ?>
+						<tr id = "<?php echo $m_viewed_book->id_book;?>">
+							<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id_book.'.jpg'?>" style='height:200px;width:150px;'></td>
+							<td>
+								<?php echo $m_viewed_book->book_name; ?>
+							</td>
+							<td>
+								<?php echo $m_viewed_book->author_name; ?>
+							</td>
+							<td>
+								<p><?php echo $m_viewed_book->price; ?>
+							</td>
+						</tr>
+						<?php } ?>
+					</tbody>
+				</table>
 							</section>
 						</div>
 					</div>
@@ -322,19 +344,24 @@
 <script src="<?php echo asset_url() . 'js/admin_page.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/jQuery.tagify.min.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/sweetalert.min.js' ?>"></script>
+<script type="text/javascript" charset="utf8" src="<?php echo asset_url() . 'js/datatable.js' ?>"></script>
 
 <script>
 	var ctx = document.getElementById("myChart");
 	var data = new Array();
+	var labelSet = new Array();
 	<?php foreach($most_viewed_categories as $key => $val){ ?>
 	data.push('<?php echo $val; ?>');
 	<?php } ?>
+
+	<?php foreach($book_categories as $key=>$category){?>
+		labelSet.push('<?php echo $category->cat_name;?>');
+	<?php } ?>
+
 	var myChart = new Chart(ctx, {
 		type: 'doughnut',
 		data: {
-			labels: ["Arts & Photography", "Biographies & Memoirs", "Cookbooks & Wine", "Children's Books", "Romance",
-				"Sci-Fi & Fantasy"
-			],
+			labels: labelSet,
 			datasets: [{
 				label: '# of Votes',
 				data: data,
@@ -344,7 +371,9 @@
 					'rgba(255, 206, 86, 0.2)',
 					'rgba(75, 192, 192, 0.2)',
 					'rgba(153, 102, 255, 0.2)',
-					'rgba(255, 159, 64, 0.2)'
+					'rgba(241, 125, 12, 0.2)',
+					'rgba(131, 193, 122,0.2)',
+					'rgba(193, 122, 136,0.2)'
 				],
 				borderColor: [
 					'rgba(255,99,132,1)',
@@ -352,6 +381,8 @@
 					'rgba(255, 206, 86, 1)',
 					'rgba(75, 192, 192, 1)',
 					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)',
+					'rgba(255, 159, 64, 1)',
 					'rgba(255, 159, 64, 1)'
 				],
 				borderWidth: 1
@@ -392,6 +423,7 @@
 		document.getElementById(cityName).style.display = "block";
 		evt.currentTarget.className += " active";
 	}
+
 </script>
 
 </html>
