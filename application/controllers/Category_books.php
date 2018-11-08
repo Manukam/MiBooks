@@ -24,10 +24,11 @@ class Category_books extends CI_Controller {
         $draw = intval($this->input->get("draw"));
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
+        $search = $this->input->get('search[value]');
         $this->load->model('View_category_model');
         $total_books = $this->Book_model->get_total_books();
-        // print_r($start);
-        $book_set= $this->View_category_model->get_sub_books_pagination($mainCat,$subCat,$length,$start);
+        // print_r($search);
+        $book_set= $this->View_category_model->get_sub_books_pagination($mainCat,$subCat,$length,$start,$search);
         
 
         $data = array();

@@ -7,7 +7,7 @@
 	<title>Category View</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?php echo asset_url() . 'css/datatable.css'?>">
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 

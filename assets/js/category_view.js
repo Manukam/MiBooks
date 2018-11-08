@@ -11,6 +11,8 @@ $(document).ready(function () {
 	var table = $('#book_list').DataTable({
         "pageLength" : 5,
         serverSide: true,
+        searching: true,
+        processing: true,
         "ajax": {
             data: data,
             url : "http://localhost/MIBooks/index.php/Category_books/get_category_books/",
