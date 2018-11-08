@@ -123,8 +123,8 @@
 														<?php echo $m_viewed_book->author_name; ?></span>
 
 													<hr>
-													<!-- <i class="material-icons">attach_money</i> -->
-													<!-- <?php echo $m_viewed_book->price; ?> -->
+													<i class="fas fa-eye"></i>
+													<?php echo $m_viewed_book->NUM; ?>
 													<!-- <p><a href="#">Add to Cart</a></p> -->
 												</div>
 
@@ -313,8 +313,8 @@
 					</thead>
 					<tbody>
 						<?php foreach($all_books as $m_viewed_book){ ?>
-						<tr id = "<?php echo $m_viewed_book->id_book;?>">
-							<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id_book.'.jpg'?>" style='height:200px;width:150px;'></td>
+						<tr id = "<?php echo $m_viewed_book->id;?>">
+							<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id.'.jpg'?>" style='height:200px;width:150px;'></td>
 							<td>
 								<?php echo $m_viewed_book->book_name; ?>
 							</td>
@@ -322,7 +322,7 @@
 								<?php echo $m_viewed_book->author_name; ?>
 							</td>
 							<td>
-								<p><?php echo $m_viewed_book->price; ?>
+								<p><?php echo $m_viewed_book->NUM; ?>
 							</td>
 						</tr>
 						<?php } ?>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Page Title</title>
+	<title>Category View</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url() . 'css/datatable.css'?>">
@@ -86,20 +86,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach($category_books as $m_viewed_book){ ?>
-						<tr id = "<?php echo $m_viewed_book->id;?>">
-							<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id.'.jpg'?>" style='height:200px;width:150px;'></td>
-							<td>
-								<?php echo $m_viewed_book->book_name; ?>
-							</td>
-							<td>
-								<?php echo $m_viewed_book->author_name; ?>
-							</td>
-							<td>
-								<p><i class="material-icons">attach_money</i> <?php echo $m_viewed_book->price; ?>
-							</td>
-						</tr>
-						<?php } ?>
+					
 					</tbody>
 				</table>
 			</div>
@@ -112,6 +99,7 @@
 <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
+<script src="<?php echo asset_url() . 'js/category_view.js' ?>"></script>
 <script type="text/javascript" charset="utf8" src="<?php echo asset_url() . 'js/datatable.js' ?>"></script>
 
 </html>

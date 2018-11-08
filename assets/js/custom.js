@@ -32,13 +32,7 @@ $(document).on('mouseleave.hover-reveal', '.hover-reveal', function (e) {
 });
 
 $(document).ready(function () {
-	var table = $('#book_list').DataTable();
-
-	$('#book_list').on('click', 'tbody tr', function () {
-		var id = table.row(this).id();
-		console.log(id);
-		window.location.href = "http://localhost/MIBooks/index.php/Book_controller/view_book/" + id;
-	});
+	
 
 	document.addEventListener('DOMContentLoaded', function () {
 		var elems = document.querySelectorAll('.materialboxed');

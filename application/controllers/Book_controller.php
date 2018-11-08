@@ -15,5 +15,7 @@ class Book_controller extends CI_Controller {
         $this->load->view("book_view",$data);
     }
 
+    
+
 }
 ?>
