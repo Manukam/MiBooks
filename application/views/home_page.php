@@ -32,7 +32,7 @@
 		<div class="parallax"><img src=<?php echo asset_url() . 'images/image15.png' ?> alt="Unsplashed background img 1"></div>
 	</div>
 
-
+<h4 class="home_heading"> Books at MiBooks </h4>
 	<div class="container">
 		<div class="section">
 			<h5> Shop By Category </h5>
@@ -126,6 +126,44 @@
 			</div>
 		</div>
 		<div class="parallax"><img src="<?php echo asset_url() . 'images/image4.jpg' ?>" alt="Unsplashed background img 3"></div>
+	</div>
+
+
+	<div class="container">
+		<div class="section">
+
+			<div class="row">
+				<div class="col s12 center">
+					<h3><i class="mdi-content-send brown-text"></i></h3>
+					<h4>Newly Added Books</h4>
+					<div class="horizontal-scroll">
+						<?php foreach ($newly_added as $n_added_book) {
+
+    ?>
+						<!-- <div class="horizonatal-scroll"> -->
+						<a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$n_added_book->id;?>">
+						<div class="card medium custom-height card-1">
+							<div class="card-image">
+								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $n_added_book->id .'.jpg' ?>">
+							</div>
+							<div class="card-content ">
+								<span class="card-title bname card-text">
+									<?php echo $n_added_book->book_name; ?></span>
+								<span class="card-content card-text">
+									<?php echo $n_added_book->author_name; ?></span>
+
+								<hr>
+								<span class="card-text"><i class="material-icons">attach_money</i><?php echo $n_added_book->price; ?> </span>
+								<p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$n_added_book->id;?>">View Book</a></p>
+							</div>
+						</div> </a>
+						<!-- </div> -->
+						<?php }?>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</div>
 
 

@@ -269,3 +269,8 @@ div.foo{
   width: 155px !important;
   height: 221px !important;
 }
+
+.home_heading{
+  align-content: center !important;
+  padding-left: 500px;
+}

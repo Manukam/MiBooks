@@ -54,13 +54,15 @@ $(document).ready(function () {
 		var mainCat = $("#book-cat-select").val();
 		var subCat = $("#sub-book").val();
 		var description = document.getElementById("book_description").value;
+		var bookPrice = document.getElementById("book_price").value;
 
 		var data = {
 			'bookName': bookName,
 			'author': author,
 			'mainCat': mainCat,
 			'subCat': subCat,
-			'description': description
+			'description': description,
+			'bookPrice': bookPrice
 		};
 		// console.log(data);
 		$.ajax({

@@ -234,7 +234,7 @@
 												</div>
 												<div class="row">
 													<div class="input-field col s12 m7">
-														<input type="text" placeholder="Book Price" required>
+														<input type="text" placeholder="Book Price" id="book_price" required>
 														<!-- <label for="first_name">First Name</label> -->
 													</div>
 												</div>

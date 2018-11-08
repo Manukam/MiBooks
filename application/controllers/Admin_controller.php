@@ -57,13 +57,15 @@ class Admin_controller extends CI_Controller {
         $main_cat = $this->input->post('mainCat');
         $sub_cat = $this->input->post('subCat');
         $description = $this->input->post('description');
+        $price = $this->input->post('bookPrice');
         // var_dump($book_name);
 
         $data = array('book_name'=> $book_name,
                         "book_author" => $author,
                     'book_cat'=>$main_cat,
                 'sub_cat'=>$sub_cat,
-                'description'=>$description
+                'description'=>$description,
+                'price'=>$price
             );
         $insert_id = $this->book_model->insert_book($data);
 

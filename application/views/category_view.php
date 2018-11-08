@@ -38,7 +38,7 @@
 
 			</div>
 		</div>
-		<div class="parallax"><img src=<?php echo asset_url() . 'images/biography_cat.jpg' ?> alt="Unsplashed background
+		<div class="parallax"><img src=<?php echo asset_url() . 'images/category/test.jpg' ?> alt="Unsplashed background
 			img
 			1"></div>
 	</div>

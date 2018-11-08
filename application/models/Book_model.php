@@ -70,6 +70,31 @@ class Book_model extends CI_Model {
         
         return 0;
       }
+
+      public function get_newly_added(){
+        $this->db->select('book.id, book.book_name, authors.author_name, book.price');
+        $this->db->group_by('book.id');
+        $this->db->order_by('book.id','desc');
+        $this->db->from('book');
+        // $this->db->join('book', 'book.id  = user_view.book_id', 'right');
+        $this->db->join('authors', 'authors.id = book.book_author');
+        $this->db->limit(10);
+        // $this->db->join('authors', 'authors.id = book.book_author');
+        $query = $this->db->get();
+        return $query->result();
+      }
+
+      public function get_recent_books($user_id){
+        $this->db->select('book.id, book.book_name, authors.author_name, book.price');
+        $this->db->from('book');
+        $this->db->join('user_view', 'user_view.book_id = book.id');
+        $this->db->join('authors', 'authors.id = book.book_author');
+        $this->db->where('user_view.user_id', $user_id);
+        $this->db->group_by('book.id');
+        $this->db->order_by('user_view.time','desc');
+        $query = $this->db->get();
+        return $query->result();
+      }
   
 }
 

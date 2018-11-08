@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Page Title</title>
+	<title><?php echo $book_details[0]->book_name . ' - ' . $book_details[0]->author_name;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 	<!-- <script src="main.js"></script> -->
@@ -88,15 +88,36 @@
 						<i class="material-icons">attach_money</i>35.00
 						<p><a href="#">Add to Cart</a></p>
 					</div>
-					<!-- <div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">
-							<?php echo $m_viewed_book->book_name; ?><i class="material-icons right">close</i></span>
-						<p>Here is some more information about this product that is only revealed once hover it.</p>
-						<p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit
-							petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
-							summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas
-							omittam ad nam. Eu per erant putent, eu has suas sale.</p>
-					</div> -->
+				</div>
+				<?php }?>
+			</div>
+		</div>
+	</div>
+	<hr class="hr_line">
+
+	<div class="container">
+		<div class="section">
+
+
+			<h5> Your recently viewed books </h5>
+			<div class="horizontal-scroll">
+				<?php foreach ($recent_books as $recent_viewed_book) {
+
+    ?>
+				<div class="card medium custom-height card-1">
+					<div class="card-image">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$recent_viewed_book->id.'.jpg' ?>">
+					</div>
+					<div class="card-content">
+						<span class="card-title bname card-text">
+							<?php echo $recent_viewed_book->book_name; ?></span>
+						<span class="card-content card-text">
+							<?php echo $recent_viewed_book->author_name; ?></span>
+
+						<hr>
+						<i class="material-icons">attach_money</i>35.00
+						<p><a href="#">Add to Cart</a></p>
+					</div>
 				</div>
 				<?php }?>
 			</div>
