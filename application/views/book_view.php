@@ -71,21 +71,21 @@
 
 			<h5> Customers who viewed this also viewed </h5>
 			<div class="horizontal-scroll">
-				<?php foreach ($category_books as $m_viewed_book) {
+				<?php foreach ($related_books as $related_book) {
 
     ?>
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$related_book->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname card-text">
-							<?php echo $m_viewed_book->book_name; ?></span>
+							<?php echo $related_book->book_name; ?></span>
 						<span class="card-content card-text">
-							<?php echo $m_viewed_book->author_name; ?></span>
+							<?php echo $related_book->author_name; ?></span>
 
 						<hr>
-						<i class="material-icons">attach_money</i>35.00
+						<i>Rs.</i><?php echo $related_book->price;?>
 						<p><a href="#">Add to Cart</a></p>
 					</div>
 				</div>

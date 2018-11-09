@@ -16,7 +16,7 @@ class Admin_controller extends CI_Controller {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         if($username === 'admin' && $password === '1234'){
-            $this->show_dashboard();
+            redirect('index.php/Admin_controller/show_dashboard');
         }else{
             // alert("wrong info");
         }
@@ -82,7 +82,7 @@ class Admin_controller extends CI_Controller {
         $this->upload->initialize($config);
         if($this->upload->do_upload("book_image")){
             $data = array('upload_data' => $this->upload->data());
-            $this->show_dashboard();
+            redirect('index.php/Admin_controller/show_dashboard#t2');
         }else{
             $response = $this->upload->display_errors();
         }
@@ -98,7 +98,7 @@ class Admin_controller extends CI_Controller {
         $this->upload->initialize($config);
         if($this->upload->do_upload("category_image")){
             $data = array('upload_data' => $this->upload->data());
-            $this->show_dashboard();
+            redirect('index.php/Admin_controller/show_dashboard#t2');
         }else{
             $response = $this->upload->display_errors();
             print_r ($response);

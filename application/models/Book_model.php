@@ -95,6 +95,31 @@ class Book_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
       }
+
+      public function get_related_books($book_id){
+
+        $this->db->select('user_view.user_id');
+        $this->db->from('user_view');
+        $this->db->where('user_view.book_id',$book_id);
+        $query = $this->db->get();
+        $user_list_array = $query->result();
+        $user_list = array();
+
+        foreach($user_list_array as $index=>$user){
+            $user_list[$index] = $user->user_id;
+        }
+
+        $this->db->select('count(user_view.book_id) as Views, book.id,book.book_name, book.price, authors.author_name');
+        $this->db->from('user_view');
+        $this->db->join('book', 'book.id = user_view.book_id');
+        $this->db->join('authors', 'book.book_author = authors.id');
+        $this->db->where_in('user_view.user_id', $user_list);   
+        $this->db->group_by('book.id');
+        $this->db->order_by('Views','desc');
+        $this->db->limit(6);
+        $query = $this->db->get();
+        return $query->result();
+      }
   
 }
 
