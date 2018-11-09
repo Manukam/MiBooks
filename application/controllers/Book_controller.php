@@ -11,6 +11,9 @@ class Book_controller extends CI_Controller {
 
 
     public function view_book($book_id){
+        $user_id = $this->session->userdata('user_id'); 
+        $this->View_tracking_model->track_views($book_id,$user_id); 
+
         $related_books_all = $this->Book_model->get_related_books($book_id);
         $related_books_filtered = array();
 
@@ -28,8 +31,7 @@ class Book_controller extends CI_Controller {
         $data['book_details'] = $this->Book_model->get_book_details($book_id);
         
 
-        $user_id = $this->session->userdata('user_id'); 
-        $this->View_tracking_model->track_views($book_id,$user_id);
+
         $this->load->view("book_view",$data);
     }
 

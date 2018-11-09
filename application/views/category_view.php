@@ -53,7 +53,7 @@
 					<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
 						<div class="card small category-card">
 							<div class="card-image waves-effect waves-block waves-light">
-								<img class="activator" src="<?php echo asset_url() . 'images/books/mamba.jpg' ?>">
+								<img class="activator" src="<?php echo asset_url() . 'images/books/'. $images_sub_cat[$sub->sub_category] .'.jpg' ?>">
 							</div>
 							<div class="card-content">
 								<span class="card-title category-name activator grey-text text-darken-4">
@@ -63,7 +63,7 @@
 						</div>
 					</a>
 				</div>
-				<?php } ?>
+				<?php }?>
 			</div>
 		</div>
 	</div>

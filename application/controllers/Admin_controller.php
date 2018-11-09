@@ -82,6 +82,7 @@ class Admin_controller extends CI_Controller {
         $this->upload->initialize($config);
         if($this->upload->do_upload("book_image")){
             $data = array('upload_data' => $this->upload->data());
+            print_r('uploaded');
             redirect('index.php/Admin_controller/show_dashboard#t2');
         }else{
             $response = $this->upload->display_errors();
