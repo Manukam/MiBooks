@@ -55,6 +55,8 @@ $(document).ready(function () {
 			// data: data,
 			success: function (data) {
 				swal("Succsess!", "Book has been added to Cart!", "success");
+				console.log(data);
+				document.getElementById('navbar-count').innerHTML = data;
 			},
 			error: function (XHR, status, response) {
 				console.log(status + ' --- ' + ' --- ' + response);

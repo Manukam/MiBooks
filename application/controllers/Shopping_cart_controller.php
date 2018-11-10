@@ -21,6 +21,8 @@ class Shopping_cart_controller extends CI_Controller {
         }else{
             $data['shopping_items'] = NULL;
         }
+
+        // print_r($data['shopping_items']);
         $this->load->view("shopping_cart",$data);
     }
 
@@ -38,6 +40,8 @@ class Shopping_cart_controller extends CI_Controller {
         }
         
         $this->session->set_userdata('cart',$shopping_items);
+
+        echo sizeof($shopping_items);
     }
 
     public function get_book_details(array $books){

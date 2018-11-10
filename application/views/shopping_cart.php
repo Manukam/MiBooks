@@ -27,8 +27,10 @@
 				<!-- <script id="shopping-cart--list-item-template" type="text/template"> -->
 				<?php if($shopping_items === NULL) {
 						echo "<p> Shopping Cärt Empty";
+						// var_dump($shopping_items);die();
 				}else{
 					foreach($shopping_items as $items){ 
+						// var_dump($shopping_items);die();
 					foreach($items as $item) {?>
 				<li class="grid shopping-cart--list-item">
 					<div class="_column product-image">
