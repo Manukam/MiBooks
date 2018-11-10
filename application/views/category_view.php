@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Page Title</title>
+	<title><?php echo $category_name[0]->cat_name; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 	<!-- <script src="main.js"></script> -->
@@ -18,9 +18,8 @@
 ?>
 	<div class="container">
 		<div class="section">
-			<p class="category-heading "> Biographies & Memoirs </p>
-			<p class="category-description">Find your new favorite book in Biographies or
-				Memoirs. Plus, see our picks for the best Biography and Memoir of the month. </p>
+			<p class="category-heading "> <?php echo $category_name[0]->cat_name; ?> </p>
+			<p class="category-description">Find your new favorite book in <?php echo $category_name[0]->cat_name; ?>. Plus, see our picks for the best <?php echo $category_name[0]->cat_name; ?> books of the month. </p>
 		</div>
 	</div>
 
@@ -38,7 +37,7 @@
 
 			</div>
 		</div>
-		<div class="parallax"><img src=<?php echo asset_url() . 'images/category/test.jpg' ?> alt="Unsplashed background
+		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $category_name[0]->cat_name; ?>.jpg" alt="Unsplashed background
 			img
 			1"></div>
 	</div>
@@ -51,9 +50,9 @@
 				<?php foreach($sub_categories as $sub){ ?>
 				<div class="col s12 m3">
 					<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
-						<div class="card small category-card">
-							<div class="card-image waves-effect waves-block waves-light">
-								<img class="activator" src="<?php echo asset_url() . 'images/books/'. $images_sub_cat[$sub->sub_category] .'.jpg' ?>">
+						<div class="card small card-1">
+							<div class="card-image category-card">
+								<img class="activator category" src="<?php echo asset_url() . 'images/books/'. $images_sub_cat[$sub->sub_category] .'.jpg' ?>">
 							</div>
 							<div class="card-content">
 								<span class="card-title category-name activator grey-text text-darken-4">
@@ -76,7 +75,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="parallax"><img src="<?php echo asset_url() . 'images/image4.jpg' ?>" alt="Unsplashed background img 3"></div>
+		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $category_name[0]->cat_name; ?>2.jpg" alt="Unsplashed background img 3"></div>
 	</div>
 
 

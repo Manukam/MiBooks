@@ -16,7 +16,7 @@ class Admin_controller extends CI_Controller {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         if($username === 'admin' && $password === '1234'){
-            redirect('index.php/Admin_controller/show_dashboard');
+            redirect('index.php/Admin_controller/show_dashboard/');
         }else{
             // alert("wrong info");
         }

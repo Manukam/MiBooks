@@ -8,6 +8,7 @@ class Category_books extends CI_Controller {
         $data['category_books'] = $this->View_category_model->get_category_data($category_id);
         $data['sub_categories'] = $this->View_category_model->get_sub_categories($category_id);
         $data['images_sub_cat'] = $this->View_category_model->get_random_pic($category_id);
+        $data['category_name'] = $this->View_category_model->get_category_name($category_id);
         $this->load->view('category_view',$data);
         }
 
@@ -15,6 +16,7 @@ class Category_books extends CI_Controller {
         $this->load->model('View_category_model');
         // $data['category_books'] = $this->View_category_model->get_category_data($category_id,$sub_category_id);
         $data['category_books'] = $this->View_category_model->get_sub_books($category_id,$sub_category_id);
+        $data['sub_category_name'] = $this->View_category_model->get_sub_category_name($sub_category_id);
         $this->load->view('category_book_view',$data);
     }
 

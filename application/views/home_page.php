@@ -94,8 +94,8 @@
 									<?php echo $m_viewed_book->author_name; ?></span>
 
 								<hr>
-								<span class="card-text"><i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?> </span>
-								<p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p>
+								<span class="card-text"><i>Rs. </i><?php echo $m_viewed_book->price; ?> </span>
+								<!-- <p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p> -->
 							</div>
 							<!-- <div class="card-reveal">
 								<span class="card-title grey-text text-darken-4">
@@ -125,7 +125,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="parallax"><img src="<?php echo asset_url() . 'images/image4.jpg' ?>" alt="Unsplashed background img 3"></div>
+		<div class="parallax"><img src="<?php echo asset_url() . 'images/artsy.jpg' ?>" alt="Unsplashed background img 3"></div>
 	</div>
 
 
@@ -153,8 +153,8 @@
 									<?php echo $n_added_book->author_name; ?></span>
 
 								<hr>
-								<span class="card-text"><i class="material-icons">attach_money</i><?php echo $n_added_book->price; ?> </span>
-								<p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$n_added_book->id;?>">View Book</a></p>
+								<span class="card-text"><i >Rs. </i><?php echo $n_added_book->price; ?> </span>
+								<!-- <p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$n_added_book->id;?>">View Book</a></p> -->
 							</div>
 						</div> </a>
 						<!-- </div> -->

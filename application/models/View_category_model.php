@@ -4,7 +4,7 @@ class View_category_model extends CI_Model {
 
     public function get_category_data($category_id){
 
-        $query_string = "SELECT book.id, book.book_name, authors.author_name,  category.cat_name from book INNER JOIN authors ON book.book_author = authors.id INNER JOIN category ON book.book_cat = category.id WHERE category.id = ?";
+        $query_string = "SELECT book.id, book.book_name, authors.author_name, book.price, category.cat_name from book INNER JOIN authors ON book.book_author = authors.id INNER JOIN category ON book.book_cat = category.id WHERE category.id = ?";
         $query = $this->db->query($query_string,array($category_id));
         return $query->result();  
     }
@@ -61,6 +61,22 @@ class View_category_model extends CI_Model {
         return $random_images; 
         // SELECT book.book_name, book.id, book.sub_cat  FROM `book` WHERE book.book_cat = 2 GROUP BY book.sub_cat
 
+    }
+
+    public function get_category_name($main_cat){
+        $this->db->select('*');
+        $this->db->from('category');
+        $this->db->where("category.id", $main_cat);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_sub_category_name($sub_cat){
+        $this->db->select('*');
+        $this->db->from('sub_category');
+        $this->db->where("sub_category.id", $sub_cat);
+        $query = $this->db->get();
+        return $query->result();
     }
 }
 

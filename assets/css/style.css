@@ -33,7 +33,7 @@ p {
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: auto;
+  height: 250px;
   color: rgba(255,255,255,.9);
 }
   .parallax-container .section {
@@ -96,7 +96,7 @@ footer.page-footer {
 }
 
 .card-image {
-  height: 250px !important;
+  height: 650px !important;
 }
 
 .resize {
@@ -118,9 +118,9 @@ footer.page-footer {
 }
 
 ::-webkit-scrollbar{
-  height: 4px;
+  height: 8px;
   width: 4px;
-  background: gray;
+  background: lightblue;
 }
 ::-webkit-scrollbar-thumb:horizontal{
   background: #000;
@@ -213,6 +213,7 @@ div.foo{
 .category-card{
   width: 170px;
   height: 10px;
+  background-size: 100% !important;
 }
 
 .section{
@@ -273,4 +274,38 @@ div.foo{
 .home_heading{
   align-content: center !important;
   padding-left: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+nav ul a {
+  height: 80px !important;
+  align-content: center !important;
+}
+
+.navbar-icon{
+  font-size: 30px !important;
+}
+
+.card.small {
+  /* height: 250px; */
+  width: 200px;
+}
+
+.activator.category{
+   max-height: 300px !important;
+   width: 150px !important;
+   left: 30px !important;
+}
+.card img {
+  /* max-height: 200px !important; */
+  object-fit: cover !important;
+  /* width: 100px !important; */
+}
+.card img.materialized.active {
+  max-height: none !important;
+  object-fit: none !important;
+}
+
+
+
+

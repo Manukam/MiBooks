@@ -17,9 +17,8 @@
 	<?php include('navbar.php');?>
 	<div class="container">
 		<div class="section">
-			<p class="category-heading "> Memoirs </p>
-			<p class="category-description">Find your new favorite book in Biographies or
-				Memoirs. Plus, see our picks for the best Biography and Memoir of the month. </p>
+			<p class="category-heading "> <?php echo $sub_category_name[0]->sub_cat_name;?> </p>
+			<p class="category-description">Find your new favorite book in<?php echo $sub_category_name[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $sub_category_name[0]->sub_cat_name;?> books of the month. </p>
 		</div>
 	</div>
 
@@ -37,7 +36,7 @@
 
 			</div>
 		</div>
-		<div class="parallax"><img src=<?php echo asset_url() . 'images/biography_cat.jpg' ?> alt="Unsplashed background
+		<div class="parallax"><img src=<?php echo asset_url() . 'images/category/cat.jpg' ?> alt="Unsplashed background
 			img
 			1"></div>
 	</div>
