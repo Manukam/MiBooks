@@ -78,6 +78,7 @@ footer.page-footer {
 
 .bname{
   font-size: 16px !important; 
+  color: black !important;
 }
 
 .category-name{
@@ -201,7 +202,9 @@ div.foo{
 }
 
 .category-heading{
-  color: #F90B6D; font-family: 'Open Sans', sans-serif; font-size: 34px; font-weight: 300; line-height: 40px; margin: 0 0 16px;
+  color: #F90B6D; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  font-size: 34px; font-weight: 300; line-height: 40px; margin: 0 0 16px;
   text-align: center;
 }
 

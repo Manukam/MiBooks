@@ -15,7 +15,7 @@
 	<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/tagify.css' ?>" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?php echo asset_url() . 'css/datatable.css'?>">
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -25,7 +25,7 @@
 		<nav class="white">
 			<div class="nav-wrapper">
 				<div class="foo">
-					<a href="<?php echo base_url() . 'index.php/Home_Controller/home_page' ?>">
+					<a href="<?php echo base_url() . '/Home_Controller/home_page' ?>">
 						<span class="letter" data-letter="B">B</span>
 						<span class="letter" data-letter="O">O</span>
 						<span class="letter" data-letter="O">O</span>
@@ -37,7 +37,7 @@
 						<span class="letter" data-letter="U">U</span>
 						<span class="letter" data-letter="P">P</span>
 						<span class="letter" data-letter="!">!</span> </a>
-					<ul class="right hide-on-med-and-down">
+					<ul class="right hide-on-med-and-down admin-icon">
 						<li><i class="icon far fa-user"></i></li>
 					</ul>
 				</div>
@@ -71,23 +71,24 @@
 								<div class="row">
 									<div class="col s12 m3">
 										<div class="card-custom card-1">
-											<p>Total Visitors</p>
-											<!-- <i cl	ass="fas fa fa-chart-line left admin-icons-1"></i> -->
-											<!-- <span id="stat-number" class="step color-1">
-												<?php echo $total_visitors; ?></span> -->
+											<!-- <div class="card-title"> -->
+											<p id="stat-heading">Total Visitors</p>
+											<!-- <i class="fas fa fa-chart-line left admin-icons-1"></i> -->
+											<!-- <span id="stat-number" class="step color-1"> -->
+											<!-- <p  id="stat-number" class="step color-1 top-right"> <?php echo $total_visitors; ?></p>  -->
 											<canvas id="bar-chart-grouped" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
-											<p>Total Page Views </p>
+											<p id="stat-heading">Total Page Views </p>
 											<!-- <i class="fas fa fa-chart-line left admin-icons-2"></i> -->
 											<canvas id="bar-chart-grouped2" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
-											<p>Unique Visitors</p>
+											<p id="stat-heading">Unique Visitors</p>
 											<!-- <i class="fas fa fa-chart-line left admin-icons-3"></i> -->
 											<canvas id="bar-chart-grouped3" width="800" height="450" class="stats-graph"></canvas>
 										</div>
@@ -429,7 +430,7 @@
 		}
 	});
 
-	function openCity(evt, cityName) {
+	function openTab(evt, cityName) {
 		var i, tabcontent, tablinks;
 		tabcontent = document.getElementsByClassName("tabcontent");
 		for (i = 0; i < tabcontent.length; i++) {
@@ -448,19 +449,19 @@
 		data: {
 			labels: ["1900", "1950", "1999", "2050"],
 			datasets: [{
-				label: "Africa",
+				label: "Colombo",
 				backgroundColor: "#3e95cd",
 				data: [133, 221, 213, 532],
 			}, {
-				label: "Europe",
+				label: "Kandy",
 				backgroundColor: "#8e5ea2",
 				data: [454, 547, 675, 734]
 			}]
 		},
 		options: {
 			title: {
-				display: false,
-				text: 'Population growth (millions)'
+				display: false
+				
 			},
 			legend: {
 				display: false
@@ -504,8 +505,8 @@
 		},
 		options: {
 			title: {
-				display: false,
-				text: 'Population growth (millions)'
+				display: false
+				
 			},
 			legend: {
 				display: false
@@ -579,8 +580,8 @@
 	});
 
 
-var daySet = new Array();
-var countPerDay = new Array();
+	var daySet = new Array();
+	var countPerDay = new Array();
 	<?php foreach($visitor_count_per_Day as $key=>$date){?>
 	daySet.push('<?php echo $date->Day;?>');
 	<?php } ?>
@@ -589,27 +590,25 @@ var countPerDay = new Array();
 	countPerDay.push('<?php echo $date->COUNT;?>');
 	<?php } ?>
 
-console.log(daySet);
-console.log(countPerDay);
 	new Chart(document.getElementById("line-user-chart"), {
 		type: 'line',
 		data: {
 			labels: daySet,
-			datasets:[{
-            label: "Visits",
-            borderColor: "#80b6f4",
-            pointBorderColor: "#80b6f4",
-            pointBackgroundColor: "#80b6f4",
-            pointHoverBackgroundColor: "#80b6f4",
-            pointHoverBorderColor: "#80b6f4",
-            pointBorderWidth: 10,
-            pointHoverRadius: 10,
-            pointHoverBorderWidth: 1,
-            pointRadius: 3,
-            fill: false,
-            borderWidth: 4,
-            data: countPerDay
-        }],
+			datasets: [{
+				label: "Visits",
+				borderColor: "#80b6f4",
+				pointBorderColor: "#80b6f4",
+				pointBackgroundColor: "#80b6f4",
+				pointHoverBackgroundColor: "#80b6f4",
+				pointHoverBorderColor: "#80b6f4",
+				pointBorderWidth: 10,
+				pointHoverRadius: 10,
+				pointHoverBorderWidth: 1,
+				pointRadius: 3,
+				fill: false,
+				borderWidth: 4,
+				data: countPerDay
+			}],
 		},
 		options: {
 			title: {

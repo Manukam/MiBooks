@@ -16,7 +16,7 @@
 		</a> End Btn -->
 
 		<a href="#">
-			<div id="btn2"><input type ="submit"></div>
+			<div id="btn2"><input type ="submit" class="fancy-btn"></div>
 		</a> <!-- End Btn2 -->
 
 	</div> <!-- End Box -->

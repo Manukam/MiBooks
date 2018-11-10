@@ -323,7 +323,15 @@ span.step {
 
 #stat-number {
 	float: right;
-	padding-top: 10px !important;
+	/* top: 50px !important; */
+	/* width: 15px !important; */
+	/* height: 15px !important; */
+	padding-right: 15px;
+	top: 75px !important; 
+}
+
+#stat-heading{
+	text-align: center !important;
 }
 
 .color-1 {
@@ -676,6 +684,11 @@ textarea{
 
 .stats-graph{
 	padding-bottom: 120px !important; 
+}
+
+.admin-icon{
+	padding-right: 12px !important;
+	padding-top: 10px !important;
 }
 
 

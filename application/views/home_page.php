@@ -40,7 +40,7 @@
 			<?php foreach($categories as $category){ ?>
 				<div class="col s12 m4">
 				
-				<a href="<?php echo base_url() . 'index.php/Category_books/view_category/' . $category->id;?>">
+				<a href="<?php echo base_url() . 'Category_books/view_category/' . $category->id;?>">
 					<div class="card small card-1">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/Category/'. $category->id . '.jpg' ?>">
@@ -82,7 +82,7 @@
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">
+						<a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $m_viewed_book->id .'.jpg' ?>">
@@ -95,7 +95,7 @@
 
 								<hr>
 								<span class="card-text"><i>Rs. </i><?php echo $m_viewed_book->price; ?> </span>
-								<!-- <p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p> -->
+								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p> -->
 							</div>
 							<!-- <div class="card-reveal">
 								<span class="card-title grey-text text-darken-4">
@@ -141,7 +141,7 @@
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$n_added_book->id;?>">
+						<a href="<?php echo base_url().'/Book_controller/view_book/'.$n_added_book->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $n_added_book->id .'.jpg' ?>">
@@ -154,7 +154,7 @@
 
 								<hr>
 								<span class="card-text"><i >Rs. </i><?php echo $n_added_book->price; ?> </span>
-								<!-- <p ><a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$n_added_book->id;?>">View Book</a></p> -->
+								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$n_added_book->id;?>">View Book</a></p> -->
 							</div>
 						</div> </a>
 						<!-- </div> -->

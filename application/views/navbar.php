@@ -5,7 +5,7 @@
   <nav class="white">
     <div class="nav-wrapper">
       <div class="foo">
-        <a href="<?php echo base_url() . 'index.php/Home_Controller/home_page' ?>">
+        <a href="<?php echo base_url() . 'Home_Controller/home_page' ?>">
         <span class="letter" data-letter="B">B</span>
         <span class="letter" data-letter="O">O</span>
         <span class="letter" data-letter="O">O</span>
@@ -24,7 +24,7 @@
         <ul class="right hide-on-med-and-down">
           <!-- <li><a href="sass.html">Shop</a></li> -->
           <!-- <li><a href="badges.html">Blog</a></li> -->
-          <li><a href="<?php echo base_url(). 'index.php/Shopping_cart_controller/view_cart';?>"><i class="material-icons navbar-icon">shopping_cart</i></a></li>
+          <li><a href="<?php echo base_url(). 'Shopping_cart_controller/view_cart';?>"><i class="material-icons navbar-icon">shopping_cart</i></a></li>
         </ul>
       </div>
   </nav>

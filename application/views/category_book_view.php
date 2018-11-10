@@ -49,7 +49,7 @@
 			<div class="horizontal-scroll">
 				<?php foreach ($category_books as $m_viewed_book) {
 
-    ?>			<a href="<?php echo base_url().'index.php/Book_controller/view_book/'.$m_viewed_book->id;?>">
+    ?>			<a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
@@ -61,8 +61,8 @@
 							<?php echo $m_viewed_book->author_name; ?></span>
 
 						<hr>
-						<i class="material-icons">attach_money</i><?php echo $m_viewed_book->price; ?>
-						<p><a href="#">View Book</a></p>
+						<i class="bname">Rs. <?php echo $m_viewed_book->price; ?> </i>
+						<!-- <p><a href="#">View Book</a></p> -->
 					</div>
 					
 				</div>
