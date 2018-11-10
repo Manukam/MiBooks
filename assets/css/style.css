@@ -81,7 +81,7 @@ footer.page-footer {
 }
 
 .category-name{
-  width: 220px;
+  /* width: 220px; */
   font-size: 18px !important;
   word-wrap: break-word !important;
 }
@@ -286,8 +286,8 @@ nav ul a {
   font-size: 30px !important;
 }
 
-.card.small {
-  /* height: 250px; */
+.image-resize {
+  height: 250px;
   width: 200px;
 }
 
@@ -305,6 +305,15 @@ nav ul a {
   max-height: none !important;
   object-fit: none !important;
 }
+
+.wrap-text{
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  /* white-space: initial; */
+  /* color: #000 !im portant; */
+}
+
 
 
 

@@ -302,32 +302,33 @@
 						<div class="page" id="p5">
 							<!-- <section class="icon fa fa-plus-circle"> -->
 							<h4> List of Books </h4>
-				<table id="book_list"  cellspacing="0" width="100%">
-					<thead>
-						<tr>
-							<th></th>
-							<th>Book Name</th>
-							<th>Author</th>
-							<th>Views</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach($all_books as $m_viewed_book){ ?>
-						<tr id = "<?php echo $m_viewed_book->id;?>">
-							<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id.'.jpg'?>" style='height:200px;width:150px;'></td>
-							<td>
-								<?php echo $m_viewed_book->book_name; ?>
-							</td>
-							<td>
-								<?php echo $m_viewed_book->author_name; ?>
-							</td>
-							<td>
-								<p><?php echo $m_viewed_book->NUM; ?>
-							</td>
-						</tr>
-						<?php } ?>
-					</tbody>
-				</table>
+							<table id="book_list" cellspacing="0" width="100%">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Book Name</th>
+										<th>Author</th>
+										<th>Views</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php foreach($all_books as $m_viewed_book){ ?>
+									<tr id="<?php echo $m_viewed_book->id;?>">
+										<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id.'.jpg'?>" style='height:200px;width:150px;'></td>
+										<td>
+											<?php echo $m_viewed_book->book_name; ?>
+										</td>
+										<td>
+											<?php echo $m_viewed_book->author_name; ?>
+										</td>
+										<td>
+											<p>
+												<?php echo $m_viewed_book->NUM; ?>
+										</td>
+									</tr>
+									<?php } ?>
+								</tbody>
+							</table>
 							</section>
 						</div>
 					</div>
@@ -355,7 +356,7 @@
 	<?php } ?>
 
 	<?php foreach($book_categories as $key=>$category){?>
-		labelSet.push('<?php echo $category->cat_name;?>');
+	labelSet.push('<?php echo $category->cat_name;?>');
 	<?php } ?>
 
 	var myChart = new Chart(ctx, {
@@ -423,7 +424,6 @@
 		document.getElementById(cityName).style.display = "block";
 		evt.currentTarget.className += " active";
 	}
-
 </script>
 
 </html>

@@ -11,7 +11,8 @@
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
-</head>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"/> -->
+	</head>
 
 <body>
 	<?php include 'navbar.php';
@@ -50,14 +51,14 @@
 				<?php foreach($sub_categories as $sub){ ?>
 				<div class="col s12 m3">
 					<a href="<?php echo base_url(). 'index.php/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
-						<div class="card small card-1">
+						<div class="card small card-1 image-resize">
 							<div class="card-image category-card">
 								<img class="activator category" src="<?php echo asset_url() . 'images/books/'. $images_sub_cat[$sub->sub_category] .'.jpg' ?>">
 							</div>
 							<div class="card-content">
-								<span class="card-title category-name activator grey-text text-darken-4">
+								<span class="card-title category-name activator grey-text text-darken-4 wrap-text">
 									<?php echo $sub->sub_cat_name;?></span>
-								<!-- <p><a href="#">Browse</a></p> -->
+								<p><a href="#">Browse</a></p>
 							</div>
 						</div>
 					</a>
@@ -66,6 +67,8 @@
 			</div>
 		</div>
 	</div>
+
+
 
 	<div class="parallax-container valign-wrapper">
 		<div class="section no-pad-bot">
@@ -128,5 +131,6 @@
 <script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 <script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script> -->
 
 </html>
