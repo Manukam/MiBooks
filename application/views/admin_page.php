@@ -26,13 +26,17 @@
 			<div class="nav-wrapper">
 				<div class="foo">
 					<a href="<?php echo base_url() . 'index.php/Home_Controller/home_page' ?>">
-						<span class="letter" data-letter="M">M</span>
-						<span class="letter" data-letter="i">i</span>
 						<span class="letter" data-letter="B">B</span>
 						<span class="letter" data-letter="O">O</span>
 						<span class="letter" data-letter="O">O</span>
 						<span class="letter" data-letter="K">K</span>
-						<span class="letter" data-letter="S">S</span> </a>
+						<span class="letter" data-letter="E">E</span>
+						<span class="letter" data-letter="D">D</span>
+						<span class="letter" data-letter="-">-</span>
+
+						<span class="letter" data-letter="U">U</span>
+						<span class="letter" data-letter="P">P</span>
+						<span class="letter" data-letter="!">!</span> </a>
 					<ul class="right hide-on-med-and-down">
 						<li><i class="icon far fa-user"></i></li>
 					</ul>
@@ -68,24 +72,24 @@
 									<div class="col s12 m3">
 										<div class="card-custom card-1">
 											<p>Total Visitors</p>
-											<i class="fas fa fa-chart-line left admin-icons-1"></i>
-											<span id="stat-number" class="step color-1">
-												<?php echo $total_visitors; ?></span>
+											<!-- <i cl	ass="fas fa fa-chart-line left admin-icons-1"></i> -->
+											<!-- <span id="stat-number" class="step color-1">
+												<?php echo $total_visitors; ?></span> -->
+											<canvas id="bar-chart-grouped" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
 											<p>Total Page Views </p>
-											<i class="fas fa fa-chart-line left admin-icons-2"></i>
-											<span id="stat-number" class="step color-2">
-												<?php echo $total_page_views;?></span>
+											<!-- <i class="fas fa fa-chart-line left admin-icons-2"></i> -->
+											<canvas id="bar-chart-grouped2" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
 											<p>Unique Visitors</p>
-											<i class="fas fa fa-chart-line left admin-icons-3"></i>
-											<span id="stat-number" class="step color-3">1</span>
+											<!-- <i class="fas fa fa-chart-line left admin-icons-3"></i> -->
+											<canvas id="bar-chart-grouped3" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 
 									</div>
@@ -142,9 +146,20 @@
 								<div class="row">
 
 									<div class="chart-view">
-										<p class="admin-heading"> Most Viewed Catagories </p>
+										<p class="admin-heading chart-heading"> Most Viewed Catagories </p>
 										<div class="card-chart card-1">
 											<canvas id="myChart"></canvas> </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="section">
+								<div class="row">
+
+									<div class="chart-view">
+										<p class="admin-heading chart-heading"> Total Visits Per Day </p>
+										<div class="card-chart card-1">
+											<canvas id="line-user-chart"></canvas> </div>
 									</div>
 								</div>
 							</div>
@@ -396,15 +411,18 @@
 						display: false
 					},
 					gridLines: {
-						display: false
+						display: false,
+						drawBorder: false
 					}
 				}],
 				xAxes: [{
 					gridLines: {
-						display: false
+						display: false,
+						drawBorder: false
 					},
 					ticks: {
 						display: false
+
 					}
 				}]
 			}
@@ -424,6 +442,182 @@
 		document.getElementById(cityName).style.display = "block";
 		evt.currentTarget.className += " active";
 	}
+
+	new Chart(document.getElementById("bar-chart-grouped"), {
+		type: 'bar',
+		data: {
+			labels: ["1900", "1950", "1999", "2050"],
+			datasets: [{
+				label: "Africa",
+				backgroundColor: "#3e95cd",
+				data: [133, 221, 213, 532],
+			}, {
+				label: "Europe",
+				backgroundColor: "#8e5ea2",
+				data: [454, 547, 675, 734]
+			}]
+		},
+		options: {
+			title: {
+				display: false,
+				text: 'Population growth (millions)'
+			},
+			legend: {
+				display: false
+			},
+			scales: {
+				yAxes: [{
+					ticks: {
+						display: false
+					},
+					gridLines: {
+						display: false,
+						drawBorder: false
+					}
+				}],
+				xAxes: [{
+					gridLines: {
+						display: false,
+						drawBorder: false
+					},
+					ticks: {
+						display: false
+					},
+				}]
+			}
+		}
+	});
+
+	new Chart(document.getElementById("bar-chart-grouped2"), {
+		type: 'bar',
+		data: {
+			labels: ["1900", "1950", "1999", "2050"],
+			datasets: [{
+				label: "Africa",
+				backgroundColor: "#3e95cd",
+				data: [133, 454, 783, 2478],
+			}, {
+				label: "Europe",
+				backgroundColor: "#8e5ea2",
+				data: [408, 680, 675, 332]
+			}]
+		},
+		options: {
+			title: {
+				display: false,
+				text: 'Population growth (millions)'
+			},
+			legend: {
+				display: false
+			},
+			scales: {
+				yAxes: [{
+					ticks: {
+						display: false
+					},
+					gridLines: {
+						display: false,
+						drawBorder: false
+					}
+				}],
+				xAxes: [{
+					gridLines: {
+						display: false,
+						drawBorder: false
+					},
+					ticks: {
+						display: false
+					},
+				}]
+			}
+		}
+	});
+
+	new Chart(document.getElementById("bar-chart-grouped3"), {
+		type: 'bar',
+		data: {
+			labels: ["1900", "1950", "1999", "2050"],
+			datasets: [{
+				label: "Africa",
+				backgroundColor: "#3e95cd",
+				data: [133, 537, 783, 234],
+			}, {
+				label: "Europe",
+				backgroundColor: "#8e5ea2",
+				data: [408, 547, 523, 734]
+			}]
+		},
+		options: {
+			title: {
+				display: false,
+				text: 'Population growth (millions)'
+			},
+			legend: {
+				display: false
+			},
+			scales: {
+				yAxes: [{
+					ticks: {
+						display: false
+					},
+					gridLines: {
+						display: false,
+						drawBorder: false
+					}
+				}],
+				xAxes: [{
+					gridLines: {
+						display: false,
+						drawBorder: false
+					},
+					ticks: {
+						display: false
+					},
+				}]
+			}
+		}
+	});
+
+
+var daySet = new Array();
+var countPerDay = new Array();
+	<?php foreach($visitor_count_per_Day as $key=>$date){?>
+	daySet.push('<?php echo $date->Day;?>');
+	<?php } ?>
+
+	<?php foreach($visitor_count_per_Day as $key=>$date){?>
+	countPerDay.push('<?php echo $date->COUNT;?>');
+	<?php } ?>
+
+console.log(daySet);
+console.log(countPerDay);
+	new Chart(document.getElementById("line-user-chart"), {
+		type: 'line',
+		data: {
+			labels: daySet,
+			datasets:[{
+            label: "Visits",
+            borderColor: "#80b6f4",
+            pointBorderColor: "#80b6f4",
+            pointBackgroundColor: "#80b6f4",
+            pointHoverBackgroundColor: "#80b6f4",
+            pointHoverBorderColor: "#80b6f4",
+            pointBorderWidth: 10,
+            pointHoverRadius: 10,
+            pointHoverBorderWidth: 1,
+            pointRadius: 3,
+            fill: false,
+            borderWidth: 4,
+            data: countPerDay
+        }],
+		},
+		options: {
+			title: {
+				display: false,
+				text: 'Total Visits Per Day'
+			}
+		}
+	});
 </script>
 
 </html>

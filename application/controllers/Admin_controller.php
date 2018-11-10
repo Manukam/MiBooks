@@ -36,6 +36,7 @@ class Admin_controller extends CI_Controller {
         $data['book_categories'] = $this->book_model->get_book_categories();
         $data['total_page_views'] = $this->Admin_model->get_total_page_views();
         $data['total_visitors'] = $this->Admin_model->get_visitors();
+        $data['visitor_count_per_Day'] = $this->Admin_model->get_visitor_count_per_day();
 
 
         $data['authors'] = $this->Admin_model->get_authors();

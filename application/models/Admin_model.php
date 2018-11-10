@@ -48,6 +48,11 @@ class Admin_model extends CI_Model {
     public function get_visitors(){
         return $this->db->count_all_results('users');
     }
+
+    public function get_visitor_count_per_day(){
+        $query = $this->db->query('SELECT DATE(user_view.time) as Day, count(EXTRACT(DAY FROM user_view.time)) as COUNT from user_view group by EXTRACT(DAY from user_view.time)');  
+        return $query->result();
+    }
 }
 
 

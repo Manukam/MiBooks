@@ -366,6 +366,10 @@ span {
 	text-align: center;
 }
 
+.chart-heading{
+	padding-right: 150px;
+}
+
 #myChart {
 	width: 100% !important;
 	height: 90% !important;
@@ -374,7 +378,7 @@ span {
 
 .chart-view {
 	top: 550px;
-	left: 150px !important;
+	left: 250px !important;
 	position: relative !important;
 	width: 80%;
 	height: 80%;
@@ -387,7 +391,9 @@ span {
 }
 
 .card-chart {
-	width: 100%;
+	width: 80%;
+	padding-left: 40px !important;
+	background-color: #fff !important;
 }
 
 .form-card-custom {
@@ -666,6 +672,10 @@ textarea{
 
 #book_list_wrapper{
 	width: 90% !important;
+}
+
+.stats-graph{
+	padding-bottom: 120px !important; 
 }
 
 
