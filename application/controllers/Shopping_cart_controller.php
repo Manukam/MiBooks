@@ -10,8 +10,6 @@ class Shopping_cart_controller extends CI_Controller {
 
     public function view_cart(){
         $added_books = $this->session->userdata('cart');
-        // var_dump($this->session->userdata('cart'));
-        // $this->load->model('Book_model');
         $shopping_list = array();
         if($added_books != null){
             $shopping_list = $this->get_book_details($added_books);
@@ -31,7 +29,6 @@ class Shopping_cart_controller extends CI_Controller {
         $shopping_items = $this->session->userdata('cart');
         if(!is_array($shopping_items)){
             $shopping_items = array();
-            // var_dump('here');
         }
         if(array_key_exists($book_id,$shopping_items)){
             $existing_quantity = $shopping_items[$book_id];
@@ -41,12 +38,6 @@ class Shopping_cart_controller extends CI_Controller {
         }
         
         $this->session->set_userdata('cart',$shopping_items);
-        // var_dump ( $this->session->userdata('cart'));
-        // $this->load->view("book_view",$book_id);
-    }
-
-    public function no_dupes(array $input_array) {
-        return count($input_array) === count(array_flip($input_array));
     }
 
     public function get_book_details(array $books){

@@ -30,7 +30,7 @@
 				}else{
 					foreach($shopping_items as $items){ 
 					foreach($items as $item) {?>
-				<li class="_grid shopping-cart--list-item">
+				<li class="grid shopping-cart--list-item">
 					<div class="_column product-image">
 						<img class="product-image" src="<?php echo asset_url(). 'images/books/' . $item->id .'.jpg' ?>" alt="Item image" />
 					</div>
@@ -44,7 +44,7 @@
 						<!-- <div class="price product-single-price">1234</div> -->
 					</div>
 					<div class="_column product-modifiers">
-						<div class="_grid">
+						<div class="grid">
 							<button class="_btn _column product-subtract" id='<?php echo $item->id;?>' onClick="removeOne(this.id)">&minus;</button>
 							<div class="_column product-qty" id="product-quantity">
 								<?php echo  $item->quantity;?>
@@ -60,7 +60,7 @@
 
 			</ol>
 
-			<footer class="_grid cart-totals">
+			<footer class="grid cart-totals">
 				<div class="_column subtotal" id="subtotalCtr">
 					<div class="cart-totals-key">Subtotal</div>
 					<div class="cart-totals-value">Rs. 0.00</div>
@@ -78,7 +78,7 @@
 					<div class="cart-totals-value">Rs. 0.00</div>
 				</div>
 				<div class="_column checkout">
-					<button class="_btn checkout-btn entypo-forward">Checkout</button>
+					<button class="_btn checkout-_btn entypo-forward">Checkout</button>
 				</div>
 			</footer>
 

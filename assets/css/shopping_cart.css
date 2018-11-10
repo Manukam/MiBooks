@@ -18,13 +18,13 @@ h1, .sub-heading {
  * @section: utilities;
  * @see: Justify Grid [http://justifygrid.com/]
  */
-._grid {
+.grid {
   text-align: justify !important;
   text-justify: distribute-all-lines;
   font-size: 0 !important;
   text-rendering: optimizespeed;
 }
-._grid:after {
+.grid:after {
   content: "";
   display: inline-block;
   width: 100%;
@@ -45,7 +45,7 @@ h1, .sub-heading {
   font-weight: 300;
 }
 ._btn:hover,
-.cart-totals:hover ._btn {
+.cart-totals:hover .___btn {
   background-color: #3498db;
   color: #ecf0f1;
 }
@@ -59,7 +59,7 @@ h1, .sub-heading {
   margin: 0 auto;
 }
 /**
- * @extends: _grid;
+ * @extends: grid;
  */
 .shopping-cart--list-item {
   border: 1px solid #bdc3c7;
@@ -156,7 +156,7 @@ h1, .sub-heading {
 
 /**
  * @section: cart-totals;
- * @extends: _grid;
+ * @extends: grid;
  */
 .cart-totals {
   border-top: 1px solid #bdc3c7;
@@ -190,10 +190,10 @@ h1, .sub-heading {
   margin-top: 1.5em;
   vertical-align: middle;
 }
-.checkout-btn:before {
+.checkout-___btn:before {
   margin-right: .5em;
 }
-._btn.checkout-btn:hover {
+._btn.checkout-_btn:hover {
   background-color: #2980b9;
 }
 
