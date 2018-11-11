@@ -61,7 +61,7 @@
 								<li class="icon fa fa-plus-circle" id="dos"></li>
 							</a>
 							<a href="#t5">
-								<i class="icon fas fa-search"></i>
+								<i class="icon fas fa-search" id="tres"></i>
 							</a>
 						</ul>
 
