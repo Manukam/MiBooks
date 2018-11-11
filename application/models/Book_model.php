@@ -61,8 +61,11 @@ class Book_model extends CI_Model {
         return $query->result();
     }
 
-    public function get_total_books(){
-        $query = $this->db->select("COUNT(book.id) as num")->get("book");
+    public function get_total_books($sub_cat){
+        $this->db->select("COUNT(book.id) as num");
+        $this->db->from('book');
+        $this->db->where("book.sub_cat", $sub_cat);
+        $query = $this->db->get();
         $result = $query->row();
         if(isset($result)) {
             return $result->num;

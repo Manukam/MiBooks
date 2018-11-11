@@ -43,22 +43,22 @@
 		<div class="col s12 m3">
 			<div class="card small price-card">
 				<div class="card-content">
-					<span class="card-title category-name activator grey-text text-darken-4">Buy New</span>
-					<span class="right"> Rs. 2100.00 </span>
+					<span class="card-title category-name activator grey-text text-darken-4">Buy New!</span>
+					
 					<!-- <p><a href="#">Browse</a></p> -->
-					<label>Qty</label>
+					<label>Quantity: </label>
 					<div class="input-field col s12 left">
 						<select id="book_quantity">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 						</select>
-
+						<span class="left price-tag"> Rs. 2100.00 </span>
 					</div>
 
 				</div>
 				<div class="card-action cart-btn" id="<?php  echo $book_details[0]->id;?>">
-					<a class="waves-effect waves-light btn center">Add to Cart</a>
+					<a class="waves-effect waves-light btn center add-cart-btn">Add to Cart</a>
 				</div>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 
 						<hr>
 						<i>Rs.</i><?php echo $related_book->price;?>
-						<p><a href="#">Add to Cart</a></p>
+						<!-- <p><a href="#">Add to Cart</a></p> -->
 					</div>
 				</div>
 				<?php }?>
@@ -115,8 +115,8 @@
 							<?php echo $recent_viewed_book->author_name; ?></span>
 
 						<hr>
-						<i class="material-icons">attach_money</i>35.00
-						<p><a href="#">Add to Cart</a></p>
+						<i>Rs. </i><?php echo $recent_viewed_book->price;?>
+						<!-- <p><a href="#">Add to Cart</a></p> -->
 					</div>
 				</div>
 				<?php }?>

@@ -247,7 +247,7 @@ div.foo{
   /* width: 200px; */
   display: flex;
   /* position: inherit !important; */
-  top: 10 !important;
+  top: 70px !important;
   left: 0;
   height: 100%;
   width: 90%;
@@ -340,6 +340,25 @@ i {
   top: 17px !important;
   right:2px !important;
   padding:5px !important;
+}
+
+.add-cart-btn{
+  width: 100%;
+  background-color: #F90B6D !important;
+}
+
+.price-tag{
+  padding-top: 50px;
+  font-size: 20px;
+  padding-left: 50px;
+}
+.slogan-text{
+  padding-bottom: 20px;
+  
+}
+
+.slogan-content{
+  padding-top: 70px !important;
 }
 
 

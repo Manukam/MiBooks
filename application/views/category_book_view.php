@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="section">
 			<p class="category-heading "> <?php echo $sub_category_name[0]->sub_cat_name;?> </p>
-			<p class="category-description">Find your new favorite book in<?php echo $sub_category_name[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $sub_category_name[0]->sub_cat_name;?> books of the month. </p>
+			<p class="category-description">Find your new favorite book in <?php echo $sub_category_name[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $sub_category_name[0]->sub_cat_name;?> books of the month. </p>
 		</div>
 	</div>
 
@@ -45,7 +45,7 @@
 		<div class="section">
 
 
-			<h5> Most viewed Biographies and Memoirs </h5>
+			<h5> Most viewed <?php echo $sub_category_name[0]->sub_cat_name;?> Books </h5>
 			<div class="horizontal-scroll">
 				<?php foreach ($category_books as $m_viewed_book) {
 
@@ -74,7 +74,7 @@
 
 		<div class="container">
 			<div class="section">
-				<h4> List of Books </h4>
+				<h4> List of <?php echo $sub_category_name[0]->sub_cat_name;?> Books </h4>
 				<table id="book_list" class="display" cellspacing="0" width="100%">
 					<thead>
 						<tr>

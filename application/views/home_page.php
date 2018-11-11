@@ -32,7 +32,7 @@
 		<div class="parallax"><img src=<?php echo asset_url() . 'images/image15.png' ?> alt="Unsplashed background img 1"></div>
 	</div>
 
-<h4 class="home_heading"> Books at MiBooks </h4>
+<h4 class="home_heading"> Books at BOOKED-UP! </h4>
 	<div class="container">
 		<div class="section">
 			<h5> Shop By Category </h5>

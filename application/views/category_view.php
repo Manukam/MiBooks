@@ -87,7 +87,7 @@
 		<div class="section">
 
 
-			<h5> Most viewed Biographies and Memoirs </h5>
+			<h5> Most viewed  <?php echo $category_name[0]->cat_name; ?> Books </h5>
 			<div class="horizontal-scroll">
 				<?php foreach ($category_books as $m_viewed_book) {
 
