@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?php echo $book_details[0]->book_name . ' - ' . $book_details[0]->author_name;?></title>
+	<title><?php echo $bookDetails[0]->book_name . ' - ' . $bookDetails[0]->author_name;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -15,14 +15,14 @@
 	<?php include('navbar.php');?>
 	<div class="row">
 		<div class="col s12 m3">
-			<img class="materialboxed" width="300" src="<?php echo asset_url() . 'images/books/'.$book_details[0]->id.'.jpg' ?>">
+			<img class="materialboxed" width="300" src="<?php echo asset_url() . 'images/books/'.$bookDetails[0]->id.'.jpg' ?>">
 		</div>
 		<div class="col s12 m6">
 			<h5>
-				<?php echo $book_details[0]->book_name; ?>
+				<?php echo $bookDetails[0]->book_name; ?>
 			</h5>
 			<h6>
-				<?php echo $book_details[0]->author_name;?>
+				<?php echo $bookDetails[0]->author_name;?>
 			</h6>
 			<hr>
 
@@ -55,7 +55,7 @@
 					</div>
 
 				</div>
-				<div class="card-action cart-btn" id="<?php  echo $book_details[0]->id;?>">
+				<div class="card-action cart-btn" id="<?php  echo $bookDetails[0]->id;?>">
 					<a class="waves-effect waves-light btn center add-cart-btn">Add to Cart</a>
 				</div>
 			</div>
@@ -69,21 +69,21 @@
 
 			<h5> Customers who viewed this also viewed </h5>
 			<div class="horizontal-scroll">
-				<?php foreach ($related_books as $related_book) {
+				<?php foreach ($relatedBooks as $relatedBook) {
 
     ?>
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$related_book->id.'.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$relatedBook->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname card-text">
-							<?php echo $related_book->book_name; ?></span>
+							<?php echo $relatedBook->book_name; ?></span>
 						<span class="card-content card-text">
-							<?php echo $related_book->author_name; ?></span>
+							<?php echo $relatedBook->author_name; ?></span>
 
 						<hr>
-						<i>Rs.</i><?php echo $related_book->price;?>
+						<i>Rs.</i><?php echo $relatedBook->price;?>
 						<!-- <p><a href="#">Add to Cart</a></p> -->
 					</div>
 				</div>
@@ -99,21 +99,21 @@
 
 			<h5> Your recently viewed books </h5>
 			<div class="horizontal-scroll">
-				<?php foreach ($recent_books as $recent_viewed_book) {
+				<?php foreach ($recentBooks as $recentViewedBook) {
 
     ?>
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$recent_viewed_book->id.'.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$recentViewedBook->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname card-text">
-							<?php echo $recent_viewed_book->book_name; ?></span>
+							<?php echo $recentViewedBook->book_name; ?></span>
 						<span class="card-content card-text">
-							<?php echo $recent_viewed_book->author_name; ?></span>
+							<?php echo $recentViewedBook->author_name; ?></span>
 
 						<hr>
-						<i>Rs. </i><?php echo $recent_viewed_book->price;?>
+						<i>Rs. </i><?php echo $recentViewedBook->price;?>
 						<!-- <p><a href="#">Add to Cart</a></p> -->
 					</div>
 				</div>

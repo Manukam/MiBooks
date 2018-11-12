@@ -17,8 +17,8 @@
 	<?php include('navbar.php');?>
 	<div class="container">
 		<div class="section">
-			<p class="category-heading "> <?php echo $sub_category_name[0]->sub_cat_name;?> </p>
-			<p class="category-description">Find your new favorite book in <?php echo $sub_category_name[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $sub_category_name[0]->sub_cat_name;?> books of the month. </p>
+			<p class="category-heading "> <?php echo $subCategoryName[0]->sub_cat_name;?> </p>
+			<p class="category-description">Find your new favorite book in <?php echo $subCategoryName[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $sub_category_name[0]->sub_cat_name;?> books of the month. </p>
 		</div>
 	</div>
 
@@ -45,23 +45,23 @@
 		<div class="section">
 
 
-			<h5> Most viewed <?php echo $sub_category_name[0]->sub_cat_name;?> Books </h5>
+			<h5> Most viewed <?php echo $subCategoryName[0]->sub_cat_name;?> Books </h5>
 			<div class="horizontal-scroll">
-				<?php foreach ($category_books as $m_viewed_book) {
+				<?php foreach ($categoryBooks as $mViewedBook) {
 
-    ?>			<a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">
+    ?>			<a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$mViewedBook->id.'.jpg' ?>">
 					</div>
 					<div class="card-content card-text">
 						<span class="card-title bname">
-							<?php echo $m_viewed_book->book_name; ?></span>
+							<?php echo $mViewedBook->book_name; ?></span>
 						<span class="card-content card-text">
-							<?php echo $m_viewed_book->author_name; ?></span>
+							<?php echo $mViewedBook->author_name; ?></span>
 
 						<hr>
-						<i class="bname">Rs. <?php echo $m_viewed_book->price; ?> </i>
+						<i class="bname">Rs. <?php echo $mViewedBook->price; ?> </i>
 						<!-- <p><a href="#">View Book</a></p> -->
 					</div>
 					
@@ -74,7 +74,7 @@
 
 		<div class="container">
 			<div class="section">
-				<h4> List of <?php echo $sub_category_name[0]->sub_cat_name;?> Books </h4>
+				<h4> List of <?php echo $subCategoryName[0]->sub_cat_name;?> Books </h4>
 				<table id="book_list" class="display" cellspacing="0" width="100%">
 					<thead>
 						<tr>

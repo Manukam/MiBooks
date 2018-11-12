@@ -78,34 +78,25 @@
 					<h3><i class="mdi-content-send brown-text"></i></h3>
 					<h4>Most Viewed Books</h4>
 					<div class="horizontal-scroll">
-						<?php foreach ($most_viewed as $m_viewed_book) {
+						<?php foreach ($mostViewed as $mViewedBook) {
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">
+						<a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
-								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $m_viewed_book->id .'.jpg' ?>">
+								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $mViewedBook->id .'.jpg' ?>">
 							</div>
 							<div class="card-content ">
 								<span class="card-title bname card-text">
-									<?php echo $m_viewed_book->book_name; ?></span>
+									<?php echo $mViewedBook->book_name; ?></span>
 								<span class="card-content card-text">
-									<?php echo $m_viewed_book->author_name; ?></span>
+									<?php echo $mViewedBook->author_name; ?></span>
 
 								<hr>
-								<span class="card-text"><i>Rs. </i><?php echo $m_viewed_book->price; ?> </span>
-								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">View Book</a></p> -->
+								<span class="card-text"><i>Rs. </i><?php echo $mViewedBook->price; ?> </span>
+								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">View Book</a></p> -->
 							</div>
-							<!-- <div class="card-reveal">
-								<span class="card-title grey-text text-darken-4">
-									<?php echo $m_viewed_book->book_name; ?><i class="material-icons right">close</i></span>
-								<p>Here is some more information about this product that is only revealed once hover it.</p>
-								<p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit
-									petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
-									summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas
-									omittam ad nam. Eu per erant putent, eu has suas sale.</p>
-							</div> -->
 						</div> </a>
 						<!-- </div> -->
 						<?php }?>
@@ -137,24 +128,24 @@
 					<h3><i class="mdi-content-send brown-text"></i></h3>
 					<h4>Newly Added Books</h4>
 					<div class="horizontal-scroll">
-						<?php foreach ($newly_added as $n_added_book) {
+						<?php foreach ($newlyAdded as $nAddedBook) {
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'/Book_controller/view_book/'.$n_added_book->id;?>">
+						<a href="<?php echo base_url().'/Book_controller/view_book/'.$nAddedBook->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
-								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $n_added_book->id .'.jpg' ?>">
+								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $nAddedBook->id .'.jpg' ?>">
 							</div>
 							<div class="card-content ">
 								<span class="card-title bname card-text">
-									<?php echo $n_added_book->book_name; ?></span>
+									<?php echo $nAddedBook->book_name; ?></span>
 								<span class="card-content card-text">
-									<?php echo $n_added_book->author_name; ?></span>
+									<?php echo $nAddedBook->author_name; ?></span>
 
 								<hr>
-								<span class="card-text"><i >Rs. </i><?php echo $n_added_book->price; ?> </span>
-								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$n_added_book->id;?>">View Book</a></p> -->
+								<span class="card-text"><i >Rs. </i><?php echo $nAddedBook->price; ?> </span>
+								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$nAddedBook->id;?>">View Book</a></p> -->
 							</div>
 						</div> </a>
 						<!-- </div> -->

@@ -13,7 +13,7 @@
 
         <ul>
             <?php 
-               foreach ($book_list as $book)
+               foreach ($bookList as $book)
                 {
                     echo "<li> <a  href=". base_url() . "/View_tracking/view_book/" .$book->id.">" .$book->book_name; // access attributes
                     // echo $user->reverse_name(); // or methods defined on the 'User' class

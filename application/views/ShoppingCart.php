@@ -25,11 +25,11 @@
 			<ol class="ui-list shopping-cart--list" id="shopping-cart--list">
 
 				<!-- <script id="shopping-cart--list-item-template" type="text/template"> -->
-				<?php if($shopping_items === NULL) {
+				<?php if($shoppingItems === NULL) {
 						echo "<p> Shopping Cärt Empty";
 						// var_dump($shopping_items);die();
 				}else{
-					foreach($shopping_items as $items){ 
+					foreach($shoppingItems as $items){ 
 						// var_dump($shopping_items);die();
 					foreach($items as $item) {?>
 				<li class="grid shopping-cart--list-item">
@@ -65,7 +65,7 @@
 			<footer class="grid cart-totals">
 				<div class="_column subtotal" id="subtotalCtr">
 					<div class="cart-totals-key">Subtotal</div>
-					<div class="cart-totals-value">Rs. <?php echo $sub_total;?></div>
+					<div class="cart-totals-value">Rs. <?php echo $subTotal;?></div>
 				</div>
 				<div class="_column shipping" id="shippingCtr">
 					<div class="cart-totals-key">Shipping</div>
@@ -77,7 +77,7 @@
 				</div>
 				<div class="_column total" id="totalCtr">
 					<div class="cart-totals-key">Total</div>
-					<div class="cart-totals-value">Rs. <?php echo $total_money;?></div>
+					<div class="cart-totals-value">Rs. <?php echo $totalMoney;?></div>
 				</div>
 				<div class="_column checkout">
 					<button class="_btn checkout-_btn entypo-forward">Checkout</button>

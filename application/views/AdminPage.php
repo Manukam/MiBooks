@@ -113,23 +113,23 @@
 										<div class="horizontal-scroll-admin">
 											<p class="admin-heading">Most Viewed Books</p>
 											<!-- <div id="rightArrow"></div> -->
-											<?php foreach ($most_viewed as $m_viewed_book) {
+											<?php foreach ($mostViewed as $mViewedBook) {
 
     ?>
 											<!-- <div class="horizonatal-scroll"> -->
 											<div class="card medium custom-height card-1">
 												<div class="card-image">
-													<img class="activator resize" src="<?php echo asset_url() . 'images/books/' . $m_viewed_book->id . '.jpg' ?>">
+													<img class="activator resize" src="<?php echo asset_url() . 'images/books/' . $mViewedBook->id . '.jpg' ?>">
 												</div>
 												<div class="card-content">
 													<span class="card-title bname wrap-text">
-														<?php echo $m_viewed_book->book_name; ?></span>
+														<?php echo $mViewedBook->book_name; ?></span>
 													<span class="card-content ">
-														<?php echo $m_viewed_book->author_name; ?></span>
+														<?php echo $mViewedBook->author_name; ?></span>
 
 													<hr>
 													<i class="fas fa-eye"></i>
-													<?php echo $m_viewed_book->NUM; ?>
+													<?php echo $mViewedBook->NUM; ?>
 													<!-- <p><a href="#">Add to Cart</a></p> -->
 												</div>
 
@@ -224,7 +224,7 @@
 													<div class="input-field col s12 m7">
 														<select class="js-example-basic-single book-cat-select" id="book-cat-select" required>
 															<option value="" disabled selected>Book Category</option>
-															<?php foreach($book_categories as $category){ ?>
+															<?php foreach($bookCategories as $category){ ?>
 															<option value="<?php echo $category->id; ?>">
 																<?php echo $category->cat_name;?>
 															</option>
@@ -328,18 +328,18 @@
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach($all_books as $m_viewed_book){ ?>
+									<?php foreach($allBooks as $mViewedBook){ ?>
 									<tr id="<?php echo $m_viewed_book->id;?>">
-										<td><img src="<?php echo asset_url() .'images/books/'.$m_viewed_book->id.'.jpg'?>" style='height:200px;width:150px;'></td>
+										<td><img src="<?php echo asset_url() .'images/books/'.$mViewedBook->id.'.jpg'?>" style='height:200px;width:150px;'></td>
 										<td>
-											<?php echo $m_viewed_book->book_name; ?>
+											<?php echo $mViewedBook->book_name; ?>
 										</td>
 										<td>
-											<?php echo $m_viewed_book->author_name; ?>
+											<?php echo $mViewedBook->author_name; ?>
 										</td>
 										<td>
 											<p>
-												<?php echo $m_viewed_book->NUM; ?>
+												<?php echo $mViewedBook->NUM; ?>
 										</td>
 									</tr>
 									<?php } ?>

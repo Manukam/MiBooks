@@ -19,8 +19,8 @@
 ?>
 	<div class="container">
 		<div class="section">
-			<p class="category-heading  "> <?php echo $category_name[0]->cat_name; ?> </p>
-			<p class="category-description">Find your new favorite book in <?php echo $category_name[0]->cat_name; ?>. Plus, see our picks for the best <?php echo $category_name[0]->cat_name; ?> books of the month. </p>
+			<p class="category-heading  "> <?php echo $categoryName[0]->cat_name; ?> </p>
+			<p class="category-description">Find your new favorite book in <?php echo $categoryName[0]->cat_name; ?>. Plus, see our picks for the best <?php echo $category_name[0]->cat_name; ?> books of the month. </p>
 		</div>
 	</div>
 
@@ -38,7 +38,7 @@
 
 			</div>
 		</div>
-		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $category_name[0]->cat_name; ?>.jpg" alt="Unsplashed background
+		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $categoryName[0]->cat_name; ?>.jpg" alt="Unsplashed background
 			img
 			1"></div>
 	</div>
@@ -48,7 +48,7 @@
 			<h5> Shop By Category </h5>
 
 			<div class="row">
-				<?php foreach($sub_categories as $sub){ ?>
+				<?php foreach($subCategories as $sub){ ?>
 				<div class="col s12 m3">
 					<a href="<?php echo base_url(). '/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
 						<div class="card small card-1 image-resize">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $category_name[0]->cat_name; ?>2.jpg" alt="Unsplashed background img 3"></div>
+		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $categoryName[0]->cat_name; ?>2.jpg" alt="Unsplashed background img 3"></div>
 	</div>
 
 
@@ -87,23 +87,23 @@
 		<div class="section">
 
 
-			<h5> Most viewed  <?php echo $category_name[0]->cat_name; ?> Books </h5>
+			<h5> Most viewed  <?php echo $categoryName[0]->cat_name; ?> Books </h5>
 			<div class="horizontal-scroll">
-				<?php foreach ($category_books as $m_viewed_book) {
+				<?php foreach ($categoryBooks as $mViewedBook) {
 
-    ?>          <a href="<?php echo base_url().'/Book_controller/view_book/'.$m_viewed_book->id;?>">
+    ?>          <a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
-						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$m_viewed_book->id.'.jpg' ?>">
+						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$mViewedBook->id.'.jpg' ?>">
 					</div>
 					<div class="card-content">
 						<span class="card-title bname card-text">
-							<?php echo $m_viewed_book->book_name; ?></span>
+							<?php echo $mViewedBook->book_name; ?></span>
 						<span class="card-content card-text">
-							<?php echo $m_viewed_book->author_name; ?></span>
+							<?php echo $mViewedBook->author_name; ?></span>
 
 						<hr>
-						<i class="bname">Rs. <?php echo $m_viewed_book->price; ?> </i>
+						<i class="bname">Rs. <?php echo $mViewedBook->price; ?> </i>
 						<!-- <p class="card-text"><a href="#">Add to Cart</a></p> -->
 					</div>
 					
