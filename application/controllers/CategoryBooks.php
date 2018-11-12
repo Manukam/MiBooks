@@ -1,42 +1,41 @@
 <?php
 
-class Category_books extends CI_Controller {
+class CategoryBooks extends CI_Controller {
 
-    public function view_category($category_id){
-
-        $this->load->model('View_category_model');
-        $data['category_books'] = $this->View_category_model->get_category_data($category_id);
-        $data['sub_categories'] = $this->View_category_model->get_sub_categories($category_id);
-        $data['images_sub_cat'] = $this->View_category_model->get_random_pic($category_id);
-        $data['category_name'] = $this->View_category_model->get_category_name($category_id);
-        $this->load->view('category_view',$data);
-        }
-
-    public function view_category_books($category_id, $sub_category_id){
-        $this->load->model('View_category_model');
-        // $data['category_books'] = $this->View_category_model->get_category_data($category_id,$sub_category_id);
-        $data['category_books'] = $this->View_category_model->get_sub_books($category_id,$sub_category_id);
-        $data['sub_category_name'] = $this->View_category_model->get_sub_category_name($sub_category_id);
-        $this->load->view('category_book_view',$data);
+    function __construct() {
+        parent::__construct();
+        $this->load->model("BookModel");
+        $this->load->model('ViewCategoryModel');
     }
 
-    public function get_category_books(){
-        $this->load->model('Book_model');
+    public function viewCategory($categoryId){ 
+        $data['categoryBooks'] = $this->ViewCategoryModel->getCategoryData($categoryId);
+        $data['subCategories'] = $this->ViewCategoryModel->getSubCategories($categoryId);
+        $data['imagesSubCat'] = $this->ViewCategoryModel->getRandomPic($categoryId);
+        $data['categoryName'] = $this->ViewCategoryModel->getCategoryName($categoryId);
+        $this->load->view('CategoryView',$data);
+    }
+
+    public function viewCategoryBooks($categoryId, $subCategoryId){
+        $data['categoryBooks'] = $this->ViewCategoryModel->getSubBooks($categoryId,$subCategoryId);
+        $data['subCategoryName'] = $this->ViewCategoryModel->getSubCategoryName($subCategoryId);
+        $this->load->view('categoryBookView',$data);
+    }
+
+    public function getCategoryBooks(){
         $mainCat = $this->input->get('mainCat');
         $subCat = $this->input->get('subCat');
         $draw = intval($this->input->get("draw"));
         $start = intval($this->input->get("start"));
         $length = intval($this->input->get("length"));
         $search = $this->input->get('search[value]');
-        $this->load->model('View_category_model');
-        $total_books = $this->Book_model->get_total_books($subCat);
-        // print_r($search);
-        $book_set= $this->View_category_model->get_sub_books_pagination($mainCat,$subCat,$length,$start,$search);
+        $totalBooks = $this->BookModel->getTotalBooks($subCat);
+        $bookSet= $this->ViewCategoryModel->getSubBooksPagination($mainCat,$subCat,$length,$start,$search);
         
 
         $data = array();
 
-        foreach($book_set as $book) {
+        foreach($bookSet as $book) {
 
              $data[] = array(
                 $book->id,
@@ -51,8 +50,8 @@ class Category_books extends CI_Controller {
 
         $result = array(
             "draw" => $draw,
-              "recordsTotal" => $total_books,
-              "recordsFiltered" => $total_books,
+              "recordsTotal" => $totalBooks,
+              "recordsFiltered" => $totalBooks,
               "data" => $data
          );
         echo json_encode($result);
