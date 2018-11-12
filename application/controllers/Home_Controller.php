@@ -14,7 +14,7 @@ class Home_Controller extends CI_Controller {
     public function check_session(){
         $this->load->model('User_model');
         if($this->session->userdata('user_id')){
-            // echo ("session available");
+          //Session available, refresh the session  
         }else{
             $user_id = uniqid(true);
             $newdata = array(

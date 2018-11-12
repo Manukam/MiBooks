@@ -10,19 +10,31 @@ class Shopping_cart_controller extends CI_Controller {
 
     public function view_cart(){
         $added_books = $this->session->userdata('cart');
-        $shopping_list = array();
+        $shopping_list = array();    
+        $sub_total = 0;
+        $shipping = 250;
+        $tax = 5;
+        $total;
         if($added_books != null){
             $shopping_list = $this->get_book_details($added_books);
             $data['shopping_items'] = $shopping_list;
             // var_dump($data['shopping_items']);
             foreach($shopping_list as $book){
                 $book[0]->total_price = $book[0]->price * $book[0]->quantity; 
+                $sub_total += $book[0]->total_price;
             }
         }else{
             $data['shopping_items'] = NULL;
         }
 
-        // print_r($data['shopping_items']);
+        $tax = ($sub_total * $tax) / 100; 
+        $total = ($sub_total + $shipping) + $tax;
+
+        $data['total_money'] = $total;
+        $data['tax'] = $tax;
+        $data['sub_total'] = $sub_total;
+      
+
         $this->load->view("shopping_cart",$data);
     }
 

@@ -6,8 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?php echo $book_details[0]->book_name . ' - ' . $book_details[0]->author_name;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-	<!-- <script src="main.js"></script> -->
 	<link href="<?php echo asset_url() . 'css/materialIcon.css'?>" rel="stylesheet">
 	<link href="<?php echo asset_url() . 'css/materialize.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="<?php echo asset_url() . 'css/style.css' ?>" type="text/css" rel="stylesheet" media="screen,projection" />

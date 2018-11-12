@@ -19,7 +19,7 @@
 	<?php echo include('navbar.php');?>
 	<div class="main">
 		<h1>Shopping cart</h1>
-		<h2 class="sub-heading">Free shipping from $100!</h2>
+		<h2 class="sub-heading">Free shipping from Rs. 2500!</h2>
 
 		<section class="shopping-cart">
 			<ol class="ui-list shopping-cart--list" id="shopping-cart--list">
@@ -65,19 +65,19 @@
 			<footer class="grid cart-totals">
 				<div class="_column subtotal" id="subtotalCtr">
 					<div class="cart-totals-key">Subtotal</div>
-					<div class="cart-totals-value">Rs. 0.00</div>
+					<div class="cart-totals-value">Rs. <?php echo $sub_total;?></div>
 				</div>
 				<div class="_column shipping" id="shippingCtr">
 					<div class="cart-totals-key">Shipping</div>
-					<div class="cart-totals-value">Rs.  0.00</div>
+					<div class="cart-totals-value">Rs. 250</div>
 				</div>
 				<div class="_column taxes" id="taxesCtr">
-					<div class="cart-totals-key">Taxes (6%)</div>
-					<div class="cart-totals-value">Rs. 0.00</div>
+					<div class="cart-totals-key">Taxes (5%)</div>
+					<div class="cart-totals-value">Rs. <?php echo $tax; ?></div>
 				</div>
 				<div class="_column total" id="totalCtr">
 					<div class="cart-totals-key">Total</div>
-					<div class="cart-totals-value">Rs. 0.00</div>
+					<div class="cart-totals-value">Rs. <?php echo $total_money;?></div>
 				</div>
 				<div class="_column checkout">
 					<button class="_btn checkout-_btn entypo-forward">Checkout</button>

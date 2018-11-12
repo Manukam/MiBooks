@@ -122,7 +122,7 @@
 													<img class="activator resize" src="<?php echo asset_url() . 'images/books/' . $m_viewed_book->id . '.jpg' ?>">
 												</div>
 												<div class="card-content">
-													<span class="card-title bname">
+													<span class="card-title bname wrap-text">
 														<?php echo $m_viewed_book->book_name; ?></span>
 													<span class="card-content ">
 														<?php echo $m_viewed_book->author_name; ?></span>

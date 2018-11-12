@@ -147,7 +147,7 @@ $(document).ready(function () {
 				if(data == 'true'){
 					document.getElementById("validity").classList.remove("valid");
 					document.getElementById("validity").classList.add("not-valid");
-					console.log('methenta enna');
+					// console.log('methenta enna');
 				}else{
 					document.getElementById("validity").classList.remove("not-valid");
 					document.getElementById("validity").classList.add("valid");
