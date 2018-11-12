@@ -40,7 +40,7 @@
 			<?php foreach($categories as $category){ ?>
 				<div class="col s12 m4">
 				
-				<a href="<?php echo base_url() . 'Category_books/view_category/' . $category->id;?>">
+				<a href="<?php echo base_url() . 'CategoryBooks/viewCategory/' . $category->id;?>">
 					<div class="card small card-1">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="<?php echo asset_url() . 'images/Category/'. $category->id . '.jpg' ?>">
@@ -82,7 +82,7 @@
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">
+						<a href="<?php echo base_url().'/BookController/viewBook/'.$mViewedBook->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $mViewedBook->id .'.jpg' ?>">
@@ -95,7 +95,6 @@
 
 								<hr>
 								<span class="card-text"><i>Rs. </i><?php echo $mViewedBook->price; ?> </span>
-								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">View Book</a></p> -->
 							</div>
 						</div> </a>
 						<!-- </div> -->
@@ -132,7 +131,7 @@
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'/Book_controller/view_book/'.$nAddedBook->id;?>">
+						<a href="<?php echo base_url().'/BookController/viewBook/'.$nAddedBook->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $nAddedBook->id .'.jpg' ?>">
@@ -145,7 +144,6 @@
 
 								<hr>
 								<span class="card-text"><i >Rs. </i><?php echo $nAddedBook->price; ?> </span>
-								<!-- <p ><a href="<?php echo base_url().'/Book_controller/view_book/'.$nAddedBook->id;?>">View Book</a></p> -->
 							</div>
 						</div> </a>
 						<!-- </div> -->

@@ -9,14 +9,14 @@ class AdminController extends CI_Controller {
     }
 
     public function loginView(){
-        $this->load->view("admin_login");
+        $this->load->view("AdminLogin");
     }
 
     public function login(){
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         if($username === 'admin' && $password === '1234'){
-            redirect('index.php/Admin_controller/show_dashboard/');
+            redirect('/AdminController/showDashboard/');
         }else{
             // alert("wrong info");
         }
@@ -39,7 +39,7 @@ class AdminController extends CI_Controller {
         $data['visitorCountPerDay'] = $this->AdminModel->getVisitorCountPerDay();
 
 
-        $data['authors'] = $this->Admin_model->getAuthors();
+        $data['authors'] = $this->AdminModel->getAuthors();
         $this->load->view('AdminPage',$data);
     }
 
@@ -112,7 +112,7 @@ class AdminController extends CI_Controller {
         $subCats = $this->input->post('subCats');
 
         // var_dump($sub_cats);die;
-        $insertCatId = $this->Admin_model->add_category($main_cat,$sub_cats);
+        $insertCatId = $this->AdminModel->addCategory($main_cat,$sub_cats);
         echo $insertCatId;
     }
 

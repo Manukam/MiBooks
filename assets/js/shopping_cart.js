@@ -3,7 +3,7 @@ function addOne(bookId) {
 	// var totalprice = document.getElementById("total_price").value;
 	$.ajax({
 		type: "POST",
-		url: "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_one_shopping/" + bookId,
+		url: "http://localhost/MIBooks/ShoppingCartController/addOneShopping/" + bookId,
 		// data: data,
 		success: function (data) {
 
@@ -22,7 +22,7 @@ function addOne(bookId) {
 function removeOne(bookId) {
 	$.ajax({
 		type: "POST",
-		url: "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_one_shopping/" + bookId,
+		url: "http://localhost/MIBooks/ShoppingCartController/removeOneShopping/" + bookId,
 		// data: data,
 		success: function (data) {
 			data = JSON.parse(data);

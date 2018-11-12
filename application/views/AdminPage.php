@@ -329,7 +329,7 @@
 								</thead>
 								<tbody>
 									<?php foreach($allBooks as $mViewedBook){ ?>
-									<tr id="<?php echo $m_viewed_book->id;?>">
+									<tr id="<?php echo $mViewedBook->id;?>">
 										<td><img src="<?php echo asset_url() .'images/books/'.$mViewedBook->id.'.jpg'?>" style='height:200px;width:150px;'></td>
 										<td>
 											<?php echo $mViewedBook->book_name; ?>
@@ -367,11 +367,11 @@
 	var ctx = document.getElementById("myChart");
 	var data = new Array();
 	var labelSet = new Array();
-	<?php foreach($most_viewed_categories as $key => $val){ ?>
+	<?php foreach($mostViewedCategories as $key => $val){ ?>
 	data.push('<?php echo $val; ?>');
 	<?php } ?>
 
-	<?php foreach($book_categories as $key=>$category){?>
+	<?php foreach($bookCategories as $key=>$category){?>
 	labelSet.push('<?php echo $category->cat_name;?>');
 	<?php } ?>
 
@@ -582,11 +582,11 @@
 
 	var daySet = new Array();
 	var countPerDay = new Array();
-	<?php foreach($visitor_count_per_Day as $key=>$date){?>
+	<?php foreach($visitorCountPerDay as $key=>$date){?>
 	daySet.push('<?php echo $date->Day;?>');
 	<?php } ?>
 
-	<?php foreach($visitor_count_per_Day as $key=>$date){?>
+	<?php foreach($visitorCountPerDay as $key=>$date){?>
 	countPerDay.push('<?php echo $date->COUNT;?>');
 	<?php } ?>
 

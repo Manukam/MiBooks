@@ -5,7 +5,7 @@ class HomeController extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("BookModel");
-        $this->load->model('User_model');
+        $this->load->model('UserModel');
     }
 
     public function homePage(){
@@ -28,7 +28,7 @@ class HomeController extends CI_Controller {
  
             $this->session->set_userdata($newdata);
             // echo "Session added!";
-            $this->User_model->new_user($userId);
+            $this->UserModel->newUser($userId);
 
         }
     }

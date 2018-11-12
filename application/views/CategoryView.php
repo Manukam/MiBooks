@@ -20,7 +20,7 @@
 	<div class="container">
 		<div class="section">
 			<p class="category-heading  "> <?php echo $categoryName[0]->cat_name; ?> </p>
-			<p class="category-description">Find your new favorite book in <?php echo $categoryName[0]->cat_name; ?>. Plus, see our picks for the best <?php echo $category_name[0]->cat_name; ?> books of the month. </p>
+			<p class="category-description">Find your new favorite book in <?php echo $categoryName[0]->cat_name; ?>. Plus, see our picks for the best <?php echo $categoryName[0]->cat_name; ?> books of the month. </p>
 		</div>
 	</div>
 
@@ -53,7 +53,7 @@
 					<a href="<?php echo base_url(). '/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
 						<div class="card small card-1 image-resize">
 							<div class="card-image category-card">
-								<img class="activator category" src="<?php echo asset_url() . 'images/books/'. $images_sub_cat[$sub->sub_category] .'.jpg' ?>">
+								<img class="activator category" src="<?php echo asset_url() . 'images/books/'. $imagesSubCat[$sub->sub_category] .'.jpg' ?>">
 							</div>
 							<div class="card-content">
 								<span class="card-title category-name activator grey-text text-darken-4 wrap-text">

@@ -4,11 +4,11 @@ class ShoppingCartController extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model("Book_model");
-        $this->load->model("Admin_model");
+        $this->load->model("BookModel");
+        $this->load->model("AdminModel");
     }
 
-    public function view_cart(){
+    public function viewCart(){
         $addedBooks = $this->session->userdata('cart');
         $shoppingList = array();    
         $subTotal = 0;
@@ -58,7 +58,7 @@ class ShoppingCartController extends CI_Controller {
     public function getBookDetails(array $books){
         $bookIds = array_keys($books);
         foreach($bookIds as $index=>$bookId){
-            $bookDetails = $this->Book_model->get_book_details($bookId);
+            $bookDetails = $this->BookModel->getBookDetails($bookId);
             $bookDetails[0]->quantity = $books[$bookId];
             $shoppingList[$index] = $bookDetails;
             

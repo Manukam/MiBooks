@@ -29,7 +29,7 @@ class ViewCategoryModel extends CI_Model {
         return $query->result();  
     }
 
-    public function get_sub_books_pagination($categoryId,$subCategoryId,$length,$start,$search){
+    public function getSubBooksPagination($categoryId,$subCategoryId,$length,$start,$search){
         //  $query_string = "SELECT book.book_name, authors.author_name,  category.cat_name from book INNER JOIN authors ON book.book_author = authors.id INNER JOIN category ON book.book_cat = category.id WHERE category.id = ?";
         $this->db->select('book.id , book.book_name, authors.author_name,  book.price');
         $this->db->from('book');
@@ -44,7 +44,7 @@ class ViewCategoryModel extends CI_Model {
         return $query->result();  
     }
 
-    public function get_random_pic($mainCat){
+    public function getRandomPic($mainCat){
         $this->db->select('book.id, book.sub_cat');
         $this->db->from('book');
         $this->db->where("book.book_cat", $mainCat);

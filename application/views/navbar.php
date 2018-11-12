@@ -5,7 +5,7 @@
 	<nav class="white">
 		<div class="nav-wrapper">
 			<div class="foo">
-				<a href="<?php echo base_url() . 'Home_Controller/home_page' ?>">
+				<a href="<?php echo base_url() . 'HomeController/homePage' ?>">
 					<span class="letter" data-letter="B">B</span>
 					<span class="letter" data-letter="O">O</span>
 					<span class="letter" data-letter="O">O</span>
@@ -24,7 +24,7 @@
 				<ul class="right hide-on-med-and-down">
 					<!-- <li><a href="sass.html">Shop</a></li> -->
 					<!-- <li><a href="badges.html">Blog</a></li> -->
-					<li><a class="icon-wrapper" href="<?php echo base_url(). 'Shopping_cart_controller/view_cart';?>">
+					<li><a class="icon-wrapper" href="<?php echo base_url(). 'ShoppingCartController/viewCart';?>">
 							<div class="icon-wrapper">
                 <?php 
                   $number_nav = $this->session->userdata('cart');

@@ -54,7 +54,7 @@
 							<button class="_btn _column product-plus" id='<?php echo $item->id;?>' onClick="addOne(this.id)">&plus;</button>
 						</div>
 						<button class="_btn entypo-trash product-remove" id='<?php echo $item->id;?>' onClick="removeItem(this.id)">Remove</button>
-						<div class="price product-total-price" id="total_price">Rs. <?php echo $item->total_price;?></div>
+						<div class="price product-total-price" id="total_price">Rs. <?php echo $item->totalPrice;?></div>
 					</div>
 				</li>
 				<?php }}} ?>

@@ -37,7 +37,7 @@ class BookModel extends CI_Model {
         return  $insertId;
     }
 
-    public function check_book($bookName){
+    public function checkBook($bookName){
         $query = $this->db->get_where('book',array('book_name' => $bookName));
         $count = $query->num_rows();
         // print_r($count);
@@ -109,7 +109,7 @@ class BookModel extends CI_Model {
         $userList = array();
 
         foreach($userListArray as $index=>$user){
-            $userList[$index] = $user->userId;
+            $userList[$index] = $user->user_id;
         }
 
         $this->db->select('count(user_view.book_id) as Views, book.id,book.book_name, book.price, authors.author_name');

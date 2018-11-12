@@ -15,7 +15,7 @@ $(document).ready(function () {
 		processing: true,
 		"ajax": {
 			data: data,
-			url: "http://localhost/MIBooks/index.php/Category_books/get_category_books/",
+			url: "http://localhost/MIBooks/index.php/CategoryBooks/getCategoryBooks/",
 			type: 'GET'
 		},
 		"columnDefs": [{
@@ -49,6 +49,6 @@ $(document).ready(function () {
 	$('#book_list').on('click', 'tbody tr', function () {
 		var id = table.row(this).id();
 		console.log(id);
-		window.location.href = "http://localhost/MIBooks/index.php/Book_controller/view_book/" + id;
+		window.location.href = "http://localhost/MIBooks/BookController/viewBook/" + id;
 	});
 });

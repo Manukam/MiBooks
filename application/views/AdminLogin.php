@@ -1,7 +1,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
 <link href="<?php echo asset_url() . 'css/admin_login.css'?>" rel='stylesheet' type='text/css'>
 
-<form method="post" action="<?php echo base_url() . 'index.php/Admin_controller/login/' ?>">
+<form method="post" action="<?php echo base_url() . 'index.php/AdminController/login/' ?>">
 	<div class="box">
 		<h1>Admin Login</h1>
 

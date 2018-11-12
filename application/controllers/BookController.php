@@ -5,10 +5,11 @@ class BookController extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("BookModel");
+        $this->load->model("ViewTrackingModel");
     }
 
 
-    public function viewBook($book_id){
+    public function viewBook($bookId){
         $userId = $this->session->userdata('user_id'); 
         $this->ViewTrackingModel->trackViews($bookId,$userId); 
 

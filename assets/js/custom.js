@@ -46,12 +46,10 @@ $(document).ready(function () {
 		var book_id = document.getElementsByClassName("cart-btn")[0].id;
 		var e = document.getElementById("book_quantity");
 		var quantity = e.options[e.selectedIndex].value;
-		// console.log(book_id);
-		// window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity;
-		// swal("Succsess!", "Book has been added to Cart!", "success");
+
 		$.ajax({
 			type: "POST",
-			url: "http://localhost/MIBooks/index.php/Shopping_cart_controller/add_to_cart/" + book_id + "/" + quantity,
+			url: "http://localhost/MIBooks/index.php/ShoppingCartController/addToCart/" + book_id + "/" + quantity,
 			// data: data,
 			success: function (data) {
 				swal("Succsess!", "Book has been added to Cart!", "success");
@@ -73,7 +71,7 @@ function removeItem(book_id) {
 	// window.location.href = "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_cart_item/" + book_id;
 	$.ajax({
 		type: "POST",
-		url: "http://localhost/MIBooks/index.php/Shopping_cart_controller/remove_cart_item/" + book_id,
+		url: "http://localhost/MIBooks/ShoppingCartController/removeCartItem/" + book_id,
 		// data: data,
 		success: function (data) {
 			location.reload();

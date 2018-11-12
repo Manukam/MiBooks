@@ -18,7 +18,7 @@ $(document).ready(function () {
 		$.ajax({
 			type: "POST",
 			dataType: 'json',
-			url: "http://localhost/MIBooks/index.php/Admin_controller/get_sub_categories/" + data.id,
+			url: "http://localhost/MIBooks/index.php/AdminController/getSubCategories/" + data.id,
 			// data: data,
 
 			success: function (data) {
@@ -68,7 +68,7 @@ $(document).ready(function () {
 		$.ajax({
 			type: "POST",
 			dataType: 'json',
-			url: "http://localhost/MIBooks/index.php/Admin_controller/add_book/",
+			url: "http://localhost/MIBooks/AdminController/addBook/",
 			data: data,
 			success: function (data) {
 				console.log(data);
@@ -80,7 +80,7 @@ $(document).ready(function () {
 		}).done(function () {
 			var form = document.getElementById("form-image");
 			if (form) {
-				form.action = "http://localhost/MIBooks/index.php/Admin_controller/add_book_image/" + fileName;
+				form.action = "http://localhost/MIBooks/AdminController/addBookImage/" + fileName;
 			}
 			$('#book_image_upload').trigger('click');
 			// console.log(form.action);
@@ -110,7 +110,7 @@ $(document).ready(function () {
 		$.ajax({
 			type: "POST",
 			// dataType: 'json',
-			url: "http://localhost/MIBooks/index.php/Admin_controller/add_category/",
+			url: "http://localhost/MIBooks/AdminController/addCategory/",
 			data: cat_data,
 
 			success: function (data) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
 		}).done(function(){
 			var form = document.getElementById("category-image");
 			if (form) {
-				form.action = "http://localhost/MIBooks/index.php/Admin_controller/add_category_image/" + categoryId;
+				form.action = "http://localhost/MIBooks/AdminController/addCategoryImage/" + categoryId;
 			}
 			$('#category_image_upload').trigger('click');
 		});
@@ -140,7 +140,7 @@ $(document).ready(function () {
 		$.ajax({
 			type: "POST",
 			// dataType: 'json',
-			url: "http://localhost/MIBooks/index.php/Admin_controller/book_validate/",
+			url: "http://localhost/MIBooks/AdminController/bookValidate/",
 			data: data,
 
 			success: function (data) {
