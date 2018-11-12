@@ -2,9 +2,13 @@
 
 class Home_Controller extends CI_Controller {
 
+    function __construct() {
+        parent::__construct();
+        $this->load->model("book_model");
+    }
+
     public function home_page(){
         $this->check_session();
-        $this->load->model("book_model");
         $data['most_viewed'] = $this->book_model->get_most_viewed_book_list();
         $data['categories'] = $this->book_model->get_book_categories();
         $data['newly_added'] = $this->book_model->get_newly_added();
