@@ -1,8 +1,8 @@
 <?php
 
-class Book_model extends CI_Model {
+class BookModel extends CI_Model {
 
-    public function get_most_viewed_book_list(){
+    public function getMostViewedBookList(){
         $this->load->model("Book");
         $query = $this->db->query('SELECT book.id, book.book_name, authors.author_name, user_view.book_id,book.price, count(user_view.book_id) as NUM FROM user_view RIGHT JOIN book ON book.id = user_view.book_id INNER JOIN authors ON authors.id = book.book_author GROUP BY book.id ORDER BY NUM DESC');  
         
@@ -16,29 +16,29 @@ class Book_model extends CI_Model {
     }
 
 
-    public function get_book_categories(){
+    public function getBookCategories(){
         $query = $this->db->get('category'); 
 
         return $query->result();
     }
 
-    public function get_book_details($book_id){
+    public function getBookDetails($bookId){
         $this->db->select('book.id, book.book_name, book.book_author, book.book_cat, authors.author_name, book.price, 0 as quantity, 0 as toal_price');
         $this->db->from('book');
         $this->db->join('authors', 'authors.id = book.book_author');
-        $this->db->where("book.id", $book_id);
+        $this->db->where("book.id", $bookId);
         $query = $this->db->get();
         return $query->result();
     }
 
-    public function insert_book($data){
+    public function insertBook($data){
         $this->db->insert("book",$data);
-        $insert_id = $this->db->insert_id();
-        return  $insert_id;
+        $insertId = $this->db->insert_id();
+        return  $insertId;
     }
 
-    public function check_book($book_name){
-        $query = $this->db->get_where('book',array('book_name' => $book_name));
+    public function check_book($bookName){
+        $query = $this->db->get_where('book',array('book_name' => $bookName));
         $count = $query->num_rows();
         // print_r($count);
         if($count == 0){
@@ -49,7 +49,7 @@ class Book_model extends CI_Model {
         
     }
 
-    public function get_all_books(){
+    public function getAllBooks(){
         $this->db->select('book.id, book.book_name, authors.author_name, user_view.book_id, count(user_view.book_id) as NUM');
         $this->db->group_by('book.id');
         $this->db->order_by('NUM','desc');
@@ -61,10 +61,10 @@ class Book_model extends CI_Model {
         return $query->result();
     }
 
-    public function get_total_books($sub_cat){
+    public function getTotalBooks($subCat){
         $this->db->select("COUNT(book.id) as num");
         $this->db->from('book');
-        $this->db->where("book.sub_cat", $sub_cat);
+        $this->db->where("book.sub_cat", $subCat);
         $query = $this->db->get();
         $result = $query->row();
         if(isset($result)) {
@@ -74,7 +74,7 @@ class Book_model extends CI_Model {
         return 0;
       }
 
-      public function get_newly_added(){
+      public function getNewlyAdded(){
         $this->db->select('book.id, book.book_name, authors.author_name, book.price');
         $this->db->group_by('book.id');
         $this->db->order_by('book.id','desc');
@@ -87,36 +87,36 @@ class Book_model extends CI_Model {
         return $query->result();
       }
 
-      public function get_recent_books($user_id){
+      public function getRecentBooks($userId){
         $this->db->select('book.id, book.book_name, authors.author_name, book.price');
         $this->db->from('book');
         $this->db->join('user_view', 'user_view.book_id = book.id');
         $this->db->join('authors', 'authors.id = book.book_author');
-        $this->db->where('user_view.user_id', $user_id);
+        $this->db->where('user_view.user_id', $userId);
         $this->db->group_by('book.id');
         $this->db->order_by('user_view.time','desc');
         $query = $this->db->get();
         return $query->result();
       }
 
-      public function get_related_books($book_id){
+      public function getRelatedBooks($bookId){
 
         $this->db->select('user_view.user_id');
         $this->db->from('user_view');
-        $this->db->where('user_view.book_id',$book_id);
+        $this->db->where('user_view.book_id',$bookId);
         $query = $this->db->get();
-        $user_list_array = $query->result();
-        $user_list = array();
+        $userListArray = $query->result();
+        $userList = array();
 
-        foreach($user_list_array as $index=>$user){
-            $user_list[$index] = $user->user_id;
+        foreach($userListArray as $index=>$user){
+            $userList[$index] = $user->userId;
         }
 
         $this->db->select('count(user_view.book_id) as Views, book.id,book.book_name, book.price, authors.author_name');
         $this->db->from('user_view');
         $this->db->join('book', 'book.id = user_view.book_id');
         $this->db->join('authors', 'book.book_author = authors.id');
-        $this->db->where_in('user_view.user_id', $user_list);   
+        $this->db->where_in('user_view.user_id', $userList);   
         $this->db->group_by('book.id');
         $this->db->order_by('Views','desc');
         $this->db->limit(6);
