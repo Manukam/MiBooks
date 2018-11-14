@@ -71,25 +71,20 @@
 								<div class="row">
 									<div class="col s12 m3">
 										<div class="card-custom card-1">
-											<!-- <div class="card-title"> -->
 											<p id="stat-heading">Total Visitors</p>
-											<!-- <i class="fas fa fa-chart-line left admin-icons-1"></i> -->
-											<!-- <span id="stat-number" class="step color-1"> -->
-											<!-- <p  id="stat-number" class="step color-1 top-right"> <?php echo $total_visitors; ?></p>  -->
+											
 											<canvas id="bar-chart-grouped" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
 											<p id="stat-heading">Total Page Views </p>
-											<!-- <i class="fas fa fa-chart-line left admin-icons-2"></i> -->
 											<canvas id="bar-chart-grouped2" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 									</div>
 									<div class="col s12 m3">
 										<div class="card-custom card-1 left">
 											<p id="stat-heading">Unique Visitors</p>
-											<!-- <i class="fas fa fa-chart-line left admin-icons-3"></i> -->
 											<canvas id="bar-chart-grouped3" width="800" height="450" class="stats-graph"></canvas>
 										</div>
 
@@ -98,25 +93,16 @@
 								</div>
 							</div>
 
-							<!-- <div class="section">
-								<div class="row">
-									<p>Most Viewed</p>
-								</div>
-							</div> -->
-
 							<div class="section">
 								<div class="row">
 
 									<div class="col s12 center">
-										<!-- <h3><i class="mdi-content-send brown-text"></i></h3> -->
 
 										<div class="horizontal-scroll-admin">
 											<p class="admin-heading">Most Viewed Books</p>
-											<!-- <div id="rightArrow"></div> -->
 											<?php foreach ($mostViewed as $mViewedBook) {
 
     ?>
-											<!-- <div class="horizonatal-scroll"> -->
 											<div class="card medium custom-height card-1">
 												<div class="card-image">
 													<img class="activator resize" src="<?php echo asset_url() . 'images/books/' . $mViewedBook->id . '.jpg' ?>">
