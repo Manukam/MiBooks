@@ -362,6 +362,12 @@ i {
   padding-top: 70px !important;
 }
 
+.carousel{
+  bottom: 100px !important;
+  height: 510px !important;
+  overflow: unset !important;
+}
+
 
 
 
