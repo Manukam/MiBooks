@@ -77,12 +77,12 @@
 				<div class="col s12 center">
 					<h3><i class="mdi-content-send brown-text"></i></h3>
 					<h4>Most Viewed Books</h4>
-					<div class="horizontal-scroll">
+					<div class="carousel">
 						<?php foreach ($mostViewed as $mViewedBook) {
 
     ?>
 						<!-- <div class="horizonatal-scroll"> -->
-						<a href="<?php echo base_url().'/BookController/viewBook/'.$mViewedBook->id;?>">
+						<a class="carousel-item" href="<?php echo base_url().'/BookController/viewBook/'.$mViewedBook->id;?>">
 						<div class="card medium custom-height card-1">
 							<div class="card-image">
 								<img class="activator resize" src="<?php echo asset_url() . 'images/books/'. $mViewedBook->id .'.jpg' ?>">
@@ -167,4 +167,5 @@
 	<script src="<?php echo asset_url() . 'js/materialize.js' ?>"></script>
 	<script src="<?php echo asset_url() . 'js/init.js' ?>"></script>
 	<script src="<?php echo asset_url() . 'js/custom.js' ?>"></script>
+	<script src="<?php echo asset_url() . 'js/homepage.js' ?>"></script>
 </html>
