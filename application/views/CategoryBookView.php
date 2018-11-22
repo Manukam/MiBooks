@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="section">
 			<p class="category-heading "> <?php echo $subCategoryName[0]->sub_cat_name;?> </p>
-			<p class="category-description">Find your new favorite book in <?php echo $subCategoryName[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $sub_category_name[0]->sub_cat_name;?> books of the month. </p>
+			<p class="category-description">Find your new favorite book in <?php echo $subCategoryName[0]->sub_cat_name;?>. Plus, see our picks for the best <?php echo $subCategoryName[0]->sub_cat_name;?> books of the month. </p>
 		</div>
 	</div>
 
@@ -49,7 +49,7 @@
 			<div class="horizontal-scroll">
 				<?php foreach ($categoryBooks as $mViewedBook) {
 
-    ?>			<a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">
+    ?>			<a href="<?php echo base_url().'/BookController/viewBook/'.$mViewedBook->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$mViewedBook->id.'.jpg' ?>">

@@ -50,7 +50,7 @@
 			<div class="row">
 				<?php foreach($subCategories as $sub){ ?>
 				<div class="col s12 m3">
-					<a href="<?php echo base_url(). '/Category_books/view_category_books/'. $sub->main_category .'/'. $sub->sub_category?>">
+					<a href="<?php echo base_url(). 'CategoryBooks/viewCategoryBooks/'. $sub->main_category .'/'. $sub->sub_category?>">
 						<div class="card small card-1 image-resize">
 							<div class="card-image category-card">
 								<img class="activator category" src="<?php echo asset_url() . 'images/books/'. $imagesSubCat[$sub->sub_category] .'.jpg' ?>">
