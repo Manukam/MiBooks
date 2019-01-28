@@ -49,7 +49,7 @@ class AdminController extends CI_Controller {
         foreach($subCategories as $index=>$sub){
             $result[$sub->id] = $sub->subCatName;     
          }
-         echo json_encode($result);
+        echo json_encode($result);
     }
 
     public function addBook(){

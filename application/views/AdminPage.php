@@ -25,7 +25,7 @@
 		<nav class="white">
 			<div class="nav-wrapper">
 				<div class="foo">
-					<a href="<?php echo base_url() . '/Home_Controller/home_page' ?>">
+					<a href="<?php echo base_url() . 'HomeController/homePage' ?>">
 						<span class="letter" data-letter="B">B</span>
 						<span class="letter" data-letter="O">O</span>
 						<span class="letter" data-letter="O">O</span>

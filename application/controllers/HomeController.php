@@ -17,9 +17,10 @@ class HomeController extends CI_Controller {
     }
 
     public function checkSession(){
-        if($this->session->userdata('userId')){
-          //Session available, refresh the session  
+        if($this->session->userdata('user_id')){
+         
         }else{
+            // var_dump('session available');die;
             $userId = uniqid(true);
             $newdata = array(
                 'user_id'  => $userId,

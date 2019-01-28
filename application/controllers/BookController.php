@@ -35,7 +35,7 @@ class BookController extends CI_Controller {
     }
 
     public function getRecent(){
-        $userId = $this->session->userdata('userId');
+        $userId = $this->session->userdata('user_id');
         return $this->BookModel->getRecentBooks($userId);
     }
 
