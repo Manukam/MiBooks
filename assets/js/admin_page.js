@@ -83,7 +83,7 @@ $(document).ready(function () {
 				form.action = "http://localhost/MIBooks/AdminController/addBookImage/" + fileName;
 			}
 			$('#book_image_upload').trigger('click');
-			// console.log(form.action);
+			swal("Succsess!", "Book has been added!", "success");
 		});
 		// $('#hide_this').click();
 
@@ -101,11 +101,11 @@ $(document).ready(function () {
 		tags = JSON.parse(tags[0].value);
 		// console.log(tags);
 		var cat_data = {
-			'main_cat': categoryName,
-			'sub_cats': tags
+			'mainCat': categoryName,
+			'subCats': tags
 		};
 
-		// console.log(cat_data);
+		console.log(cat_data);
 
 		$.ajax({
 			type: "POST",
@@ -114,7 +114,7 @@ $(document).ready(function () {
 			data: cat_data,
 
 			success: function (data) {
-				console.log(data);
+				// console.log(data);
 				categoryId = data;
 
 				swal("Succsess!", "Category has been added!", "success");

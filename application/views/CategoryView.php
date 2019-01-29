@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?php echo $category_name[0]->cat_name; ?></title>
+	<title><?php echo $categoryName[0]->cat_name; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 	<!-- <script src="main.js"></script> -->
@@ -39,8 +39,7 @@
 			</div>
 		</div>
 		<div class="parallax"><img src="<?php echo asset_url() . 'images/category/'. $categoryName[0]->cat_name; ?>.jpg" alt="Unsplashed background
-			img
-			1"></div>
+			img1"></div>
 	</div>
 
 	<div class="container">
@@ -91,7 +90,7 @@
 			<div class="horizontal-scroll">
 				<?php foreach ($categoryBooks as $mViewedBook) {
 
-    ?>          <a href="<?php echo base_url().'/Book_controller/view_book/'.$mViewedBook->id;?>">
+    ?>          <a href="<?php echo base_url().'BookController/viewBook/'.$mViewedBook->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$mViewedBook->id.'.jpg' ?>">

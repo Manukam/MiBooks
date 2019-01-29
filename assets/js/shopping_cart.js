@@ -10,7 +10,7 @@ function addOne(bookId) {
 			data = JSON.parse(data);
 
 			document.getElementById("product-quantity").innerHTML = data.quantity;
-			document.getElementById("total_price").innerHTML = 'Rs. ' + data.total_price;
+			document.getElementById("total_price").innerHTML = 'Rs. ' + data.totalPrice;
 
 		},
 		error: function (XHR, status, response) {
@@ -27,7 +27,7 @@ function removeOne(bookId) {
 		success: function (data) {
 			data = JSON.parse(data);
 			document.getElementById("product-quantity").innerHTML = data.quantity;
-			document.getElementById("total_price").innerHTML = 'Rs.' + data.total_price;
+			document.getElementById("total_price").innerHTML = 'Rs.' + data.totalPrice;
 		},
 		error: function (XHR, status, response) {
 			console.log(status + ' --- ' + ' --- ' + response);

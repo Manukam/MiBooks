@@ -51,7 +51,7 @@
 							<option value="2">2</option>
 							<option value="3">3</option>
 						</select>
-						<span class="left price-tag"> Rs. 2100.00 </span>
+						<span class="left price-tag">Rs. <?php  echo $bookDetails[0]->price;?></span>
 					</div>
 
 				</div>
@@ -71,7 +71,7 @@
 			<div class="horizontal-scroll">
 				<?php foreach ($relatedBooks as $relatedBook) {
 
-    ?>
+    ?><a href="<?php echo base_url().'BookController/viewBook/'.$relatedBook->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$relatedBook->id.'.jpg' ?>">
@@ -101,7 +101,7 @@
 			<div class="horizontal-scroll">
 				<?php foreach ($recentBooks as $recentViewedBook) {
 
-    ?>
+    ?> <a href="<?php echo base_url().'BookController/viewBook/'.$recentViewedBook->id;?>">
 				<div class="card medium custom-height card-1">
 					<div class="card-image">
 						<img class="activator resize" src="<?php echo asset_url() . 'images/books/'.$recentViewedBook->id.'.jpg' ?>">

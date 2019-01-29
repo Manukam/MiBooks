@@ -29,7 +29,7 @@ class AdminModel extends CI_Model {
         $mainCategoryId = $this->db->insert_id();
         
         $subCategories = array();
-        foreach($sub_cats as $index=>$sub){
+        foreach($subCats as $index=>$sub){
             $subCategories = array('sub_cat_name' => $sub['value']);
             $this->db->insert('sub_category', $subCategories);
             $subCatId = $this->db->insert_id();

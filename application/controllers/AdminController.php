@@ -47,7 +47,7 @@ class AdminController extends CI_Controller {
         $subCategories = $this->AdminModel->getSubCategories($mainCategoryId);
         $result= array();
         foreach($subCategories as $index=>$sub){
-            $result[$sub->id] = $sub->subCatName;     
+            $result[$sub->id] = $sub->sub_cat_name;     
          }
         echo json_encode($result);
     }
@@ -112,13 +112,13 @@ class AdminController extends CI_Controller {
         $subCats = $this->input->post('subCats');
 
         // var_dump($sub_cats);die;
-        $insertCatId = $this->AdminModel->addCategory($main_cat,$sub_cats);
+        $insertCatId = $this->AdminModel->addCategory($mainCat,$subCats);
         echo $insertCatId;
     }
 
     public function bookValidate(){
         $bookName = $this->input->post("book_name");
-        $result = $this->bookModel->checkBook($bookName);
+        $result = $this->BookModel->checkBook($bookName);
         // print_r($result);
         echo $result;
     }

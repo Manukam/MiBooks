@@ -48,7 +48,7 @@ $(document).ready(function () {
 
 	$('#book_list').on('click', 'tbody tr', function () {
 		var id = table.row(this).id();
-		console.log(id);
+		// console.log(id);
 		window.location.href = "http://localhost/MIBooks/BookController/viewBook/" + id;
 	});
 });

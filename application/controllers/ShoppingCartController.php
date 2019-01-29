@@ -76,7 +76,7 @@ class ShoppingCartController extends CI_Controller {
 
     public function addOneShopping($bookId){
         $addedBooks = $this->session->userdata('cart');
-        $bookDetails = $this->Book_model->getBookDetails($bookId);
+        $bookDetails = $this->BookModel->getBookDetails($bookId);
         $quantity = $addedBooks[$bookId] + 1;
         $addedBooks[$bookId] = $quantity;
         $this->session->set_userdata('cart',$addedBooks);
@@ -88,7 +88,7 @@ class ShoppingCartController extends CI_Controller {
     }
     public function removeOneShopping($bookId){
         $addedBooks = $this->session->userdata('cart');
-        $bookDetails = $this->Book_model->getBookDetails($bookId);
+        $bookDetails = $this->BookModel->getBookDetails($bookId);
         $quantity = $addedBooks[$bookId] - 1;
         $addedBooks[$bookId] = $quantity;
         $this->session->set_userdata('cart',$addedBooks);
